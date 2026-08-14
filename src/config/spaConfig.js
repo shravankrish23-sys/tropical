@@ -24,11 +24,12 @@ export const spaConfig = {
     bookingMessage: "Hello Tropical Spa! I would like to book a therapy session."
   },
   features: [
-    "Premium therapy rooms",
+    "Premium spa treatment",
     "Certified therapist",
-    "Complementary hot and cold beverages",
-    "Complementary hot and cold towel",
-    "100% Money back guarantee"
+    "Premium therapy room",
+    "Complimentary beverages",
+    "Complimentary hot/cold towel",
+    "100% money-back guarantee*"
   ],
   images: {
     logo: logoImg,
