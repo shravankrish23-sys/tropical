@@ -8,9 +8,9 @@ export const spaConfig = {
     name: "Tropical Spa",
     tagline: "Experience the tropical spa",
     voucherText: "with special gift voucher",
-    priceLabel: "Rs.1000",
+    priceLabel: "Rs.500",
     currency: "Rs.",
-    priceAmount: "1000",
+    priceAmount: "500",
     phone: "+91 95503 66963",
     whatsappNumber: "919550366963",
     whatsappDisplay: "WhatsApp",
@@ -20,7 +20,7 @@ export const spaConfig = {
       "CRPF CAMPUS, Doddaballapura",
       "Main Rd YELAHANKA, Bengaluru - 64"
     ],
-    voucherMessage: "Hello Tropical Spa! I would like to claim the special gift voucher of Rs.1000 and book an appointment.",
+    voucherMessage: "Hello Tropical Spa! I would like to claim the special gift voucher of Rs.500 and book an appointment.",
     bookingMessage: "Hello Tropical Spa! I would like to book a therapy session."
   },
   features: [

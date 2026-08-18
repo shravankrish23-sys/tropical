@@ -42,7 +42,7 @@ export const Hero = () => {
             rel="noopener noreferrer"
             id="hero-claim-offer"
             className="hero-cta-btn"
-            ariaLabel="Claim the Rs.1000 gift voucher offer via WhatsApp"
+            ariaLabel="Claim the Rs.500 gift voucher offer via WhatsApp"
           >
             Claim the offer
           </Button>
