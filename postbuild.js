@@ -49,6 +49,9 @@ const fallbackHtml = `
       <strong>WhatsApp:</strong> <a href="https://wa.me/${businessInfo.whatsappNumber}" style="color: #9eb875; text-decoration: underline; font-weight: 600;">WhatsApp Contact</a>
     </p>
     <p style="margin-bottom: 15px; font-size: 1.1rem;">
+      <strong>Hours:</strong> ${businessInfo.hours}
+    </p>
+    <p style="margin-bottom: 15px; font-size: 1.1rem;">
       <strong>Email:</strong> <a href="mailto:${businessInfo.email}" style="color: #9eb875; text-decoration: underline;">${businessInfo.email}</a>
     </p>
   </div>
