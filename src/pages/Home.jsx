@@ -95,7 +95,7 @@ export const Home = () => {
   const faqs = [
     {
       q: "Where is Tropical Spa located?",
-      a: `Tropical Spa is located at NO.1, 1st Floor, ACSS Complex, CRPF Campus, Doddaballapura Main Road, Yelahanka, Bengaluru - 560064.`
+      a: `Tropical Spa is located at 1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064.`
     },
     {
       q: "How do I claim the ₹1,000 gift voucher?",

@@ -99,7 +99,7 @@ export const Layout = () => {
             {/* Embedded maps style frame */}
             <div className="footer-map-embed">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6601449830573!2d77.586425!3d13.0956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1907ffffffbf%3A0x63eb10d0fba75f78!2sDoddaballapura%20Main%20Rd%2C%20Yelahanka%2C%20Bengaluru%2C%20Karnataka%20560064!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=13.121476,77.576569&z=17&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

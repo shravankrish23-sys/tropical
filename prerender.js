@@ -24,7 +24,7 @@ const metadata = {
   },
   '/locations/yelahanka': {
     title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
-    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex near CRPF Campus offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.'
+    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.'
   },
   '/services/deep-tissue-massage': {
     title: 'Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru',
@@ -63,7 +63,7 @@ const schemaJson = {
       "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "NO.1, 1st floor ACSS COMPLEX, CRPF CAMPUS, Doddaballapura Main Rd",
+        "streetAddress": "1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart",
         "addressLocality": "Yelahanka, Bengaluru",
         "addressRegion": "Karnataka",
         "postalCode": "560064",
@@ -71,8 +71,8 @@ const schemaJson = {
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 13.0956,
-        "longitude": 77.5890
+        "latitude": 13.121476,
+        "longitude": 77.576569
       },
       "openingHoursSpecification": [
         {
@@ -98,7 +98,7 @@ const schemaJson = {
           "name": "Where is Tropical Spa located?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Tropical Spa is located at NO.1, 1st Floor, ACSS Complex, CRPF Campus, Doddaballapura Main Road, Yelahanka, Bengaluru - 560064."
+            "text": "Tropical Spa is located at 1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064."
           }
         },
         {

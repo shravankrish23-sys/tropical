@@ -10,7 +10,7 @@ export const LocationYelahanka = () => {
     <div>
       <SeoMeta 
         title="Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd"
-        description="Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex near CRPF Campus offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963."
+        description="Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963."
       />
 
       <div className="page-container">
@@ -30,7 +30,7 @@ export const LocationYelahanka = () => {
             <section aria-labelledby="intro-heading">
               <h2 id="intro-heading" className="geo-section-title">Your Local Wellness Oasis</h2>
               <p className="geo-intro-text" style={{ marginTop: '1rem' }}>
-                Conveniently located at NO.1, 1st Floor, ACSS Complex, CRPF Campus on Doddaballapura Main Road, Tropical Spa is the premier wellness destination for residents across Yelahanka New Town, Kogilu, Allalasandra, Judicial Layout, and surrounding North Bengaluru neighborhoods. Avoid long commutes into central Bengaluru and experience luxury massage therapies right in your neighborhood.
+                Conveniently located at 1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Tropical Spa is the premier wellness destination for residents across Yelahanka New Town, Kogilu, Allalasandra, Judicial Layout, and surrounding North Bengaluru neighborhoods. Avoid long commutes into central Bengaluru and experience luxury massage therapies right in your neighborhood.
               </p>
             </section>
 
@@ -43,8 +43,8 @@ export const LocationYelahanka = () => {
               
               <div className="landmarks-grid">
                 <div className="landmark-item">
-                  <div className="landmark-name">CRPF Campus Gate</div>
-                  <div className="landmark-desc">Located right near the main entrance gate of the CRPF Campus in Yelahanka, serving as our primary regional landmark.</div>
+                  <div className="landmark-name">Nice Mart</div>
+                  <div className="landmark-desc">Located right next to Nice Mart on Doddaballapura Main Road, serving as our primary regional landmark.</div>
                 </div>
                 <div className="landmark-item">
                   <div className="landmark-name">ACSS Complex</div>
@@ -124,7 +124,7 @@ export const LocationYelahanka = () => {
 
             <div className="geo-map-frame">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.6601449830573!2d77.586425!3d13.0956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1907ffffffbf%3A0x63eb10d0fba75f78!2sDoddaballapura%20Main%20Rd%2C%20Yelahanka%2C%20Bengaluru%2C%20Karnataka%20560064!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=13.121476,77.576569&z=17&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

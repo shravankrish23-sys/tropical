@@ -23,8 +23,9 @@ const jsonLd = {
   "email": businessInfo.email,
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "NO.1, 1st Floor ACSS Complex, CRPF Campus, Doddaballapura, Main Rd Yelahanka",
-    "addressLocality": "Bengaluru",
+    "streetAddress": "1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart",
+    "addressLocality": "Yelahanka, Bengaluru",
+    "postalCode": "560064",
     "addressCountry": "IN"
   },
   "contactPoint": {
