@@ -12,7 +12,7 @@ export const Hero = () => {
         
         {/* Left Column: Promotion Details */}
         <div className="hero-content">
-          <h1 className="hero-title">{business.tagline}</h1>
+          <h2 className="hero-title">{business.tagline}</h2>
           <p className="hero-subtitle serif-text">{business.voucherText}</p>
           
           <div className="hero-price-wrap">

@@ -85,6 +85,8 @@ const schemaJson = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
         "reviewCount": "180"
       }
     },
@@ -132,7 +134,7 @@ const schemaJson = {
     let html = template;
     const meta = metadata[url];
     
-    const canonicalLink = `<link rel="canonical" href="https://tropicalspa.in${url === '/' ? '' : url}" />`;
+    const canonicalLink = `<link rel="canonical" href="https://tropicalspa.in${url === '/' ? '' : url}/" />`;
     const schemaScript = `<script type="application/ld+json">${JSON.stringify(schemaJson)}</script>`;
     
     html = html.replace('<head>', `<head>\n  ${canonicalLink}\n  ${schemaScript}`);
@@ -161,9 +163,9 @@ const schemaJson = {
       }
 
       if (html.includes('property="og:url"')) {
-        html = html.replace(/<meta property="og:url" content=".*?"\s*\/?>/, `<meta property="og:url" content="https://tropicalspa.in${url === '/' ? '' : url}" />`);
+        html = html.replace(/<meta property="og:url" content=".*?"\s*\/?>/, `<meta property="og:url" content="https://tropicalspa.in${url === '/' ? '' : url}/" />`);
       } else {
-        html = html.replace('</title>', `</title>\n  <meta property="og:url" content="https://tropicalspa.in${url === '/' ? '' : url}" />`);
+        html = html.replace('</title>', `</title>\n  <meta property="og:url" content="https://tropicalspa.in${url === '/' ? '' : url}/" />`);
       }
     }
     
