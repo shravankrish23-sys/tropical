@@ -1,14 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { Button } from './Button';
 import { spaConfig } from '../config/spaConfig';
 
 export const Header = () => {
   const { business, images, links } = spaConfig;
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+
+  const toggleMobileNav = () => {
+    setIsMobileOpen(!isMobileOpen);
+  };
+
+  const closeMobileNav = () => {
+    setIsMobileOpen(false);
+  };
 
   return (
     <header className="site-header" role="banner">
       <div className="header-container">
-        <a href="#" className="brand-link" aria-label={`${business.name} Home`}>
+        
+        {/* Brand Logo Link */}
+        <Link to="/" className="brand-link" aria-label={`${business.name} Home`} onClick={closeMobileNav}>
           <img
             src={images.logo}
             alt={`${business.name} Logo`}
@@ -16,11 +28,60 @@ export const Header = () => {
             width="165"
             height="54"
           />
-        </a>
+        </Link>
 
+        {/* Desktop Navigation Links */}
+        <nav className="header-nav" aria-label="Main navigation">
+          <ul className="nav-list">
+            <li>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+                end
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/locations/yelahanka" 
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+              >
+                Yelahanka Spa
+              </NavLink>
+            </li>
+            
+            {/* Services Dropdown */}
+            <li className="nav-item-dropdown">
+              <span className="nav-link" style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
+                Services
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transition: 'transform 0.2s ease' }}>
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+              <div className="dropdown-menu">
+                <Link to="/services/deep-tissue-massage" className="dropdown-item">Deep Tissue Massage</Link>
+                <Link to="/services/traditional-thai-massage" className="dropdown-item">Traditional Thai Massage</Link>
+                <Link to="/services/swedish-massage" className="dropdown-item">Classic Swedish Massage</Link>
+                <Link to="/services/couples-massage" className="dropdown-item">Couples &amp; Jacuzzi Retreat</Link>
+              </div>
+            </li>
+            
+            <li>
+              <NavLink 
+                to="/pricing" 
+                className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+              >
+                Pricing Menu
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Actions (Call, WhatsApp, Hamburger) */}
         <div className="header-actions">
           <a href={links.telUrl} className="header-phone-link" aria-label={`Call Tropical Spa at ${business.phone}`}>
-            <span style={{ verticalAlign: 'middle' }}>{business.phone}</span>
+            <span className="header-phone-text" style={{ verticalAlign: 'middle' }}>{business.phone}</span>
           </a>
 
           <Button
@@ -34,7 +95,7 @@ export const Header = () => {
           </Button>
 
           <Button
-            href={links.whatsappUrl("Hi Tropical Spa, I would like to enquire about booking a spa appointment.")}
+            href={links.whatsappUrl("Hi Tropical Spa, I would like to book a luxury spa appointment.")}
             target="_blank"
             rel="noopener noreferrer"
             className="header-icon-btn"
@@ -45,7 +106,77 @@ export const Header = () => {
               <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.95-1.418A9.954 9.954 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a7.95 7.95 0 01-4.073-1.118l-.29-.173-3.016.864.854-2.952-.19-.303A7.96 7.96 0 014 12c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8z" fill="currentColor"/>
             </svg>
           </Button>
+
+          {/* Hamburger Icon for Mobile Menu */}
+          <button 
+            className="mobile-nav-toggle" 
+            onClick={toggleMobileNav}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMobileOpen}
+          >
+            {isMobileOpen ? (
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            ) : (
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            )}
+          </button>
         </div>
+
+      </div>
+
+      {/* Mobile Drawer Navigation Overlay */}
+      <div 
+        className={isMobileOpen ? "mobile-drawer-overlay open" : "mobile-drawer-overlay"} 
+        onClick={closeMobileNav}
+      ></div>
+
+      {/* Mobile Drawer Panel */}
+      <div className={isMobileOpen ? "mobile-drawer open" : "mobile-drawer"} role="navigation" aria-label="Mobile Navigation">
+        <ul className="nav-list">
+          <li>
+            <NavLink 
+              to="/" 
+              className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+              onClick={closeMobileNav}
+              end
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
+              to="/locations/yelahanka" 
+              className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+              onClick={closeMobileNav}
+            >
+              Yelahanka Location
+            </NavLink>
+          </li>
+          <li>
+            <span className="nav-link" style={{ fontWeight: '600', color: 'var(--clr-white)' }}>
+              Our Services
+            </span>
+            <div className="dropdown-menu-mobile">
+              <Link to="/services/deep-tissue-massage" className="dropdown-item" onClick={closeMobileNav}>Deep Tissue Massage</Link>
+              <Link to="/services/traditional-thai-massage" className="dropdown-item" onClick={closeMobileNav}>Traditional Thai Massage</Link>
+              <Link to="/services/swedish-massage" className="dropdown-item" onClick={closeMobileNav}>Classic Swedish Massage</Link>
+              <Link to="/services/couples-massage" className="dropdown-item" onClick={closeMobileNav}>Couples &amp; Jacuzzi Retreat</Link>
+            </div>
+          </li>
+          <li>
+            <NavLink 
+              to="/pricing" 
+              className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
+              onClick={closeMobileNav}
+            >
+              Pricing Tariff
+            </NavLink>
+          </li>
+        </ul>
       </div>
     </header>
   );
