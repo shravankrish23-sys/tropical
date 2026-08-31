@@ -44,16 +44,16 @@ export const Layout = () => {
             <h3 className="footer-col-title">Quick Links</h3>
             <ul className="footer-links-list" style={{ marginBottom: '2rem' }}>
               <li className="footer-link-item"><Link to="/">Home Sanctuary</Link></li>
-              <li className="footer-link-item"><Link to="/locations/yelahanka">Yelahanka Flagship</Link></li>
-              <li className="footer-link-item"><Link to="/pricing">Pricing & Menu</Link></li>
+              <li className="footer-link-item"><Link to="/locations/yelahanka/">Yelahanka Flagship</Link></li>
+              <li className="footer-link-item"><Link to="/pricing/">Pricing & Menu</Link></li>
             </ul>
 
             <h3 className="footer-col-title">Wellness Therapies</h3>
             <ul className="footer-links-list">
-              <li className="footer-link-item"><Link to="/services/deep-tissue-massage">Deep Tissue Massage</Link></li>
-              <li className="footer-link-item"><Link to="/services/traditional-thai-massage">Traditional Thai Massage</Link></li>
-              <li className="footer-link-item"><Link to="/services/swedish-massage">Classic Swedish Massage</Link></li>
-              <li className="footer-link-item"><Link to="/services/couples-massage">Luxury Couples Retreat</Link></li>
+              <li className="footer-link-item"><Link to="/services/deep-tissue-massage/">Deep Tissue Massage</Link></li>
+              <li className="footer-link-item"><Link to="/services/traditional-thai-massage/">Traditional Thai Massage</Link></li>
+              <li className="footer-link-item"><Link to="/services/swedish-massage/">Classic Swedish Massage</Link></li>
+              <li className="footer-link-item"><Link to="/services/couples-massage/">Luxury Couples Retreat</Link></li>
             </ul>
           </div>
 
@@ -119,7 +119,7 @@ export const Layout = () => {
           <div className="footer-bottom-links">
             <Link to="/">Privacy Policy</Link>
             <Link to="/">Terms of Service</Link>
-            <Link to="/pricing">Sitemap</Link>
+            <Link to="/pricing/">Sitemap</Link>
           </div>
         </div>
       </footer>

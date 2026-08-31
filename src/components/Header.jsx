@@ -44,7 +44,7 @@ export const Header = () => {
             </li>
             <li>
               <NavLink 
-                to="/locations/yelahanka" 
+                to="/locations/yelahanka/" 
                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               >
                 Yelahanka Spa
@@ -60,16 +60,16 @@ export const Header = () => {
                 </svg>
               </span>
               <div className="dropdown-menu">
-                <Link to="/services/deep-tissue-massage" className="dropdown-item">Deep Tissue Massage</Link>
-                <Link to="/services/traditional-thai-massage" className="dropdown-item">Traditional Thai Massage</Link>
-                <Link to="/services/swedish-massage" className="dropdown-item">Classic Swedish Massage</Link>
-                <Link to="/services/couples-massage" className="dropdown-item">Couples &amp; Jacuzzi Retreat</Link>
+                <Link to="/services/deep-tissue-massage/" className="dropdown-item">Deep Tissue Massage</Link>
+                <Link to="/services/traditional-thai-massage/" className="dropdown-item">Traditional Thai Massage</Link>
+                <Link to="/services/swedish-massage/" className="dropdown-item">Classic Swedish Massage</Link>
+                <Link to="/services/couples-massage/" className="dropdown-item">Couples &amp; Jacuzzi Retreat</Link>
               </div>
             </li>
             
             <li>
               <NavLink 
-                to="/pricing" 
+                to="/pricing/" 
                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               >
                 Pricing Menu
@@ -149,7 +149,7 @@ export const Header = () => {
           </li>
           <li>
             <NavLink 
-              to="/locations/yelahanka" 
+              to="/locations/yelahanka/" 
               className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               onClick={closeMobileNav}
             >
@@ -161,15 +161,15 @@ export const Header = () => {
               Our Services
             </span>
             <div className="dropdown-menu-mobile">
-              <Link to="/services/deep-tissue-massage" className="dropdown-item" onClick={closeMobileNav}>Deep Tissue Massage</Link>
-              <Link to="/services/traditional-thai-massage" className="dropdown-item" onClick={closeMobileNav}>Traditional Thai Massage</Link>
-              <Link to="/services/swedish-massage" className="dropdown-item" onClick={closeMobileNav}>Classic Swedish Massage</Link>
-              <Link to="/services/couples-massage" className="dropdown-item" onClick={closeMobileNav}>Couples &amp; Jacuzzi Retreat</Link>
+              <Link to="/services/deep-tissue-massage/" className="dropdown-item" onClick={closeMobileNav}>Deep Tissue Massage</Link>
+              <Link to="/services/traditional-thai-massage/" className="dropdown-item" onClick={closeMobileNav}>Traditional Thai Massage</Link>
+              <Link to="/services/swedish-massage/" className="dropdown-item" onClick={closeMobileNav}>Classic Swedish Massage</Link>
+              <Link to="/services/couples-massage/" className="dropdown-item" onClick={closeMobileNav}>Couples &amp; Jacuzzi Retreat</Link>
             </div>
           </li>
           <li>
             <NavLink 
-              to="/pricing" 
+              to="/pricing/" 
               className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               onClick={closeMobileNav}
             >

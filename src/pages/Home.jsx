@@ -21,25 +21,25 @@ export const Home = () => {
     {
       title: "Deep Tissue Massage",
       desc: "Targeted clinical therapy designed to alleviate chronic muscle tightness, adhesions, and deep myofascial tension.",
-      path: "/services/deep-tissue-massage",
+      path: "/services/deep-tissue-massage/",
       img: spaConfig.images.heroYoga
     },
     {
       title: "Traditional Thai Massage",
       desc: "Ancient dry bodywork combining passive yoga stretches, rhythmic joint mobilization, and SEN energy line pressure.",
-      path: "/services/traditional-thai-massage",
+      path: "/services/traditional-thai-massage/",
       img: spaConfig.images.heroCorridor
     },
     {
       title: "Classic Swedish Therapy",
       desc: "Quintessential relaxation massage utilizing long gliding strokes and organic essential oils to reduce everyday fatigue.",
-      path: "/services/swedish-massage",
+      path: "/services/swedish-massage/",
       img: spaConfig.images.heroTowels
     },
     {
       title: "VIP Couples Suite",
       desc: "Celebrate together with side-by-side full-body massages, warm herbal steam, and a shared hydrotherapy bath.",
-      path: "/services/couples-massage",
+      path: "/services/couples-massage/",
       img: spaConfig.images.heroYoga
     }
   ];
