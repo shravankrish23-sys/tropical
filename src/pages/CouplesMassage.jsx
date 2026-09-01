@@ -31,6 +31,7 @@ export const CouplesMassage = () => {
       <SeoMeta 
         title="Couples Spa & Massage in Yelahanka | Tropical Spa Bengaluru"
         description="Exclusive couples spa packages with private suites and jacuzzi hydrotherapy at Tropical Spa Yelahanka. Reserve your private session: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/couples-massage/"
       />
 
       <div className="page-container">

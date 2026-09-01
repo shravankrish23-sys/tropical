@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { LocationYelahanka } from './pages/LocationYelahanka';
@@ -16,15 +16,15 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="locations/yelahanka" element={<LocationYelahanka />} />
-          <Route path="location-yelahanka" element={<LocationYelahanka />} />
+          <Route path="location-yelahanka" element={<Navigate to="/locations/yelahanka/" replace />} />
           <Route path="services/deep-tissue-massage" element={<DeepTissue />} />
-          <Route path="deep-tissue" element={<DeepTissue />} />
+          <Route path="deep-tissue" element={<Navigate to="/services/deep-tissue-massage/" replace />} />
           <Route path="services/traditional-thai-massage" element={<ThaiMassage />} />
-          <Route path="thai-massage" element={<ThaiMassage />} />
+          <Route path="thai-massage" element={<Navigate to="/services/traditional-thai-massage/" replace />} />
           <Route path="services/swedish-massage" element={<SwedishMassage />} />
-          <Route path="swedish-massage" element={<SwedishMassage />} />
+          <Route path="swedish-massage" element={<Navigate to="/services/swedish-massage/" replace />} />
           <Route path="services/couples-massage" element={<CouplesMassage />} />
-          <Route path="couples-massage" element={<CouplesMassage />} />
+          <Route path="couples-massage" element={<Navigate to="/services/couples-massage/" replace />} />
           <Route path="pricing" element={<Pricing />} />
           {/* Fallback route back to home */}
           <Route path="*" element={<Home />} />

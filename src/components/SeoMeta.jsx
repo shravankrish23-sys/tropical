@@ -1,5 +1,29 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { businessInfo } from '../config/businessInfo';
+
+export const primaryCanonicalMap = {
+  '': 'https://tropicalspa.in/',
+  '/': 'https://tropicalspa.in/',
+  '/pricing': 'https://tropicalspa.in/pricing/',
+  '/locations/yelahanka': 'https://tropicalspa.in/locations/yelahanka/',
+  '/location-yelahanka': 'https://tropicalspa.in/locations/yelahanka/',
+  '/services/swedish-massage': 'https://tropicalspa.in/services/swedish-massage/',
+  '/swedish-massage': 'https://tropicalspa.in/services/swedish-massage/',
+  '/services/traditional-thai-massage': 'https://tropicalspa.in/services/traditional-thai-massage/',
+  '/thai-massage': 'https://tropicalspa.in/services/traditional-thai-massage/',
+  '/services/deep-tissue-massage': 'https://tropicalspa.in/services/deep-tissue-massage/',
+  '/deep-tissue': 'https://tropicalspa.in/services/deep-tissue-massage/',
+  '/services/couples-massage': 'https://tropicalspa.in/services/couples-massage/',
+  '/couples-massage': 'https://tropicalspa.in/services/couples-massage/'
+};
+
+export const resolveCanonicalUrl = (pathname, explicitCanonical) => {
+  if (explicitCanonical) return explicitCanonical;
+  if (!pathname) return 'https://tropicalspa.in/';
+  const normalized = pathname.replace(/\/+$/, '').toLowerCase();
+  return primaryCanonicalMap[normalized] || `https://tropicalspa.in${normalized ? `${normalized}/` : '/'}`;
+};
 
 export const localBusinessSchema = {
   "@context": "https://schema.org",
@@ -53,7 +77,14 @@ export const localBusinessSchema = {
   }
 };
 
-export const SeoMeta = ({ title, description, schema }) => {
+export const SeoMeta = ({ title, description, canonical, schema }) => {
+  let location;
+  try {
+    location = useLocation();
+  } catch (e) {
+    location = null;
+  }
+
   useEffect(() => {
     if (title) {
       document.title = title;
@@ -69,6 +100,24 @@ export const SeoMeta = ({ title, description, schema }) => {
       if (ogDesc) ogDesc.setAttribute('content', description);
     }
 
+    // Dynamic Canonical Link management
+    const currentPath = location?.pathname || (typeof window !== 'undefined' ? window.location.pathname : '');
+    const canonicalUrl = resolveCanonicalUrl(currentPath, canonical);
+
+    let linkCanonical = document.querySelector('link[rel="canonical"]');
+    if (!linkCanonical) {
+      linkCanonical = document.createElement('link');
+      linkCanonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(linkCanonical);
+    }
+    linkCanonical.setAttribute('href', canonicalUrl);
+
+    // Update og:url
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute('content', canonicalUrl);
+    }
+
     // Inject / Update LocalBusiness JSON-LD schema
     const activeSchema = schema || localBusinessSchema;
     let schemaScript = document.querySelector('script[data-schema="local-business"]');
@@ -79,12 +128,9 @@ export const SeoMeta = ({ title, description, schema }) => {
       document.head.appendChild(schemaScript);
     }
     schemaScript.textContent = JSON.stringify(activeSchema, null, 2);
-
-    return () => {
-      // Cleanup is optional, keeping head tags valid across route changes
-    };
-  }, [title, description, schema]);
+  }, [title, description, canonical, schema, location]);
 
   return null;
 };
+
 

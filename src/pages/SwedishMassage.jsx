@@ -31,6 +31,7 @@ export const SwedishMassage = () => {
       <SeoMeta 
         title="Swedish Massage in Yelahanka Bengaluru | Tropical Spa"
         description="Unwind with a classic luxury Swedish Massage at Tropical Spa Yelahanka. Relax muscles, improve circulation, and melt stress. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/swedish-massage/"
       />
 
       <div className="page-container">

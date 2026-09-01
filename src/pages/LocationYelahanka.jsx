@@ -11,6 +11,7 @@ export const LocationYelahanka = () => {
       <SeoMeta 
         title="Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd"
         description="Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/locations/yelahanka/"
       />
 
       <div className="page-container">

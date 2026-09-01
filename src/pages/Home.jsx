@@ -116,6 +116,7 @@ export const Home = () => {
       <SeoMeta 
         title="Tropical Spa | Luxury Spa & Massage Centre in Yelahanka, Bengaluru"
         description="Visit Tropical Spa on Doddaballapura Main Rd, Yelahanka. Certified therapists, premium private rooms, complimentary beverages & ₹1000 special vouchers. Call +91 95503 66963."
+        canonical="https://tropicalspa.in/"
       />
 
       {/* Hero section */}

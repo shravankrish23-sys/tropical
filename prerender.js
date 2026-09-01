@@ -7,20 +7,27 @@ const toAbsolute = (p) => path.resolve(__dirname, p);
 
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 
-const routes = [
+// 7 Primary Canonical URLs
+const primaryRoutes = [
   '/',
-  '/swedish-massage',
-  '/thai-massage',
-  '/deep-tissue',
-  '/couples-massage',
   '/pricing',
-  '/location-yelahanka',
   '/locations/yelahanka',
-  '/services/deep-tissue-massage',
-  '/services/traditional-thai-massage',
   '/services/swedish-massage',
+  '/services/traditional-thai-massage',
+  '/services/deep-tissue-massage',
   '/services/couples-massage'
 ];
+
+// Alias routes mapped to their master canonical URLs
+const aliasMap = {
+  '/location-yelahanka': '/locations/yelahanka',
+  '/swedish-massage': '/services/swedish-massage',
+  '/thai-massage': '/services/traditional-thai-massage',
+  '/deep-tissue': '/services/deep-tissue-massage',
+  '/couples-massage': '/services/couples-massage'
+};
+
+const allRoutes = [...primaryRoutes, ...Object.keys(aliasMap)];
 
 const metadata = {
   '/': {
@@ -29,11 +36,17 @@ const metadata = {
     heading: 'Experience the Tropical Spa Sanctuary in Yelahanka',
     subheading: 'Premium holistic wellness, certified body therapies, and private relaxation suites in Doddaballapura Main Rd, Bengaluru.'
   },
-  '/swedish-massage': {
-    title: 'Swedish Massage in Yelahanka Bengaluru | Tropical Spa',
-    description: 'Unwind with a classic luxury Swedish Massage at Tropical Spa Yelahanka. Relax muscles, improve circulation, and melt stress. Book now: +91 95503 66963.',
-    heading: 'Classic Swedish Massage Therapy in Yelahanka',
-    subheading: 'Gentle, flowing strokes using warm therapeutic herbal oils designed to eliminate tension and promote complete relaxation.'
+  '/pricing': {
+    title: 'Spa Tariff & Massage Packages | Tropical Spa Yelahanka',
+    description: 'Transparent pricing for massage and spa treatments at Tropical Spa Yelahanka. Claim your ₹1,000 gift voucher. Book today at +91 95503 66963.',
+    heading: 'Tropical Spa Menu & Transparent Tariff in Yelahanka',
+    subheading: 'Affordable luxury packages starting with special ₹1,000 gift vouchers and a 100% money-back guarantee.'
+  },
+  '/locations/yelahanka': {
+    title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
+    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.',
+    heading: 'Tropical Spa Yelahanka Flagship Sanctuary',
+    subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
   },
   '/services/swedish-massage': {
     title: 'Swedish Massage in Yelahanka Bengaluru | Tropical Spa',
@@ -41,23 +54,11 @@ const metadata = {
     heading: 'Classic Swedish Massage Therapy in Yelahanka',
     subheading: 'Gentle, flowing strokes using warm therapeutic herbal oils designed to eliminate tension and promote complete relaxation.'
   },
-  '/thai-massage': {
-    title: 'Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa',
-    description: 'Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963.',
-    heading: 'Authentic Traditional Thai Massage in Yelahanka',
-    subheading: 'Ancient passive stretching and acupressure therapy without oils, restoring vitality and joint flexibility.'
-  },
   '/services/traditional-thai-massage': {
     title: 'Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa',
     description: 'Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963.',
     heading: 'Authentic Traditional Thai Massage in Yelahanka',
     subheading: 'Ancient passive stretching and acupressure therapy without oils, restoring vitality and joint flexibility.'
-  },
-  '/deep-tissue': {
-    title: 'Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru',
-    description: 'Relieve chronic pain, stiff neck, and back tension with Deep Tissue Massage at Tropical Spa Yelahanka. Certified therapists. Book session: +91 95503 66963.',
-    heading: 'Deep Tissue Muscle Recovery Massage in Yelahanka',
-    subheading: 'Focused deep pressure targeting chronic back pain, muscle stiffness, and athletic fatigue.'
   },
   '/services/deep-tissue-massage': {
     title: 'Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru',
@@ -65,37 +66,18 @@ const metadata = {
     heading: 'Deep Tissue Muscle Recovery Massage in Yelahanka',
     subheading: 'Focused deep pressure targeting chronic back pain, muscle stiffness, and athletic fatigue.'
   },
-  '/couples-massage': {
-    title: 'Couples Spa & Massage in Yelahanka | Tropical Spa Bengaluru',
-    description: 'Exclusive couples spa packages with private suites and jacuzzi hydrotherapy at Tropical Spa Yelahanka. Reserve your private session: +91 95503 66963.',
-    heading: 'Luxury Couples Spa & Jacuzzi Retreat in Yelahanka',
-    subheading: 'Side-by-side synchronized body treatments in private romantic couple suites with complimentary beverages.'
-  },
   '/services/couples-massage': {
     title: 'Couples Spa & Massage in Yelahanka | Tropical Spa Bengaluru',
     description: 'Exclusive couples spa packages with private suites and jacuzzi hydrotherapy at Tropical Spa Yelahanka. Reserve your private session: +91 95503 66963.',
     heading: 'Luxury Couples Spa & Jacuzzi Retreat in Yelahanka',
     subheading: 'Side-by-side synchronized body treatments in private romantic couple suites with complimentary beverages.'
-  },
-  '/pricing': {
-    title: 'Spa Tariff & Massage Packages | Tropical Spa Yelahanka',
-    description: 'Transparent pricing for massage and spa treatments at Tropical Spa Yelahanka. Claim your ₹1,000 gift voucher. Book today at +91 95503 66963.',
-    heading: 'Tropical Spa Menu & Transparent Tariff in Yelahanka',
-    subheading: 'Affordable luxury packages starting with special ₹1,000 gift vouchers and a 100% money-back guarantee.'
-  },
-  '/location-yelahanka': {
-    title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
-    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.',
-    heading: 'Tropical Spa Yelahanka Flagship Sanctuary',
-    subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
-  },
-  '/locations/yelahanka': {
-    title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
-    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.',
-    heading: 'Tropical Spa Yelahanka Flagship Sanctuary',
-    subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
   }
 };
+
+// Aliases inherit master metadata
+for (const [alias, master] of Object.entries(aliasMap)) {
+  metadata[alias] = metadata[master];
+}
 
 const schemaJson = {
   "@context": "https://schema.org",
@@ -191,7 +173,7 @@ const schemaJson = {
 };
 
 (async () => {
-  for (const url of routes) {
+  for (const url of allRoutes) {
     const routePath = url === '/' ? '' : url;
     const outDir = toAbsolute(`dist${routePath}`);
     
@@ -202,7 +184,10 @@ const schemaJson = {
     let html = template;
     const meta = metadata[url] || metadata['/'];
     
-    const canonicalUrl = `https://tropicalspa.in${url === '/' ? '/' : `${url}/`}`;
+    // Master canonical URL determination: aliases canonicalize to master long-form paths
+    const masterTarget = aliasMap[url] || url;
+    const canonicalUrl = `https://tropicalspa.in${masterTarget === '/' ? '/' : `${masterTarget}/`}`;
+    
     const canonicalLink = `<link rel="canonical" href="${canonicalUrl}" />`;
     const schemaScript = `<script type="application/ld+json">${JSON.stringify(schemaJson)}</script>`;
     
@@ -238,18 +223,18 @@ const schemaJson = {
       }
     }
 
-    // Inject crawler-friendly semantic HTML inside #root so Googlebot indexes full content immediately
+    // Crawler-friendly semantic HTML inside #root
     const fallbackContent = `
       <header style="padding: 20px; text-align: center; background: #0c120c; color: #ffffff;">
         <h2>Tropical Spa - Luxury Massage & Wellness Sanctuary</h2>
         <nav style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 10px;">
           <a href="/" style="color: #c5a059;">Home</a>
-          <a href="/location-yelahanka" style="color: #c5a059;">Yelahanka Centre</a>
-          <a href="/swedish-massage" style="color: #c5a059;">Swedish Massage</a>
-          <a href="/thai-massage" style="color: #c5a059;">Thai Massage</a>
-          <a href="/deep-tissue" style="color: #c5a059;">Deep Tissue</a>
-          <a href="/couples-massage" style="color: #c5a059;">Couples Retreat</a>
-          <a href="/pricing" style="color: #c5a059;">Pricing & Tariff</a>
+          <a href="/locations/yelahanka/" style="color: #c5a059;">Yelahanka Centre</a>
+          <a href="/services/swedish-massage/" style="color: #c5a059;">Swedish Massage</a>
+          <a href="/services/traditional-thai-massage/" style="color: #c5a059;">Thai Massage</a>
+          <a href="/services/deep-tissue-massage/" style="color: #c5a059;">Deep Tissue</a>
+          <a href="/services/couples-massage/" style="color: #c5a059;">Couples Retreat</a>
+          <a href="/pricing/" style="color: #c5a059;">Pricing & Tariff</a>
         </nav>
       </header>
       <main style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; color: #333333;">
@@ -278,5 +263,56 @@ const schemaJson = {
     
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
   }
-  console.log(`Successfully pre-rendered ${routes.length} static routes.`);
+
+  // Ensure sitemap.xml strictly contains only the 7 primary canonical URLs
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tropicalspa.in/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://tropicalspa.in/pricing/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tropicalspa.in/locations/yelahanka/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://tropicalspa.in/services/swedish-massage/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tropicalspa.in/services/traditional-thai-massage/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tropicalspa.in/services/deep-tissue-massage/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tropicalspa.in/services/couples-massage/</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+`;
+  fs.writeFileSync(toAbsolute('dist/sitemap.xml'), sitemapXml);
+  fs.writeFileSync(toAbsolute('public/sitemap.xml'), sitemapXml);
+
+  console.log(`Successfully pre-rendered routes and generated sitemap with strictly 7 primary canonical URLs.`);
 })();

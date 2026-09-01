@@ -32,6 +32,7 @@ export const DeepTissue = () => {
       <SeoMeta 
         title="Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru"
         description="Relieve chronic pain, stiff neck, and back tension with Deep Tissue Massage at Tropical Spa Yelahanka. Certified therapists. Book session: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/deep-tissue-massage/"
       />
 
       <div className="page-container">

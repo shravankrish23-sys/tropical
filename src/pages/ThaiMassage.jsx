@@ -32,6 +32,7 @@ export const ThaiMassage = () => {
       <SeoMeta 
         title="Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa"
         description="Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963."
+        canonical="https://tropicalspa.in/services/traditional-thai-massage/"
       />
 
       <div className="page-container">

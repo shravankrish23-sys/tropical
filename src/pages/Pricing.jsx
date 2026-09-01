@@ -73,6 +73,7 @@ export const Pricing = () => {
       <SeoMeta 
         title="Spa Tariff &amp; Massage Packages | Tropical Spa Yelahanka"
         description="Transparent pricing for massage and spa treatments at Tropical Spa Yelahanka. Claim your ₹1,000 gift voucher. Book today at +91 95503 66963."
+        canonical="https://tropicalspa.in/pricing/"
       />
 
       <div className="page-container">
