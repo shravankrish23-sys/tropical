@@ -9,42 +9,91 @@ const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 
 const routes = [
   '/',
+  '/swedish-massage',
+  '/thai-massage',
+  '/deep-tissue',
+  '/couples-massage',
+  '/pricing',
+  '/location-yelahanka',
   '/locations/yelahanka',
   '/services/deep-tissue-massage',
   '/services/traditional-thai-massage',
   '/services/swedish-massage',
-  '/services/couples-massage',
-  '/pricing'
+  '/services/couples-massage'
 ];
 
 const metadata = {
   '/': {
     title: 'Tropical Spa | Luxury Spa & Massage Centre in Yelahanka, Bengaluru',
-    description: 'Visit Tropical Spa on Doddaballapura Main Rd, Yelahanka. Certified therapists, premium private rooms, complimentary beverages & ₹1000 special vouchers. Call +91 95503 66963.'
+    description: 'Visit Tropical Spa on Doddaballapura Main Rd, Yelahanka. Certified therapists, premium private rooms, complimentary beverages & ₹1000 special vouchers. Call +91 95503 66963.',
+    heading: 'Experience the Tropical Spa Sanctuary in Yelahanka',
+    subheading: 'Premium holistic wellness, certified body therapies, and private relaxation suites in Doddaballapura Main Rd, Bengaluru.'
   },
-  '/locations/yelahanka': {
-    title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
-    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.'
-  },
-  '/services/deep-tissue-massage': {
-    title: 'Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru',
-    description: 'Relieve chronic pain, stiff neck, and back tension with Deep Tissue Massage at Tropical Spa Yelahanka. Certified therapists. Book session: +91 95503 66963.'
-  },
-  '/services/traditional-thai-massage': {
-    title: 'Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa',
-    description: 'Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963.'
+  '/swedish-massage': {
+    title: 'Swedish Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Unwind with a classic luxury Swedish Massage at Tropical Spa Yelahanka. Relax muscles, improve circulation, and melt stress. Book now: +91 95503 66963.',
+    heading: 'Classic Swedish Massage Therapy in Yelahanka',
+    subheading: 'Gentle, flowing strokes using warm therapeutic herbal oils designed to eliminate tension and promote complete relaxation.'
   },
   '/services/swedish-massage': {
     title: 'Swedish Massage in Yelahanka Bengaluru | Tropical Spa',
-    description: 'Unwind with a classic luxury Swedish Massage at Tropical Spa Yelahanka. Relax muscles, improve circulation, and melt stress. Book now: +91 95503 66963.'
+    description: 'Unwind with a classic luxury Swedish Massage at Tropical Spa Yelahanka. Relax muscles, improve circulation, and melt stress. Book now: +91 95503 66963.',
+    heading: 'Classic Swedish Massage Therapy in Yelahanka',
+    subheading: 'Gentle, flowing strokes using warm therapeutic herbal oils designed to eliminate tension and promote complete relaxation.'
+  },
+  '/thai-massage': {
+    title: 'Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963.',
+    heading: 'Authentic Traditional Thai Massage in Yelahanka',
+    subheading: 'Ancient passive stretching and acupressure therapy without oils, restoring vitality and joint flexibility.'
+  },
+  '/services/traditional-thai-massage': {
+    title: 'Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963.',
+    heading: 'Authentic Traditional Thai Massage in Yelahanka',
+    subheading: 'Ancient passive stretching and acupressure therapy without oils, restoring vitality and joint flexibility.'
+  },
+  '/deep-tissue': {
+    title: 'Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru',
+    description: 'Relieve chronic pain, stiff neck, and back tension with Deep Tissue Massage at Tropical Spa Yelahanka. Certified therapists. Book session: +91 95503 66963.',
+    heading: 'Deep Tissue Muscle Recovery Massage in Yelahanka',
+    subheading: 'Focused deep pressure targeting chronic back pain, muscle stiffness, and athletic fatigue.'
+  },
+  '/services/deep-tissue-massage': {
+    title: 'Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru',
+    description: 'Relieve chronic pain, stiff neck, and back tension with Deep Tissue Massage at Tropical Spa Yelahanka. Certified therapists. Book session: +91 95503 66963.',
+    heading: 'Deep Tissue Muscle Recovery Massage in Yelahanka',
+    subheading: 'Focused deep pressure targeting chronic back pain, muscle stiffness, and athletic fatigue.'
+  },
+  '/couples-massage': {
+    title: 'Couples Spa & Massage in Yelahanka | Tropical Spa Bengaluru',
+    description: 'Exclusive couples spa packages with private suites and jacuzzi hydrotherapy at Tropical Spa Yelahanka. Reserve your private session: +91 95503 66963.',
+    heading: 'Luxury Couples Spa & Jacuzzi Retreat in Yelahanka',
+    subheading: 'Side-by-side synchronized body treatments in private romantic couple suites with complimentary beverages.'
   },
   '/services/couples-massage': {
     title: 'Couples Spa & Massage in Yelahanka | Tropical Spa Bengaluru',
-    description: 'Exclusive couples spa packages with private suites and jacuzzi hydrotherapy at Tropical Spa Yelahanka. Reserve your private session: +91 95503 66963.'
+    description: 'Exclusive couples spa packages with private suites and jacuzzi hydrotherapy at Tropical Spa Yelahanka. Reserve your private session: +91 95503 66963.',
+    heading: 'Luxury Couples Spa & Jacuzzi Retreat in Yelahanka',
+    subheading: 'Side-by-side synchronized body treatments in private romantic couple suites with complimentary beverages.'
   },
   '/pricing': {
     title: 'Spa Tariff & Massage Packages | Tropical Spa Yelahanka',
-    description: 'Transparent pricing for massage and spa treatments at Tropical Spa Yelahanka. Claim your ₹1,000 gift voucher. Book today at +91 95503 66963.'
+    description: 'Transparent pricing for massage and spa treatments at Tropical Spa Yelahanka. Claim your ₹1,000 gift voucher. Book today at +91 95503 66963.',
+    heading: 'Tropical Spa Menu & Transparent Tariff in Yelahanka',
+    subheading: 'Affordable luxury packages starting with special ₹1,000 gift vouchers and a 100% money-back guarantee.'
+  },
+  '/location-yelahanka': {
+    title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
+    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.',
+    heading: 'Tropical Spa Yelahanka Flagship Sanctuary',
+    subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
+  },
+  '/locations/yelahanka': {
+    title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
+    description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.',
+    heading: 'Tropical Spa Yelahanka Flagship Sanctuary',
+    subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
   }
 };
 
@@ -52,10 +101,14 @@ const schemaJson = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "DaySpa",
+      "@type": ["DaySpa", "HealthAndBeautyBusiness", "LocalBusiness"],
       "@id": "https://tropicalspa.in/#organization",
       "name": "Tropical Spa",
+      "alternateName": "Tropical Spa Yelahanka",
       "url": "https://tropicalspa.in",
+      "logo": "https://tropicalspa.in/logo.png",
+      "image": "https://tropicalspa.in/hero-yoga.png",
+      "description": "Tropical Spa in Yelahanka, Bengaluru provides luxury wellness therapies, certified Deep Tissue, Traditional Thai, Swedish, and Couples massages with complimentary beverages and ₹1,000 vouchers.",
       "telephone": "+919550366963",
       "email": "tropicalventures23@gmail.com",
       "priceRange": "₹₹",
@@ -74,6 +127,7 @@ const schemaJson = {
         "latitude": 13.121476,
         "longitude": 77.576569
       },
+      "hasMap": "https://maps.google.com/maps?q=13.121476,77.576569",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -81,6 +135,12 @@ const schemaJson = {
           "opens": "10:00",
           "closes": "21:00"
         }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/tropicalspa.yelahanka/",
+        "https://www.instagram.com/tropicalspa.yelahanka/",
+        "https://www.trustpilot.com/review/tropicalspa.in",
+        "https://share.google/S8qcA1i8wY72WiVed"
       ],
       "aggregateRating": {
         "@type": "AggregateRating",
@@ -95,7 +155,7 @@ const schemaJson = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Where is Tropical Spa located?",
+          "name": "Where is Tropical Spa located in Bengaluru?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Tropical Spa is located at 1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064."
@@ -103,10 +163,18 @@ const schemaJson = {
         },
         {
           "@type": "Question",
+          "name": "What massage therapies are offered at Tropical Spa Yelahanka?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer Deep Tissue Massage, Authentic Thai Massage, Classic Swedish Massage, Couples Massage with private jacuzzi, and specialized head/foot reflexology treatments."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How do I claim the ₹1,000 gift voucher?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Call or WhatsApp us at +91 95503 66963 or visit us in Yelahanka to claim your ₹1,000 gift voucher on select therapies."
+            "text": "Call or WhatsApp us at +91 95503 66963 or visit our Yelahanka centre to claim your ₹1,000 gift voucher on select therapies."
           }
         },
         {
@@ -114,7 +182,7 @@ const schemaJson = {
           "name": "What are your operating hours?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We are open 7 days a week from 10:00 AM to 9:00 PM."
+            "text": "Tropical Spa is open 7 days a week from 10:00 AM to 9:00 PM."
           }
         }
       ]
@@ -132,9 +200,10 @@ const schemaJson = {
     }
     
     let html = template;
-    const meta = metadata[url];
+    const meta = metadata[url] || metadata['/'];
     
-    const canonicalLink = `<link rel="canonical" href="https://tropicalspa.in${url === '/' ? '' : url}/" />`;
+    const canonicalUrl = `https://tropicalspa.in${url === '/' ? '/' : `${url}/`}`;
+    const canonicalLink = `<link rel="canonical" href="${canonicalUrl}" />`;
     const schemaScript = `<script type="application/ld+json">${JSON.stringify(schemaJson)}</script>`;
     
     html = html.replace('<head>', `<head>\n  ${canonicalLink}\n  ${schemaScript}`);
@@ -163,13 +232,51 @@ const schemaJson = {
       }
 
       if (html.includes('property="og:url"')) {
-        html = html.replace(/<meta property="og:url" content=".*?"\s*\/?>/, `<meta property="og:url" content="https://tropicalspa.in${url === '/' ? '' : url}/" />`);
+        html = html.replace(/<meta property="og:url" content=".*?"\s*\/?>/, `<meta property="og:url" content="${canonicalUrl}" />`);
       } else {
-        html = html.replace('</title>', `</title>\n  <meta property="og:url" content="https://tropicalspa.in${url === '/' ? '' : url}/" />`);
+        html = html.replace('</title>', `</title>\n  <meta property="og:url" content="${canonicalUrl}" />`);
       }
     }
+
+    // Inject crawler-friendly semantic HTML inside #root so Googlebot indexes full content immediately
+    const fallbackContent = `
+      <header style="padding: 20px; text-align: center; background: #0c120c; color: #ffffff;">
+        <h2>Tropical Spa - Luxury Massage & Wellness Sanctuary</h2>
+        <nav style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 10px;">
+          <a href="/" style="color: #c5a059;">Home</a>
+          <a href="/location-yelahanka" style="color: #c5a059;">Yelahanka Centre</a>
+          <a href="/swedish-massage" style="color: #c5a059;">Swedish Massage</a>
+          <a href="/thai-massage" style="color: #c5a059;">Thai Massage</a>
+          <a href="/deep-tissue" style="color: #c5a059;">Deep Tissue</a>
+          <a href="/couples-massage" style="color: #c5a059;">Couples Retreat</a>
+          <a href="/pricing" style="color: #c5a059;">Pricing & Tariff</a>
+        </nav>
+      </header>
+      <main style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; color: #333333;">
+        <h1 style="font-size: 2.2rem; color: #141c15; margin-bottom: 12px;">${meta.heading}</h1>
+        <p style="font-size: 1.15rem; line-height: 1.6; color: #4a554a; margin-bottom: 25px;">${meta.subheading}</p>
+        <div style="background: #f4f6f2; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+          <h3 style="margin-top: 0; color: #2d4030;">Special Voucher & Booking</h3>
+          <p>Claim your exclusive <strong>₹1,000 Gift Voucher</strong> on premium spa therapies with certified therapists and 100% money-back guarantee.</p>
+          <p><strong>Call / WhatsApp:</strong> <a href="tel:+919550366963" style="color: #2d4030; font-weight: bold;">+91 95503 66963</a></p>
+        </div>
+      </main>
+      <footer style="background: #141c15; color: #e0e0e0; padding: 30px 20px; text-align: center;">
+        <p><strong>Tropical Spa Yelahanka</strong></p>
+        <p>1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064</p>
+        <p>Hours: Open Daily 10:00 AM – 9:00 PM</p>
+        <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
+          <a href="https://www.facebook.com/tropicalspa.yelahanka/" style="color: #c5a059;">Facebook</a>
+          <a href="https://www.instagram.com/tropicalspa.yelahanka/" style="color: #c5a059;">Instagram</a>
+          <a href="https://www.trustpilot.com/review/tropicalspa.in" style="color: #c5a059;">Trustpilot Reviews</a>
+          <a href="https://share.google/S8qcA1i8wY72WiVed" style="color: #c5a059;">Google Business Profile</a>
+        </div>
+      </footer>
+    `;
+
+    html = html.replace('<div id="root"></div>', `<div id="root">${fallbackContent}</div>`);
     
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
   }
-  console.log('Successfully pre-rendered all static routes.');
+  console.log(`Successfully pre-rendered ${routes.length} static routes.`);
 })();

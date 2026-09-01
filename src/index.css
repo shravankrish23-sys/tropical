@@ -922,7 +922,84 @@ a:focus-visible, button:focus-visible {
   color: var(--clr-btn-bg);
 }
 
+.footer-social-wrapper {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-social-title {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--clr-olive-light);
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.footer-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.footer-social-icon-btn svg {
+  width: 19px;
+  height: 19px;
+  transition: transform 0.2s ease;
+}
+
+.footer-social-icon-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.footer-social-icon-btn:hover svg {
+  transform: scale(1.08);
+}
+
+.social-facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  color: #ffffff;
+}
+
+.social-instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  border-color: #d6249f;
+  color: #ffffff;
+}
+
+.social-trustpilot:hover {
+  background: #00b67a;
+  border-color: #00b67a;
+  color: #ffffff;
+}
+
+.social-google:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #ea4335;
+}
+
 .footer-col-title {
+
   font-size: 1.25rem;
   color: var(--clr-white);
   margin-bottom: 1.5rem;

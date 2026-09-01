@@ -20,6 +20,12 @@ export const businessInfo = {
   bookingMessage: "Hello Tropical Spa! I would like to book a therapy session.",
   hours: "Open Daily: 10:00 AM – 9:00 PM",
   websiteUrl: "https://tropicalspa.in/",
+  socialLinks: {
+    facebook: "https://www.facebook.com/tropicalspa.yelahanka/",
+    instagram: "https://www.instagram.com/tropicalspa.yelahanka/",
+    trustpilot: "https://www.trustpilot.com/review/tropicalspa.in",
+    googleProfile: "https://share.google/S8qcA1i8wY72WiVed"
+  },
   valueHighlights: [
     "₹1,000 Special Gift Voucher",
     "100% Money-Back Guarantee",
@@ -28,3 +34,4 @@ export const businessInfo = {
     "Complimentary Beverages & Hot/Cold Towels"
   ]
 };
+

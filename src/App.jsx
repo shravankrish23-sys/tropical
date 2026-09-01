@@ -16,10 +16,15 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="locations/yelahanka" element={<LocationYelahanka />} />
+          <Route path="location-yelahanka" element={<LocationYelahanka />} />
           <Route path="services/deep-tissue-massage" element={<DeepTissue />} />
+          <Route path="deep-tissue" element={<DeepTissue />} />
           <Route path="services/traditional-thai-massage" element={<ThaiMassage />} />
+          <Route path="thai-massage" element={<ThaiMassage />} />
           <Route path="services/swedish-massage" element={<SwedishMassage />} />
+          <Route path="swedish-massage" element={<SwedishMassage />} />
           <Route path="services/couples-massage" element={<CouplesMassage />} />
+          <Route path="couples-massage" element={<CouplesMassage />} />
           <Route path="pricing" element={<Pricing />} />
           {/* Fallback route back to home */}
           <Route path="*" element={<Home />} />

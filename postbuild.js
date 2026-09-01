@@ -16,18 +16,33 @@ if (!fs.existsSync(indexPath)) {
 // 1. Construct Schema.org JSON-LD object
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
+  "@type": ["DaySpa", "HealthAndBeautyBusiness", "LocalBusiness"],
   "name": businessInfo.name,
   "url": businessInfo.websiteUrl,
   "telephone": businessInfo.phoneRaw,
   "email": businessInfo.email,
+  "priceRange": "₹₹",
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, UPI, Credit Card, Debit Card",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart",
     "addressLocality": "Yelahanka, Bengaluru",
+    "addressRegion": "Karnataka",
     "postalCode": "560064",
     "addressCountry": "IN"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 13.121476,
+    "longitude": 77.576569
+  },
+  "sameAs": [
+    businessInfo.socialLinks.facebook,
+    businessInfo.socialLinks.instagram,
+    businessInfo.socialLinks.trustpilot,
+    businessInfo.socialLinks.googleProfile
+  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": businessInfo.phoneRaw,
