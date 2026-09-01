@@ -80,7 +80,7 @@ const headTags = `
   <meta property="og:url" content="${businessInfo.websiteUrl}" />
 
   <!-- Schema.org JSON-LD Structured Data -->
-  <script type="application/ld+json">
+  <script type="application/ld+json" id="local-business-schema" data-schema="local-business">
 ${JSON.stringify(jsonLd, null, 2)}
   </script>
 `;

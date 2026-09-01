@@ -123,14 +123,7 @@ const schemaJson = {
         "https://www.instagram.com/tropicalspa.yelahanka/",
         "https://www.trustpilot.com/review/tropicalspa.in",
         "https://share.google/S8qcA1i8wY72WiVed"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "bestRating": "5",
-        "worstRating": "1",
-        "reviewCount": "180"
-      }
+      ]
     },
     {
       "@type": "FAQPage",
@@ -189,7 +182,7 @@ const schemaJson = {
     const canonicalUrl = `https://tropicalspa.in${masterTarget === '/' ? '/' : `${masterTarget}/`}`;
     
     const canonicalLink = `<link rel="canonical" href="${canonicalUrl}" />`;
-    const schemaScript = `<script type="application/ld+json">${JSON.stringify(schemaJson)}</script>`;
+    const schemaScript = `<script type="application/ld+json" id="local-business-schema" data-schema="local-business">${JSON.stringify(schemaJson)}</script>`;
     
     html = html.replace('<head>', `<head>\n  ${canonicalLink}\n  ${schemaScript}`);
     

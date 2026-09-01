@@ -67,14 +67,7 @@ export const localBusinessSchema = {
     businessInfo.socialLinks.instagram,
     businessInfo.socialLinks.trustpilot,
     businessInfo.socialLinks.googleProfile
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "bestRating": "5",
-    "worstRating": "1",
-    "reviewCount": "180"
-  }
+  ]
 };
 
 export const SeoMeta = ({ title, description, canonical, schema }) => {
@@ -118,19 +111,34 @@ export const SeoMeta = ({ title, description, canonical, schema }) => {
       ogUrl.setAttribute('content', canonicalUrl);
     }
 
-    // Inject / Update LocalBusiness JSON-LD schema
+    // Inject / Update LocalBusiness JSON-LD schema (Strictly exactly one script tag)
     const activeSchema = schema || localBusinessSchema;
-    let schemaScript = document.querySelector('script[data-schema="local-business"]');
+    const allSchemaScripts = document.querySelectorAll('script[type="application/ld+json"]');
+    
+    let schemaScript = document.getElementById('local-business-schema') || (allSchemaScripts.length > 0 ? allSchemaScripts[0] : null);
+
+    // Remove any duplicate schema scripts if present
+    if (allSchemaScripts.length > 1) {
+      for (let i = 1; i < allSchemaScripts.length; i++) {
+        allSchemaScripts[i].remove();
+      }
+    }
+
     if (!schemaScript) {
       schemaScript = document.createElement('script');
       schemaScript.type = 'application/ld+json';
+      schemaScript.id = 'local-business-schema';
       schemaScript.setAttribute('data-schema', 'local-business');
       document.head.appendChild(schemaScript);
+    } else {
+      schemaScript.id = 'local-business-schema';
+      schemaScript.setAttribute('data-schema', 'local-business');
     }
     schemaScript.textContent = JSON.stringify(activeSchema, null, 2);
   }, [title, description, canonical, schema, location]);
 
   return null;
 };
+
 
 
