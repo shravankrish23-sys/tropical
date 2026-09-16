@@ -21,13 +21,19 @@ export const Header = () => {
         
         {/* Brand Logo Link */}
         <Link to="/" className="brand-link" aria-label={`${business.name} Home`} onClick={closeMobileNav}>
-          <img
-            src={images.logo}
-            alt={`${business.name} Logo`}
-            className="brand-logo-img"
-            width="165"
-            height="54"
-          />
+          <picture>
+            <source type="image/webp" srcSet={`${images.logoWebp} 1x, /logo.webp 2x`} />
+            <source type="image/png" srcSet={`${images.logo} 1x, /logo.png 2x`} />
+            <img
+              src={images.logo}
+              alt={`${business.name} Logo`}
+              className="brand-logo-img"
+              width="165"
+              height="54"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
         </Link>
 
         {/* Desktop Navigation Links */}

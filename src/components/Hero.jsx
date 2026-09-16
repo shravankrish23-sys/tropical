@@ -51,33 +51,49 @@ export const Hero = () => {
         {/* Right Column: Visual Composition */}
         <div className="hero-visuals" aria-label="Tropical Spa gallery visuals">
           <div className="visual-tall">
-            <img
-              src={images.heroYoga}
-              alt="Woman in a state of relaxation enjoying a therapy session at Tropical Spa"
-              loading="eager"
-              width="450"
-              height="580"
-            />
+            <picture>
+              <source type="image/webp" srcSet={`${images.heroYogaWebp} 450w, /hero-yoga.webp 800w`} sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 450px" />
+              <source type="image/png" srcSet={`${images.heroYoga} 450w, /hero-yoga.png 800w`} sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 450px" />
+              <img
+                src={images.heroYoga}
+                alt="Woman in a state of relaxation enjoying a therapy session at Tropical Spa"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                width="450"
+                height="580"
+              />
+            </picture>
           </div>
           
           <div className="visual-stack">
             <div className="visual-stacked-img">
-              <img
-                src={images.heroCorridor}
-                alt="Luxury tranquil arched corridor therapy walkway at Tropical Spa"
-                loading="eager"
-                width="380"
-                height="280"
-              />
+              <picture>
+                <source type="image/webp" srcSet={`${images.heroCorridorWebp} 380w, /hero-corridor.webp 600w`} sizes="(max-width: 640px) 50vw, 380px" />
+                <source type="image/png" srcSet={`${images.heroCorridor} 380w, /hero-corridor.png 600w`} sizes="(max-width: 640px) 50vw, 380px" />
+                <img
+                  src={images.heroCorridor}
+                  alt="Luxury tranquil arched corridor therapy walkway at Tropical Spa"
+                  loading="eager"
+                  decoding="async"
+                  width="380"
+                  height="280"
+                />
+              </picture>
             </div>
             <div className="visual-stacked-img">
-              <img
-                src={images.heroTowels}
-                alt="Premium rolled aromatic towels and natural frangipani flower"
-                loading="eager"
-                width="380"
-                height="280"
-              />
+              <picture>
+                <source type="image/webp" srcSet={`${images.heroTowelsWebp} 380w, /hero-towels.webp 600w`} sizes="(max-width: 640px) 50vw, 380px" />
+                <source type="image/png" srcSet={`${images.heroTowels} 380w, /hero-towels.png 600w`} sizes="(max-width: 640px) 50vw, 380px" />
+                <img
+                  src={images.heroTowels}
+                  alt="Premium rolled aromatic towels and natural frangipani flower"
+                  loading="eager"
+                  decoding="async"
+                  width="380"
+                  height="280"
+                />
+              </picture>
             </div>
           </div>
         </div>

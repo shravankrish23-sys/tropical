@@ -1,7 +1,11 @@
 import logoImg from '../assets/logo.png';
+import logoWebp from '../assets/logo.webp';
 import heroYogaImg from '../assets/hero-yoga.png';
+import heroYogaWebp from '../assets/hero-yoga.webp';
 import heroCorridorImg from '../assets/hero-corridor.png';
+import heroCorridorWebp from '../assets/hero-corridor.webp';
 import heroTowelsImg from '../assets/hero-towels.png';
+import heroTowelsWebp from '../assets/hero-towels.webp';
 import { businessInfo } from './businessInfo.js';
 
 export const spaConfig = {
@@ -18,9 +22,13 @@ export const spaConfig = {
   ],
   images: {
     logo: logoImg,
+    logoWebp: logoWebp,
     heroYoga: heroYogaImg,
+    heroYogaWebp: heroYogaWebp,
     heroCorridor: heroCorridorImg,
-    heroTowels: heroTowelsImg
+    heroCorridorWebp: heroCorridorWebp,
+    heroTowels: heroTowelsImg,
+    heroTowelsWebp: heroTowelsWebp
   },
   links: {
     whatsappUrl: (msg) => `https://wa.me/${businessInfo.whatsappNumber}?text=${encodeURIComponent(msg || "Hello Tropical Spa! I would like to know more.")}`,
@@ -28,4 +36,5 @@ export const spaConfig = {
     emailUrl: `mailto:${businessInfo.email}`
   }
 };
+
 

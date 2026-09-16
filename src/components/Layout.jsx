@@ -1,10 +1,11 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Header } from './Header';
+import { MapFacade } from './MapFacade';
 import { spaConfig } from '../config/spaConfig';
 
 export const Layout = () => {
-  const { business, links } = spaConfig;
+  const { business, links, images } = spaConfig;
   const location = useLocation();
 
   return (
@@ -22,13 +23,19 @@ export const Layout = () => {
           
           {/* Brand Info Column */}
           <div className="footer-brand-col">
-            <img 
-              src={spaConfig.images.logo} 
-              alt={`${business.name} Logo`} 
-              width="150" 
-              height="49"
-              style={{ marginBottom: '1.2rem', objectFit: 'contain' }}
-            />
+            <picture>
+              <source type="image/webp" srcSet={`${images.logoWebp} 1x, /logo.webp 2x`} />
+              <source type="image/png" srcSet={`${images.logo} 1x, /logo.png 2x`} />
+              <img 
+                src={images.logo} 
+                alt={`${business.name} Logo`} 
+                width="150" 
+                height="49"
+                loading="lazy"
+                decoding="async"
+                style={{ marginBottom: '1.2rem', objectFit: 'contain' }}
+              />
+            </picture>
             <p className="footer-brand-desc">
               Amid the fast pace of Bengaluru, Tropical Spa provides a dedicated sanctuary for holistic restoration, stress relief, and muscular recovery. Experience luxury body therapies in Doddaballapura Main Rd, Yelahanka.
             </p>
@@ -99,7 +106,7 @@ export const Layout = () => {
             <h3 className="footer-col-title">Quick Links</h3>
             <ul className="footer-links-list" style={{ marginBottom: '2rem' }}>
               <li className="footer-link-item"><Link to="/">Home Sanctuary</Link></li>
-              <li className="footer-link-item"><Link to="/locations/yelahanka/">Yelahanka Flagship</Link></li>
+              <li className="footer-link-item"><Link to="/locations/yelahanka/">Yelahanka Centre</Link></li>
               <li className="footer-link-item"><Link to="/pricing/">Pricing & Menu</Link></li>
             </ul>
 
@@ -153,16 +160,7 @@ export const Layout = () => {
 
             {/* Embedded maps style frame */}
             <div className="footer-map-embed">
-              <iframe 
-                src="https://maps.google.com/maps?q=13.121476,77.576569&z=17&output=embed" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Location for Tropical Spa Yelahanka"
-              ></iframe>
+              <MapFacade title="Google Maps Location for Tropical Spa Yelahanka" height="100%" />
             </div>
           </div>
 

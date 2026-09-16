@@ -45,7 +45,7 @@ const metadata = {
   '/locations/yelahanka': {
     title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
     description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.',
-    heading: 'Tropical Spa Yelahanka Flagship Sanctuary',
+    heading: 'Tropical Spa Yelahanka Sanctuary',
     subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
   },
   '/services/swedish-massage': {
@@ -109,7 +109,7 @@ const schemaJson = {
         "latitude": 13.121476,
         "longitude": 77.576569
       },
-      "hasMap": "https://maps.google.com/maps?q=13.121476,77.576569",
+      "hasMap": "https://www.google.com/maps/place/Tropical+Spa/@13.1209003,77.5770156,16z/data=!4m6!3m5!1s0x3bae19c65bc99fdb:0x348c454846c0e5d0!8m2!3d13.1212569!4d77.5765474!16s%2Fg%2F11zd95jf1c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -122,7 +122,7 @@ const schemaJson = {
         "https://www.facebook.com/tropicalspa.yelahanka/",
         "https://www.instagram.com/tropicalspa.yelahanka/",
         "https://www.trustpilot.com/review/tropicalspa.in",
-        "https://share.google/S8qcA1i8wY72WiVed"
+        "https://share.google/625MmYP0nILV8oq3x"
       ]
     },
     {
@@ -184,7 +184,9 @@ const schemaJson = {
     const canonicalLink = `<link rel="canonical" href="${canonicalUrl}" />`;
     const schemaScript = `<script type="application/ld+json" id="local-business-schema" data-schema="local-business">${JSON.stringify(schemaJson)}</script>`;
     
-    html = html.replace('<head>', `<head>\n  ${canonicalLink}\n  ${schemaScript}`);
+    // Ensure <meta charset="UTF-8" /> is always the very first tag immediately after <head>
+    html = html.replace(/<head>(\s*<meta charset=["']UTF-8["']\s*\/?>)?/i, `<head>\n  <meta charset="UTF-8" />\n  ${canonicalLink}\n  ${schemaScript}`);
+
     
     if (meta) {
       html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
@@ -306,6 +308,14 @@ const schemaJson = {
 `;
   fs.writeFileSync(toAbsolute('dist/sitemap.xml'), sitemapXml);
   fs.writeFileSync(toAbsolute('public/sitemap.xml'), sitemapXml);
+
+  // Ensure _headers and llms.txt exist in dist
+  if (fs.existsSync(toAbsolute('public/_headers'))) {
+    fs.copyFileSync(toAbsolute('public/_headers'), toAbsolute('dist/_headers'));
+  }
+  if (fs.existsSync(toAbsolute('public/llms.txt'))) {
+    fs.copyFileSync(toAbsolute('public/llms.txt'), toAbsolute('dist/llms.txt'));
+  }
 
   console.log(`Successfully pre-rendered routes and generated sitemap with strictly 7 primary canonical URLs.`);
 })();

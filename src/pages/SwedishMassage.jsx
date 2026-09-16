@@ -60,10 +60,18 @@ export const SwedishMassage = () => {
           </div>
           
           <div className="service-image-holder">
-            <img 
-              src={spaConfig.images.heroTowels} 
-              alt="Premium rolled massage towels and frangipani flower for Swedish Massage" 
-            />
+            <picture>
+              <source type="image/webp" srcSet={`${spaConfig.images.heroTowelsWebp} 1x, /hero-towels.webp 2x`} />
+              <source type="image/png" srcSet={`${spaConfig.images.heroTowels} 1x, /hero-towels.png 2x`} />
+              <img 
+                src={spaConfig.images.heroTowels} 
+                alt="Premium rolled massage towels and frangipani flower for Swedish Massage" 
+                loading="lazy"
+                decoding="async"
+                width="480"
+                height="400"
+              />
+            </picture>
           </div>
         </section>
 
@@ -79,7 +87,7 @@ export const SwedishMassage = () => {
               <div key={i} className="price-card">
                 <div className="price-duration">{pkg.duration}</div>
                 <div className="price-amount">{pkg.price}</div>
-                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
+                <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
                   href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Classic Swedish Massage (at ${pkg.price}).`)}
                   target="_blank"

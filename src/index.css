@@ -899,7 +899,7 @@ a:focus-visible, button:focus-visible {
   font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .footer-highlights {
@@ -911,7 +911,7 @@ a:focus-visible, button:focus-visible {
 
 .footer-highlight-item {
   font-size: 0.85rem;
-  color: var(--clr-olive-light);
+  color: #a9bf8f;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -933,7 +933,7 @@ a:focus-visible, button:focus-visible {
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--clr-olive-light);
+  color: #b4c99c;
   font-weight: 600;
   margin-bottom: 0.85rem;
 }
@@ -954,7 +954,7 @@ a:focus-visible, button:focus-visible {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
 }
@@ -999,7 +999,6 @@ a:focus-visible, button:focus-visible {
 }
 
 .footer-col-title {
-
   font-size: 1.25rem;
   color: var(--clr-white);
   margin-bottom: 1.5rem;
@@ -1028,7 +1027,7 @@ a:focus-visible, button:focus-visible {
 .footer-link-item a {
   font-size: 0.95rem;
   transition: all 0.2s ease;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer-link-item a:hover {
@@ -1075,7 +1074,7 @@ a:focus-visible, button:focus-visible {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .footer-bottom-links {
@@ -1252,7 +1251,7 @@ a:focus-visible, button:focus-visible {
 .highlight-desc {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* Geo Page Specific */
@@ -1272,7 +1271,7 @@ a:focus-visible, button:focus-visible {
 .geo-intro-text {
   font-size: 1.2rem;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .geo-section-title {
@@ -1315,7 +1314,7 @@ a:focus-visible, button:focus-visible {
 
 .landmark-desc {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.4;
 }
 
@@ -1351,7 +1350,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .geo-booking-card p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   margin-bottom: 1.8rem;
   font-size: 1rem;
 }
@@ -1368,7 +1367,7 @@ a:focus-visible, button:focus-visible {
 .tab-btn {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   padding: 0.8rem 1.8rem;
   border-radius: 30px;
   font-weight: 600;
@@ -1428,12 +1427,12 @@ a:focus-visible, button:focus-visible {
 
 .pricing-row-desc {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   margin-top: 0.3rem;
 }
 
 .pricing-row-duration {
-  color: var(--clr-olive-light);
+  color: #a9bf8f;
   font-weight: 500;
 }
 
@@ -1487,7 +1486,7 @@ a:focus-visible, button:focus-visible {
 
 .voucher-desc {
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   max-width: 700px;
   margin: 0 auto 2.5rem;
   line-height: 1.6;
@@ -1514,7 +1513,7 @@ a:focus-visible, button:focus-visible {
   font-size: 2.5rem;
   font-weight: 700;
   font-family: var(--font-serif);
-  color: rgba(158, 184, 117, 0.25);
+  color: rgba(158, 184, 117, 0.35);
   position: absolute;
   top: 10px;
   right: 15px;
@@ -1529,7 +1528,7 @@ a:focus-visible, button:focus-visible {
 
 .step-desc {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.82);
   line-height: 1.4;
 }
 
@@ -1597,7 +1596,7 @@ a:focus-visible, button:focus-visible {
   overflow: hidden;
   transition: max-height 0.3s ease, padding 0.3s ease;
   padding: 0 2rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
   line-height: 1.6;
 }

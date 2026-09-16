@@ -1,6 +1,7 @@
 import React from 'react';
 import { SeoMeta } from '../components/SeoMeta';
 import { Button } from '../components/Button';
+import { MapFacade } from '../components/MapFacade';
 import { spaConfig } from '../config/spaConfig';
 
 export const LocationYelahanka = () => {
@@ -19,7 +20,7 @@ export const LocationYelahanka = () => {
         {/* Page Header */}
         <header className="page-header">
           <h1 className="page-h1">Premium Body Massage &amp; Wellness Spa in Yelahanka, Bengaluru</h1>
-          <p className="page-subtitle">Flagship Wellness Centre located on Doddaballapura Main Road</p>
+          <p className="page-subtitle">Wellness Centre located on Doddaballapura Main Road</p>
         </header>
 
         {/* Main Grid */}
@@ -39,7 +40,7 @@ export const LocationYelahanka = () => {
             <section aria-labelledby="directions-heading">
               <h2 id="directions-heading" className="geo-section-title">Directions &amp; Landmarks</h2>
               <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
-                Finding our flagship spa is extremely simple. We are situated directly on the Doddaballapura Highway, ensuring easy accessibility by car, cab, or public transit.
+                Finding our spa is extremely simple. We are situated directly on the Doddaballapura Highway, ensuring easy accessibility by car, cab, or public transit.
               </p>
               
               <div className="landmarks-grid">
@@ -124,16 +125,10 @@ export const LocationYelahanka = () => {
             </ul>
 
             <div className="geo-map-frame">
-              <iframe 
-                src="https://maps.google.com/maps?q=13.121476,77.576569&z=17&output=embed" 
-                width="100%" 
+              <MapFacade 
+                title="Google Maps Location for Tropical Spa Yelahanka Centre" 
                 height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps Location for Tropical Spa Yelahanka Flagship"
-              ></iframe>
+              />
             </div>
           </aside>
 

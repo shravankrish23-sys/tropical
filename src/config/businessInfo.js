@@ -24,8 +24,9 @@ export const businessInfo = {
     facebook: "https://www.facebook.com/tropicalspa.yelahanka/",
     instagram: "https://www.instagram.com/tropicalspa.yelahanka/",
     trustpilot: "https://www.trustpilot.com/review/tropicalspa.in",
-    googleProfile: "https://share.google/S8qcA1i8wY72WiVed"
+    googleProfile: "https://share.google/625MmYP0nILV8oq3x"
   },
+  googleMapsPlaceUrl: "https://www.google.com/maps/place/Tropical+Spa/@13.1209003,77.5770156,16z/data=!4m6!3m5!1s0x3bae19c65bc99fdb:0x348c454846c0e5d0!8m2!3d13.1212569!4d77.5765474!16s%2Fg%2F11zd95jf1c?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
   valueHighlights: [
     "₹1,000 Special Gift Voucher",
     "100% Money-Back Guarantee",

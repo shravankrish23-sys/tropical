@@ -60,10 +60,18 @@ export const CouplesMassage = () => {
           </div>
           
           <div className="service-image-holder">
-            <img 
-              src={spaConfig.images.heroYoga} 
-              alt="VIP Couples Suite setup at Tropical Spa" 
-            />
+            <picture>
+              <source type="image/webp" srcSet={`${spaConfig.images.heroYogaWebp} 1x, /hero-yoga.webp 2x`} />
+              <source type="image/png" srcSet={`${spaConfig.images.heroYoga} 1x, /hero-yoga.png 2x`} />
+              <img 
+                src={spaConfig.images.heroYoga} 
+                alt="VIP Couples Suite setup at Tropical Spa" 
+                loading="lazy"
+                decoding="async"
+                width="480"
+                height="400"
+              />
+            </picture>
           </div>
         </section>
 
@@ -79,7 +87,7 @@ export const CouplesMassage = () => {
               <div key={i} className="price-card">
                 <div className="price-duration">{pkg.duration}</div>
                 <div className="price-amount">{pkg.price}</div>
-                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
+                <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
                   href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} VIP Couples Retreat (at ${pkg.price}).`)}
                   target="_blank"
