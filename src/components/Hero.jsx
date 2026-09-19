@@ -52,10 +52,13 @@ export const Hero = () => {
         <div className="hero-visuals" aria-label="Tropical Spa gallery visuals">
           <div className="visual-tall">
             <picture>
-              <source type="image/webp" srcSet={`${images.heroYogaWebp} 450w, /hero-yoga.webp 800w`} sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 450px" />
-              <source type="image/png" srcSet={`${images.heroYoga} 450w, /hero-yoga.png 800w`} sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 450px" />
+              <source 
+                type="image/webp" 
+                srcSet="/hero-yoga-480.webp 480w, /hero-yoga-768.webp 768w, /hero-yoga-1200.webp 1200w" 
+                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 450px" 
+              />
               <img
-                src={images.heroYoga}
+                src="/hero-yoga-480.webp"
                 alt="Woman in a state of relaxation enjoying a therapy session at Tropical Spa"
                 loading="eager"
                 fetchPriority="high"
@@ -69,12 +72,15 @@ export const Hero = () => {
           <div className="visual-stack">
             <div className="visual-stacked-img">
               <picture>
-                <source type="image/webp" srcSet={`${images.heroCorridorWebp} 380w, /hero-corridor.webp 600w`} sizes="(max-width: 640px) 50vw, 380px" />
-                <source type="image/png" srcSet={`${images.heroCorridor} 380w, /hero-corridor.png 600w`} sizes="(max-width: 640px) 50vw, 380px" />
+                <source 
+                  type="image/webp" 
+                  srcSet="/hero-corridor-480.webp 480w, /hero-corridor-768.webp 768w, /hero-corridor-1200.webp 1200w" 
+                  sizes="(max-width: 640px) 45vw, 380px" 
+                />
                 <img
-                  src={images.heroCorridor}
+                  src="/hero-corridor-480.webp"
                   alt="Luxury tranquil arched corridor therapy walkway at Tropical Spa"
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                   width="380"
                   height="280"
@@ -83,12 +89,15 @@ export const Hero = () => {
             </div>
             <div className="visual-stacked-img">
               <picture>
-                <source type="image/webp" srcSet={`${images.heroTowelsWebp} 380w, /hero-towels.webp 600w`} sizes="(max-width: 640px) 50vw, 380px" />
-                <source type="image/png" srcSet={`${images.heroTowels} 380w, /hero-towels.png 600w`} sizes="(max-width: 640px) 50vw, 380px" />
+                <source 
+                  type="image/webp" 
+                  srcSet="/hero-towels-480.webp 480w, /hero-towels-768.webp 768w, /hero-towels-1200.webp 1200w" 
+                  sizes="(max-width: 640px) 45vw, 380px" 
+                />
                 <img
-                  src={images.heroTowels}
+                  src="/hero-towels-480.webp"
                   alt="Premium rolled aromatic towels and natural frangipani flower"
-                  loading="eager"
+                  loading="lazy"
                   decoding="async"
                   width="380"
                   height="280"

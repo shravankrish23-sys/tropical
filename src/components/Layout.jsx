@@ -24,10 +24,10 @@ export const Layout = () => {
           {/* Brand Info Column */}
           <div className="footer-brand-col">
             <picture>
-              <source type="image/webp" srcSet={`${images.logoWebp} 1x, /logo.webp 2x`} />
-              <source type="image/png" srcSet={`${images.logo} 1x, /logo.png 2x`} />
+              <source type="image/webp" srcSet={`${images.logoWebp} 1x, /logo-320.webp 2x`} />
+              <source type="image/png" srcSet={`${images.logo} 1x, /logo-320.png 2x`} />
               <img 
-                src={images.logo} 
+                src={images.logoWebp || "/logo-320.webp"} 
                 alt={`${business.name} Logo`} 
                 width="150" 
                 height="49"

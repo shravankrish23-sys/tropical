@@ -1,11 +1,11 @@
-import logoImg from '../assets/logo.png';
-import logoWebp from '../assets/logo.webp';
-import heroYogaImg from '../assets/hero-yoga.png';
-import heroYogaWebp from '../assets/hero-yoga.webp';
-import heroCorridorImg from '../assets/hero-corridor.png';
-import heroCorridorWebp from '../assets/hero-corridor.webp';
-import heroTowelsImg from '../assets/hero-towels.png';
-import heroTowelsWebp from '../assets/hero-towels.webp';
+import logoImg from '../assets/logo-320.png';
+import logoWebp from '../assets/logo-320.webp';
+import heroYogaImg from '../assets/hero-yoga-480.webp';
+import heroYogaWebp from '../assets/hero-yoga-480.webp';
+import heroCorridorImg from '../assets/hero-corridor-480.webp';
+import heroCorridorWebp from '../assets/hero-corridor-480.webp';
+import heroTowelsImg from '../assets/hero-towels-480.webp';
+import heroTowelsWebp from '../assets/hero-towels-480.webp';
 import { businessInfo } from './businessInfo.js';
 
 export const spaConfig = {
