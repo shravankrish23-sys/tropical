@@ -7,8 +7,8 @@ export const SwedishMassage = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹1,999", label: "Classic Relaxation" },
-    { duration: "90 Minutes", price: "₹2,499", label: "Complete stress Melting" }
+    { duration: "60 Minutes", price: "₹2,600", label: "Classic Relaxation" },
+    { duration: "90 Minutes", price: "₹3,800", label: "Complete stress Melting" }
   ];
 
   const highlights = [

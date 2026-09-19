@@ -3,45 +3,44 @@ import { SeoMeta } from '../components/SeoMeta';
 import { Button } from '../components/Button';
 import { spaConfig } from '../config/spaConfig';
 
-export const ThaiMassage = () => {
+export const HotStoneTherapy = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹3,000", label: "Energy Flow Dry Therapy" },
-    { duration: "90 Minutes", price: "₹4,300", label: "Full Yoga Stretching" }
+    { duration: "20 Minutes", price: "₹1,600", label: "Volcanic Basalt Thermal Therapy" }
   ];
 
   const highlights = [
     {
-      title: "Passive Yoga Stretching",
-      desc: "Gentle, assisted yoga stretches increase range of motion, elongate muscles, and decompress tight spinal vertebrae."
+      title: "Volcanic Basalt Heat Retention",
+      desc: "Smooth, mineral-rich volcanic basalt stones are heated to optimal therapeutic temperatures to deliver soothing radiant heat into deep tissues."
     },
     {
-      title: "Acupressure & Sen Lines",
-      desc: "Thumb and palm pressure along vital Sen energy pathways stimulates blood circulation and releases blockages."
+      title: "Accelerated Muscle Softening",
+      desc: "Penetrating heat relaxes rigid muscular bands quickly, allowing deeper physical release without intense mechanical pressure."
     },
     {
-      title: "Dry Restorative Therapy",
-      desc: "Performed traditionally on a soft floor mat in loose, comfortable clothing without the use of heavy oils."
+      title: "Enhanced Blood Circulation",
+      desc: "Thermal energy dilates blood vessels, boosting oxygen flow and rapidly clearing metabolic toxins from fatigued muscles."
     }
   ];
 
   return (
     <div>
       <SeoMeta 
-        title="Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa"
-        description="Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963."
-        canonical="https://tropicalspa.in/services/traditional-thai-massage/"
+        title="Hot Stone Therapy in Yelahanka Bengaluru | Tropical Spa"
+        description="Melt away muscle tension with Volcanic Hot Stone Therapy at Tropical Spa Yelahanka. Radiant heat and deep relaxation. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/hot-stone-therapy/"
       />
 
       <div className="page-container">
         
         {/* Banner Section */}
-        <section className="service-hero-banner" aria-labelledby="thai-h1">
+        <section className="service-hero-banner" aria-labelledby="hotstone-h1">
           <div className="service-banner-content">
-            <h1 id="thai-h1">{business.name} | Authentic Traditional Thai Massage</h1>
+            <h1 id="hotstone-h1">{business.name} | Volcanic Hot Stone Therapy</h1>
             <p className="service-desc">
-              Thai massage is an ancient bodywork system combining passive yoga stretches, rhythmic joint mobilization, and targeted acupressure along the body's natural Sen energy lines. Performed without heavy oils on specialized padded mats, this invigorating dry therapy decompresses the spine, increases joint flexibility, and relieves physical fatigue.
+              Hot Stone Therapy is an ancient thermal treatment that uses smooth, heated volcanic basalt stones placed strategically along your energy centers and massaged into tight muscle groups. The soothing thermal energy penetrates deep into muscular tissue, melting stubborn tension, increasing micro-circulation, and calming the central nervous system.
             </p>
             
             <div className="cta-button-group" style={{ justifyContent: 'flex-start' }}>
@@ -49,7 +48,7 @@ export const ThaiMassage = () => {
                 Book Session: {business.phone}
               </Button>
               <Button 
-                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Traditional Thai Massage session.")}
+                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Hot Stone Therapy session.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-outline"
@@ -61,11 +60,11 @@ export const ThaiMassage = () => {
           
           <div className="service-image-holder">
             <picture>
-              <source type="image/webp" srcSet={`${spaConfig.images.heroCorridorWebp} 1x, /hero-corridor.webp 2x`} />
-              <source type="image/png" srcSet={`${spaConfig.images.heroCorridor} 1x, /hero-corridor.png 2x`} />
+              <source type="image/webp" srcSet={`${spaConfig.images.heroYogaWebp} 1x, /hero-yoga.webp 2x`} />
+              <source type="image/png" srcSet={`${spaConfig.images.heroYoga} 1x, /hero-yoga.png 2x`} />
               <img 
-                src={spaConfig.images.heroCorridor} 
-                alt="Traditional Thai dry massage therapy at Tropical Spa" 
+                src={spaConfig.images.heroYoga} 
+                alt="Volcanic Hot Stone Therapy at Tropical Spa Yelahanka" 
                 loading="lazy"
                 decoding="async"
                 width="480"
@@ -78,8 +77,8 @@ export const ThaiMassage = () => {
         {/* Pricing & Duration Section */}
         <section aria-labelledby="pricing-heading" style={{ marginBottom: '4rem' }}>
           <div className="section-header-center">
-            <h2 id="pricing-heading">Therapy Durations &amp; Tariffs</h2>
-            <p>Select your treatment duration. Experience authentic dry bodywork on padded mats.</p>
+            <h2 id="pricing-heading">Therapy Duration &amp; Tariff</h2>
+            <p>Can be booked standalone or as a luxury add-on to any full-body massage therapy.</p>
           </div>
 
           <div className="service-price-cards">
@@ -89,7 +88,7 @@ export const ThaiMassage = () => {
                 <div className="price-amount">{pkg.price}</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
-                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Traditional Thai Massage (at ${pkg.price}).`)}
+                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Hot Stone Therapy (at ${pkg.price}).`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
@@ -105,8 +104,8 @@ export const ThaiMassage = () => {
         {/* Highlights/Benefits Section */}
         <section className="service-highlights-section" aria-labelledby="benefits-heading">
           <div className="section-header-center">
-            <h2 id="benefits-heading">Key Restorative Benefits</h2>
-            <p>Why this traditional dry massage has been practiced for over 2,500 years.</p>
+            <h2 id="benefits-heading">Thermal Healing Benefits</h2>
+            <p>Why volcanic stone therapy provides unprecedented muscular comfort.</p>
           </div>
 
           <div className="highlights-grid">
@@ -128,4 +127,5 @@ export const ThaiMassage = () => {
     </div>
   );
 };
-export default ThaiMassage;
+
+export default HotStoneTherapy;

@@ -7,9 +7,8 @@ export const DeepTissue = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹2,299", label: "Introductory Therapy" },
-    { duration: "90 Minutes", price: "₹2,799", label: "Full Body Restorative" },
-    { duration: "120 Minutes", price: "₹3,299", label: "Complete Clinical Release" }
+    { duration: "60 Minutes", price: "₹3,100", label: "Introductory Therapy" },
+    { duration: "90 Minutes", price: "₹4,400", label: "Full Body Restorative" }
   ];
 
   const benefits = [

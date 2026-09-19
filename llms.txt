@@ -5,11 +5,28 @@
 ## Main Routes
 - [Home Sanctuary](https://tropicalspa.in/): Official homepage featuring spa introduction, therapy highlights, ₹1,000 voucher offer, and guest amenities.
 - [Yelahanka Centre](https://tropicalspa.in/locations/yelahanka/): Detailed location guide for the wellness centre on Doddaballapura Main Rd, next to Nice Mart in ACSS Complex, Yelahanka, Bengaluru.
-- [Pricing & Tariff](https://tropicalspa.in/pricing/): Transparent tariffs for single massage therapies (60/90/120 min), VIP couples packages, and steam add-ons.
-- [Classic Swedish Massage](https://tropicalspa.in/services/swedish-massage/): Quintessential European full-body relaxation therapy using warm herbal essential oils to relieve stress and boost blood circulation.
-- [Traditional Thai Massage](https://tropicalspa.in/services/traditional-thai-massage/): Ancient dry bodywork combining passive yoga stretching, joint mobilization, and Sen energy line acupressure.
-- [Deep Tissue Massage](https://tropicalspa.in/services/deep-tissue-massage/): Clinical myofascial bodywork with firm cross-fiber pressure targeting chronic pain, stiff neck, and deep muscle knots.
+- [Pricing & Tariff](https://tropicalspa.in/pricing/): Transparent official tariffs for full body massages (60/90 min), 30-minute targeted therapies, add-on services, and gift vouchers.
+
+### Full Body Wellness Massages (60 / 90 Min)
+- [Muscle Relaxing Massage](https://tropicalspa.in/services/muscle-relaxing-massage/): Targeted deep bodywork soothing sore muscles and releasing lactic acid buildup (60m: ₹2,300 | 90m: ₹3,500).
+- [Classic Swedish Massage](https://tropicalspa.in/services/swedish-massage/): Quintessential European relaxation therapy using warm botanical oils to melt stress and boost blood circulation (60m: ₹2,600 | 90m: ₹3,800).
+- [Aroma Therapy](https://tropicalspa.in/services/aromatherapy-massage/): Multisensory healing bodywork with 100% pure organic essential oils to calm the nervous system (60m: ₹2,800 | 90m: ₹4,100).
+- [Traditional Thai Massage](https://tropicalspa.in/services/traditional-thai-massage/): Ancient dry bodywork combining passive yoga stretching, joint mobilization, and Sen energy line acupressure (60m: ₹3,000 | 90m: ₹4,300).
+- [Balinese Massage](https://tropicalspa.in/services/balinese-massage/): Traditional Indonesian ritual combining gentle stretching, acupressure rolling, and scented exotic oils (60m: ₹3,000 | 90m: ₹4,300).
+- [Deep Tissue Massage](https://tropicalspa.in/services/deep-tissue-massage/): Clinical myofascial bodywork with firm cross-fiber pressure targeting chronic back pain, stiff neck, and deep muscle knots (60m: ₹3,100 | 90m: ₹4,400).
+- [Four Hand Massage](https://tropicalspa.in/services/four-hand-massage/): VIP synchronized massage performed simultaneously by two master therapists for profound sensory transcendence (60m: ₹4,300 | 90m: ₹6,500).
 - [Couples Massage Retreat](https://tropicalspa.in/services/couples-massage/): VIP double suite experience featuring side-by-side synchronized massages, private steam, and hydrotherapy jacuzzi bath.
+
+### Targeted Therapies & Express Care (30 Min)
+- [Back Massage](https://tropicalspa.in/services/back-massage/): Focused upper and lower back therapy for desk strain and lumbar tightness (30m: ₹1,600).
+- [Feet Massage & Reflexology](https://tropicalspa.in/services/feet-massage/): Acupressure foot reflexology revitalizing tired feet and improving systemic equilibrium (30m: ₹1,200).
+- [Body Polish](https://tropicalspa.in/services/body-polish/): Luxury botanical skin resurfacing and deep hydration leaving skin luminous and soft (30m: ₹2,600).
+- [Body Scrub](https://tropicalspa.in/services/body-scrub/): Exfoliating herbal sea salt scrub unclogging pores and smoothing rough texture (30m: ₹1,600).
+
+### Add-On Services & Treatments
+- [Hot Stone Therapy](https://tropicalspa.in/services/hot-stone-therapy/): Volcanic basalt heated stone massage melting stubborn muscle tightness (20m: ₹1,600).
+- [Cupping Therapy](https://tropicalspa.in/services/cupping-therapy/): Myofascial decompression creating negative pressure to separate bound tissue layers (20m: ₹1,300).
+- [Ayurvedic Head Massage](https://tropicalspa.in/services/head-massage/): Shiroabhyanga scalp and temple acupressure easing mental burnout and tension headaches (Men 30m: ₹900 | Women: ₹1,100).
 
 ## Location & Contact Information
 - **Brand**: Tropical Spa

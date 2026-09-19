@@ -60,16 +60,40 @@ export const Header = () => {
             {/* Services Dropdown */}
             <li className="nav-item-dropdown">
               <span className="nav-link" style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-                Services
+                All Services
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transition: 'transform 0.2s ease' }}>
                   <path d="M1 1L5 5L9 1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </span>
-              <div className="dropdown-menu">
-                <Link to="/services/deep-tissue-massage/" className="dropdown-item">Deep Tissue Massage</Link>
+              <div className="dropdown-menu" style={{ minWidth: '320px', maxHeight: '80vh', overflowY: 'auto' }}>
+                <div style={{ padding: '0.5rem 1.2rem 0.2rem', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--clr-olive-light)', fontWeight: '700' }}>
+                  Full Body Massages (60/90 Min)
+                </div>
+                <Link to="/services/muscle-relaxing-massage/" className="dropdown-item">Muscle Relaxing Massage</Link>
+                <Link to="/services/swedish-massage/" className="dropdown-item">Swedish Massage</Link>
+                <Link to="/services/aromatherapy-massage/" className="dropdown-item">Aroma Therapy</Link>
                 <Link to="/services/traditional-thai-massage/" className="dropdown-item">Traditional Thai Massage</Link>
-                <Link to="/services/swedish-massage/" className="dropdown-item">Classic Swedish Massage</Link>
-                <Link to="/services/couples-massage/" className="dropdown-item">Couples &amp; Jacuzzi Retreat</Link>
+                <Link to="/services/balinese-massage/" className="dropdown-item">Balinese Massage</Link>
+                <Link to="/services/deep-tissue-massage/" className="dropdown-item">Deep Tissue Massage</Link>
+                <Link to="/services/four-hand-massage/" className="dropdown-item">Four Hand Massage</Link>
+                
+                <div style={{ padding: '0.8rem 1.2rem 0.2rem', fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--clr-olive-light)', fontWeight: '700', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                  Targeted &amp; Add-On Therapies
+                </div>
+                <Link to="/services/back-massage/" className="dropdown-item">Back Massage (30 Min)</Link>
+                <Link to="/services/feet-massage/" className="dropdown-item">Feet Massage (30 Min)</Link>
+                <Link to="/services/body-polish/" className="dropdown-item">Body Polish (30 Min)</Link>
+                <Link to="/services/body-scrub/" className="dropdown-item">Body Scrub (30 Min)</Link>
+                <Link to="/services/hot-stone-therapy/" className="dropdown-item">Hot Stone Therapy</Link>
+                <Link to="/services/cupping-therapy/" className="dropdown-item">Cupping Therapy</Link>
+                <Link to="/services/head-massage/" className="dropdown-item">Head Massage</Link>
+                <Link to="/services/couples-massage/" className="dropdown-item">Couples &amp; Jacuzzi Suite</Link>
+
+                <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', margin: '0.5rem 0 0' }}>
+                  <Link to="/pricing/" className="dropdown-item" style={{ color: 'var(--clr-btn-bg)', fontWeight: '600' }}>
+                    View Complete Tariff Menu &rarr;
+                  </Link>
+                </div>
               </div>
             </li>
             
@@ -78,7 +102,7 @@ export const Header = () => {
                 to="/pricing/" 
                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               >
-                Pricing Menu
+                Pricing Tariff
               </NavLink>
             </li>
           </ul>
@@ -141,7 +165,7 @@ export const Header = () => {
       ></div>
 
       {/* Mobile Drawer Panel */}
-      <div className={isMobileOpen ? "mobile-drawer open" : "mobile-drawer"} role="navigation" aria-label="Mobile Navigation">
+      <div className={isMobileOpen ? "mobile-drawer open" : "mobile-drawer"} role="navigation" aria-label="Mobile Navigation" style={{ overflowY: 'auto' }}>
         <ul className="nav-list">
           <li>
             <NavLink 
@@ -163,24 +187,42 @@ export const Header = () => {
             </NavLink>
           </li>
           <li>
-            <span className="nav-link" style={{ fontWeight: '600', color: 'var(--clr-white)' }}>
-              Our Services
-            </span>
-            <div className="dropdown-menu-mobile">
-              <Link to="/services/deep-tissue-massage/" className="dropdown-item" onClick={closeMobileNav}>Deep Tissue Massage</Link>
-              <Link to="/services/traditional-thai-massage/" className="dropdown-item" onClick={closeMobileNav}>Traditional Thai Massage</Link>
-              <Link to="/services/swedish-massage/" className="dropdown-item" onClick={closeMobileNav}>Classic Swedish Massage</Link>
-              <Link to="/services/couples-massage/" className="dropdown-item" onClick={closeMobileNav}>Couples &amp; Jacuzzi Retreat</Link>
-            </div>
-          </li>
-          <li>
             <NavLink 
               to="/pricing/" 
               className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               onClick={closeMobileNav}
             >
-              Pricing Tariff
+              Tariff &amp; Pricing Menu
             </NavLink>
+          </li>
+          <li>
+            <span className="nav-link" style={{ fontWeight: '600', color: 'var(--clr-white)', marginTop: '0.5rem' }}>
+              Full Body Massages
+            </span>
+            <div className="dropdown-menu-mobile">
+              <Link to="/services/muscle-relaxing-massage/" className="dropdown-item" onClick={closeMobileNav}>Muscle Relaxing Massage</Link>
+              <Link to="/services/swedish-massage/" className="dropdown-item" onClick={closeMobileNav}>Swedish Massage</Link>
+              <Link to="/services/aromatherapy-massage/" className="dropdown-item" onClick={closeMobileNav}>Aroma Therapy</Link>
+              <Link to="/services/traditional-thai-massage/" className="dropdown-item" onClick={closeMobileNav}>Thai Massage</Link>
+              <Link to="/services/balinese-massage/" className="dropdown-item" onClick={closeMobileNav}>Balinese Massage</Link>
+              <Link to="/services/deep-tissue-massage/" className="dropdown-item" onClick={closeMobileNav}>Deep Tissue Massage</Link>
+              <Link to="/services/four-hand-massage/" className="dropdown-item" onClick={closeMobileNav}>Four Hand Massage</Link>
+              <Link to="/services/couples-massage/" className="dropdown-item" onClick={closeMobileNav}>Couples Suite</Link>
+            </div>
+          </li>
+          <li>
+            <span className="nav-link" style={{ fontWeight: '600', color: 'var(--clr-white)' }}>
+              Targeted &amp; Add-Ons
+            </span>
+            <div className="dropdown-menu-mobile">
+              <Link to="/services/back-massage/" className="dropdown-item" onClick={closeMobileNav}>Back Massage (30m)</Link>
+              <Link to="/services/feet-massage/" className="dropdown-item" onClick={closeMobileNav}>Feet Massage (30m)</Link>
+              <Link to="/services/body-polish/" className="dropdown-item" onClick={closeMobileNav}>Body Polish (30m)</Link>
+              <Link to="/services/body-scrub/" className="dropdown-item" onClick={closeMobileNav}>Body Scrub (30m)</Link>
+              <Link to="/services/hot-stone-therapy/" className="dropdown-item" onClick={closeMobileNav}>Hot Stone Therapy</Link>
+              <Link to="/services/cupping-therapy/" className="dropdown-item" onClick={closeMobileNav}>Cupping Therapy</Link>
+              <Link to="/services/head-massage/" className="dropdown-item" onClick={closeMobileNav}>Head Massage</Link>
+            </div>
           </li>
         </ul>
       </div>

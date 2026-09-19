@@ -3,45 +3,45 @@ import { SeoMeta } from '../components/SeoMeta';
 import { Button } from '../components/Button';
 import { spaConfig } from '../config/spaConfig';
 
-export const ThaiMassage = () => {
+export const BalineseMassage = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹3,000", label: "Energy Flow Dry Therapy" },
-    { duration: "90 Minutes", price: "₹4,300", label: "Full Yoga Stretching" }
+    { duration: "60 Minutes", price: "₹3,000", label: "Traditional Indonesian Healing" },
+    { duration: "90 Minutes", price: "₹4,300", label: "Full Ritual Body Restoration" }
   ];
 
   const highlights = [
     {
-      title: "Passive Yoga Stretching",
-      desc: "Gentle, assisted yoga stretches increase range of motion, elongate muscles, and decompress tight spinal vertebrae."
+      title: "Holistic Indonesian Techniques",
+      desc: "Blends gentle stretching, long rolling strokes, acupressure, and skin rolling to stimulate the flow of vital Qi energy."
     },
     {
-      title: "Acupressure & Sen Lines",
-      desc: "Thumb and palm pressure along vital Sen energy pathways stimulates blood circulation and releases blockages."
+      title: "Deep Micro-Circulation",
+      desc: "Firm thumb pressure along energy meridian channels increases oxygenation to deeper muscle tissues and joints."
     },
     {
-      title: "Dry Restorative Therapy",
-      desc: "Performed traditionally on a soft floor mat in loose, comfortable clothing without the use of heavy oils."
+      title: "Exotic Tropical Essential Oils",
+      desc: "Infused with therapeutic floral and herbal oils like frangipani, jasmine, and sandalwood to revitalize dry skin and soothe stress."
     }
   ];
 
   return (
     <div>
       <SeoMeta 
-        title="Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa"
-        description="Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963."
-        canonical="https://tropicalspa.in/services/traditional-thai-massage/"
+        title="Balinese Massage in Yelahanka Bengaluru | Tropical Spa"
+        description="Experience authentic Indonesian Balinese Massage at Tropical Spa Yelahanka. Acupressure, reflexology, and warm oils. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/balinese-massage/"
       />
 
       <div className="page-container">
         
         {/* Banner Section */}
-        <section className="service-hero-banner" aria-labelledby="thai-h1">
+        <section className="service-hero-banner" aria-labelledby="balinese-h1">
           <div className="service-banner-content">
-            <h1 id="thai-h1">{business.name} | Authentic Traditional Thai Massage</h1>
+            <h1 id="balinese-h1">{business.name} | Traditional Balinese Massage</h1>
             <p className="service-desc">
-              Thai massage is an ancient bodywork system combining passive yoga stretches, rhythmic joint mobilization, and targeted acupressure along the body's natural Sen energy lines. Performed without heavy oils on specialized padded mats, this invigorating dry therapy decompresses the spine, increases joint flexibility, and relieves physical fatigue.
+              Originating from the exotic Indonesian island of Bali, Balinese Massage is an ancient full-body treatment that harmonizes gentle stretching, acupressure, skin rolling, and aromatherapy. Designed to bring deep calmness and spiritual balance, this therapy improves blood flow, breaks down persistent muscular tightness, and renews whole-body vitality.
             </p>
             
             <div className="cta-button-group" style={{ justifyContent: 'flex-start' }}>
@@ -49,7 +49,7 @@ export const ThaiMassage = () => {
                 Book Session: {business.phone}
               </Button>
               <Button 
-                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Traditional Thai Massage session.")}
+                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Traditional Balinese Massage session.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-outline"
@@ -65,7 +65,7 @@ export const ThaiMassage = () => {
               <source type="image/png" srcSet={`${spaConfig.images.heroCorridor} 1x, /hero-corridor.png 2x`} />
               <img 
                 src={spaConfig.images.heroCorridor} 
-                alt="Traditional Thai dry massage therapy at Tropical Spa" 
+                alt="Balinese massage therapy suite at Tropical Spa Yelahanka" 
                 loading="lazy"
                 decoding="async"
                 width="480"
@@ -79,7 +79,7 @@ export const ThaiMassage = () => {
         <section aria-labelledby="pricing-heading" style={{ marginBottom: '4rem' }}>
           <div className="section-header-center">
             <h2 id="pricing-heading">Therapy Durations &amp; Tariffs</h2>
-            <p>Select your treatment duration. Experience authentic dry bodywork on padded mats.</p>
+            <p>Select your treatment duration. Includes private suite, aromatic foot bath, and hot shower access.</p>
           </div>
 
           <div className="service-price-cards">
@@ -89,7 +89,7 @@ export const ThaiMassage = () => {
                 <div className="price-amount">{pkg.price}</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
-                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Traditional Thai Massage (at ${pkg.price}).`)}
+                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Balinese Massage (at ${pkg.price}).`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
@@ -105,8 +105,8 @@ export const ThaiMassage = () => {
         {/* Highlights/Benefits Section */}
         <section className="service-highlights-section" aria-labelledby="benefits-heading">
           <div className="section-header-center">
-            <h2 id="benefits-heading">Key Restorative Benefits</h2>
-            <p>Why this traditional dry massage has been practiced for over 2,500 years.</p>
+            <h2 id="benefits-heading">Traditional Healing Principles</h2>
+            <p>Why Balinese therapy is revered worldwide for deep holistic rejuvenation.</p>
           </div>
 
           <div className="highlights-grid">
@@ -128,4 +128,5 @@ export const ThaiMassage = () => {
     </div>
   );
 };
-export default ThaiMassage;
+
+export default BalineseMassage;

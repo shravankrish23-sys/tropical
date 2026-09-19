@@ -3,45 +3,45 @@ import { SeoMeta } from '../components/SeoMeta';
 import { Button } from '../components/Button';
 import { spaConfig } from '../config/spaConfig';
 
-export const ThaiMassage = () => {
+export const HeadMassage = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹3,000", label: "Energy Flow Dry Therapy" },
-    { duration: "90 Minutes", price: "₹4,300", label: "Full Yoga Stretching" }
+    { duration: "30 Minutes", price: "₹900", label: "Indian Head & Scalp Massage" },
+    { duration: "Custom Care", price: "₹1,100", label: "Head Massage ( Women )" }
   ];
 
   const highlights = [
     {
-      title: "Passive Yoga Stretching",
-      desc: "Gentle, assisted yoga stretches increase range of motion, elongate muscles, and decompress tight spinal vertebrae."
+      title: "Mental Clarity & Tension Release",
+      desc: "Rhythmic scalp kneading and acupressure release deep tension around the forehead, temples, and base of the skull."
     },
     {
-      title: "Acupressure & Sen Lines",
-      desc: "Thumb and palm pressure along vital Sen energy pathways stimulates blood circulation and releases blockages."
+      title: "Hair Follicle & Scalp Nourishment",
+      desc: "Warm herbal oils stimulate blood circulation to hair roots, supporting healthy growth, cooling the brain, and reducing dryness."
     },
     {
-      title: "Dry Restorative Therapy",
-      desc: "Performed traditionally on a soft floor mat in loose, comfortable clothing without the use of heavy oils."
+      title: "Migraine & Screen Strain Relief",
+      desc: "Perfect remedy for eye fatigue, computer vision stress, tension headaches, and everyday corporate burnout."
     }
   ];
 
   return (
     <div>
       <SeoMeta 
-        title="Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa"
-        description="Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963."
-        canonical="https://tropicalspa.in/services/traditional-thai-massage/"
+        title="Head Massage in Yelahanka Bengaluru | Tropical Spa"
+        description="Soothe mental exhaustion, tension headaches, and nourish your scalp with traditional Head Massage at Tropical Spa Yelahanka. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/head-massage/"
       />
 
       <div className="page-container">
         
         {/* Banner Section */}
-        <section className="service-hero-banner" aria-labelledby="thai-h1">
+        <section className="service-hero-banner" aria-labelledby="head-h1">
           <div className="service-banner-content">
-            <h1 id="thai-h1">{business.name} | Authentic Traditional Thai Massage</h1>
+            <h1 id="head-h1">{business.name} | Ayurvedic Head &amp; Scalp Massage</h1>
             <p className="service-desc">
-              Thai massage is an ancient bodywork system combining passive yoga stretches, rhythmic joint mobilization, and targeted acupressure along the body's natural Sen energy lines. Performed without heavy oils on specialized padded mats, this invigorating dry therapy decompresses the spine, increases joint flexibility, and relieves physical fatigue.
+              Drawing from ancient Indian Shiroabhyanga rituals, our Head Massage focuses on energy points across the scalp, neck, and temples. Using warm nourishing botanical oils, this soothing treatment melts away digital eye strain, relieves tension headaches, and fosters deep mental clarity.
             </p>
             
             <div className="cta-button-group" style={{ justifyContent: 'flex-start' }}>
@@ -49,7 +49,7 @@ export const ThaiMassage = () => {
                 Book Session: {business.phone}
               </Button>
               <Button 
-                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Traditional Thai Massage session.")}
+                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Head Massage session.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-outline"
@@ -65,7 +65,7 @@ export const ThaiMassage = () => {
               <source type="image/png" srcSet={`${spaConfig.images.heroCorridor} 1x, /hero-corridor.png 2x`} />
               <img 
                 src={spaConfig.images.heroCorridor} 
-                alt="Traditional Thai dry massage therapy at Tropical Spa" 
+                alt="Ayurvedic Head & Scalp Massage at Tropical Spa Yelahanka" 
                 loading="lazy"
                 decoding="async"
                 width="480"
@@ -78,8 +78,8 @@ export const ThaiMassage = () => {
         {/* Pricing & Duration Section */}
         <section aria-labelledby="pricing-heading" style={{ marginBottom: '4rem' }}>
           <div className="section-header-center">
-            <h2 id="pricing-heading">Therapy Durations &amp; Tariffs</h2>
-            <p>Select your treatment duration. Experience authentic dry bodywork on padded mats.</p>
+            <h2 id="pricing-heading">Therapy Options &amp; Tariffs</h2>
+            <p>Select your preferred head massage option with warm Ayurvedic oils.</p>
           </div>
 
           <div className="service-price-cards">
@@ -89,7 +89,7 @@ export const ThaiMassage = () => {
                 <div className="price-amount">{pkg.price}</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
-                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Traditional Thai Massage (at ${pkg.price}).`)}
+                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.label} (${pkg.duration} at ${pkg.price}).`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
@@ -105,8 +105,8 @@ export const ThaiMassage = () => {
         {/* Highlights/Benefits Section */}
         <section className="service-highlights-section" aria-labelledby="benefits-heading">
           <div className="section-header-center">
-            <h2 id="benefits-heading">Key Restorative Benefits</h2>
-            <p>Why this traditional dry massage has been practiced for over 2,500 years.</p>
+            <h2 id="benefits-heading">Key Scalp &amp; Mind Benefits</h2>
+            <p>Why ancient head acupressure remains the quintessential stress antidote.</p>
           </div>
 
           <div className="highlights-grid">
@@ -128,4 +128,5 @@ export const ThaiMassage = () => {
     </div>
   );
 };
-export default ThaiMassage;
+
+export default HeadMassage;

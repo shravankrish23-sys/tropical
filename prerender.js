@@ -7,23 +7,46 @@ const toAbsolute = (p) => path.resolve(__dirname, p);
 
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8');
 
-// 7 Primary Canonical URLs
+// Primary Canonical URLs
 const primaryRoutes = [
   '/',
   '/pricing',
   '/locations/yelahanka',
+  '/services/muscle-relaxing-massage',
   '/services/swedish-massage',
+  '/services/aromatherapy-massage',
   '/services/traditional-thai-massage',
+  '/services/balinese-massage',
   '/services/deep-tissue-massage',
+  '/services/four-hand-massage',
+  '/services/back-massage',
+  '/services/feet-massage',
+  '/services/body-polish',
+  '/services/body-scrub',
+  '/services/hot-stone-therapy',
+  '/services/cupping-therapy',
+  '/services/head-massage',
   '/services/couples-massage'
 ];
 
 // Alias routes mapped to their master canonical URLs
 const aliasMap = {
   '/location-yelahanka': '/locations/yelahanka',
+  '/muscle-relaxing-massage': '/services/muscle-relaxing-massage',
   '/swedish-massage': '/services/swedish-massage',
+  '/aromatherapy-massage': '/services/aromatherapy-massage',
+  '/aroma-therapy': '/services/aromatherapy-massage',
   '/thai-massage': '/services/traditional-thai-massage',
+  '/balinese-massage': '/services/balinese-massage',
   '/deep-tissue': '/services/deep-tissue-massage',
+  '/four-hand-massage': '/services/four-hand-massage',
+  '/back-massage': '/services/back-massage',
+  '/feet-massage': '/services/feet-massage',
+  '/body-polish': '/services/body-polish',
+  '/body-scrub': '/services/body-scrub',
+  '/hot-stone-therapy': '/services/hot-stone-therapy',
+  '/cupping-therapy': '/services/cupping-therapy',
+  '/head-massage': '/services/head-massage',
   '/couples-massage': '/services/couples-massage'
 };
 
@@ -37,10 +60,10 @@ const metadata = {
     subheading: 'Premium holistic wellness, certified body therapies, and private relaxation suites in Doddaballapura Main Rd, Bengaluru.'
   },
   '/pricing': {
-    title: 'Spa Tariff & Massage Packages | Tropical Spa Yelahanka',
-    description: 'Transparent pricing for massage and spa treatments at Tropical Spa Yelahanka. Claim your ₹1,000 gift voucher. Book today at +91 95503 66963.',
-    heading: 'Tropical Spa Menu & Transparent Tariff in Yelahanka',
-    subheading: 'Affordable luxury packages starting with special ₹1,000 gift vouchers and a 100% money-back guarantee.'
+    title: 'Spa Tariff & Menu | Tropical Spa Yelahanka Bengaluru',
+    description: 'Official transparent tariffs for full body massages, 30 min express therapies & add-ons at Tropical Spa Yelahanka. Book now at +91 95503 66963.',
+    heading: 'Tropical Spa Menu & Official Tariffs in Yelahanka',
+    subheading: 'Transparent rates for full body therapies, express treatments, and specialized add-ons with ₹1,000 gift vouchers.'
   },
   '/locations/yelahanka': {
     title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
@@ -48,11 +71,23 @@ const metadata = {
     heading: 'Tropical Spa Yelahanka Sanctuary',
     subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
   },
+  '/services/muscle-relaxing-massage': {
+    title: 'Muscle Relaxing Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Release muscular stiffness and chronic fatigue with Muscle Relaxing Massage at Tropical Spa Yelahanka. Certified therapists. Book now: +91 95503 66963.',
+    heading: 'Muscle Relaxing Therapy in Yelahanka',
+    subheading: 'Targeted soothing bodywork to release lactic acid buildup and relieve physical fatigue.'
+  },
   '/services/swedish-massage': {
     title: 'Swedish Massage in Yelahanka Bengaluru | Tropical Spa',
     description: 'Unwind with a classic luxury Swedish Massage at Tropical Spa Yelahanka. Relax muscles, improve circulation, and melt stress. Book now: +91 95503 66963.',
     heading: 'Classic Swedish Massage Therapy in Yelahanka',
     subheading: 'Gentle, flowing strokes using warm therapeutic herbal oils designed to eliminate tension and promote complete relaxation.'
+  },
+  '/services/aromatherapy-massage': {
+    title: 'Aroma Therapy Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Indulge in pure organic Aromatherapy Massage at Tropical Spa Yelahanka. Custom essential oils for deep mental and physical healing. Book now: +91 95503 66963.',
+    heading: 'Pure Aromatherapy Massage in Yelahanka',
+    subheading: 'Harmonize mind and body with 100% pure organic essential botanical essences.'
   },
   '/services/traditional-thai-massage': {
     title: 'Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa',
@@ -60,11 +95,65 @@ const metadata = {
     heading: 'Authentic Traditional Thai Massage in Yelahanka',
     subheading: 'Ancient passive stretching and acupressure therapy without oils, restoring vitality and joint flexibility.'
   },
+  '/services/balinese-massage': {
+    title: 'Balinese Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Experience authentic Indonesian Balinese Massage at Tropical Spa Yelahanka. Acupressure, reflexology, and warm oils. Book now: +91 95503 66963.',
+    heading: 'Authentic Balinese Massage in Yelahanka',
+    subheading: 'Indonesian healing ritual combining gentle stretching, rolling strokes, and exotic floral oils.'
+  },
   '/services/deep-tissue-massage': {
     title: 'Deep Tissue Massage in Yelahanka | Tropical Spa Bengaluru',
     description: 'Relieve chronic pain, stiff neck, and back tension with Deep Tissue Massage at Tropical Spa Yelahanka. Certified therapists. Book session: +91 95503 66963.',
     heading: 'Deep Tissue Muscle Recovery Massage in Yelahanka',
     subheading: 'Focused deep pressure targeting chronic back pain, muscle stiffness, and athletic fatigue.'
+  },
+  '/services/four-hand-massage': {
+    title: 'Four Hand Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Experience the pinnacle of luxury with Four Hand Synchronized Massage at Tropical Spa Yelahanka. Two therapists, pure bliss. Book now: +91 95503 66963.',
+    heading: 'Four Hand Synchronized Massage in Yelahanka',
+    subheading: 'Two certified therapists working in flawless unison for ultimate sensory immersion.'
+  },
+  '/services/back-massage': {
+    title: 'Back Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Fast, focused relief for upper and lower back pain at Tropical Spa Yelahanka. Certified therapists, organic oils. Book now: +91 95503 66963.',
+    heading: 'Targeted Back Massage (30 Min) in Yelahanka',
+    subheading: 'Rapid relief for desk strain, shoulder knots, and lower back tightness.'
+  },
+  '/services/feet-massage': {
+    title: 'Feet Massage & Reflexology in Yelahanka | Tropical Spa',
+    description: 'Revitalize tired feet and improve overall wellness with Foot Massage & Reflexology at Tropical Spa Yelahanka. Book session: +91 95503 66963.',
+    heading: 'Foot Reflexology & Massage (30 Min) in Yelahanka',
+    subheading: 'Acupressure foot care soothing plantar fascia and enhancing whole-body equilibrium.'
+  },
+  '/services/body-polish': {
+    title: 'Body Polish Treatment in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Reveal glowing, velvety-soft skin with our Luxury Body Polish at Tropical Spa Yelahanka. Exfoliation and hydration. Book now: +91 95503 66963.',
+    heading: 'Luxury Body Polish (30 Min) in Yelahanka',
+    subheading: 'Gentle botanical resurfacing and deep hydration for glowing, radiant skin.'
+  },
+  '/services/body-scrub': {
+    title: 'Body Scrub Treatment in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Deeply cleanse and smooth your skin with an Exfoliating Body Scrub at Tropical Spa Yelahanka. Mineral crystals & organic oils. Book now: +91 95503 66963.',
+    heading: 'Exfoliating Herbal Body Scrub (30 Min) in Yelahanka',
+    subheading: 'Mineral crystal exfoliation to remove dead surface cells and unclog pores.'
+  },
+  '/services/hot-stone-therapy': {
+    title: 'Hot Stone Therapy in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Melt away muscle tension with Volcanic Hot Stone Therapy at Tropical Spa Yelahanka. Radiant heat and deep relaxation. Book now: +91 95503 66963.',
+    heading: 'Volcanic Hot Stone Therapy in Yelahanka',
+    subheading: 'Heated basalt volcanic stones delivering deep radiant thermal muscle relaxation.'
+  },
+  '/services/cupping-therapy': {
+    title: 'Cupping Therapy in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Experience myofascial decompression and chronic pain relief with Cupping Therapy at Tropical Spa Yelahanka. Book your session: +91 95503 66963.',
+    heading: 'Myofascial Cupping Therapy in Yelahanka',
+    subheading: 'Negative pressure suction separating tight fascial layers and accelerating recovery.'
+  },
+  '/services/head-massage': {
+    title: 'Head Massage in Yelahanka Bengaluru | Tropical Spa',
+    description: 'Soothe mental exhaustion, tension headaches, and nourish your scalp with traditional Head Massage at Tropical Spa Yelahanka. Book now: +91 95503 66963.',
+    heading: 'Ayurvedic Head & Scalp Massage in Yelahanka',
+    subheading: 'Shiroabhyanga scalp and temple acupressure to dissolve stress and tension headaches.'
   },
   '/services/couples-massage': {
     title: 'Couples Spa & Massage in Yelahanka | Tropical Spa Bengaluru',
@@ -90,7 +179,7 @@ const schemaJson = {
       "url": "https://tropicalspa.in",
       "logo": "https://tropicalspa.in/logo.png",
       "image": "https://tropicalspa.in/hero-yoga.png",
-      "description": "Tropical Spa in Yelahanka, Bengaluru provides luxury wellness therapies, certified Deep Tissue, Traditional Thai, Swedish, and Couples massages with complimentary beverages and ₹1,000 vouchers.",
+      "description": "Tropical Spa in Yelahanka, Bengaluru provides luxury wellness therapies, certified Deep Tissue, Traditional Thai, Swedish, Balinese, Four Hand, and Couples massages with complimentary beverages and ₹1,000 vouchers.",
       "telephone": "+919550366963",
       "email": "tropicalventures23@gmail.com",
       "priceRange": "₹₹",
@@ -141,7 +230,7 @@ const schemaJson = {
           "name": "What massage therapies are offered at Tropical Spa Yelahanka?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "We offer Deep Tissue Massage, Authentic Thai Massage, Classic Swedish Massage, Couples Massage with private jacuzzi, and specialized head/foot reflexology treatments."
+            "text": "We offer Muscle Relaxing Massage, Swedish Massage, Aroma Therapy, Authentic Thai Massage, Balinese Massage, Deep Tissue Massage, Four Hand Massage, Back Massage, Feet Reflexology, Body Polish, Body Scrub, Hot Stone Therapy, Cupping Therapy, and Ayurvedic Head Massage."
           }
         },
         {
@@ -187,7 +276,6 @@ const schemaJson = {
     // Ensure <meta charset="UTF-8" /> is always the very first tag immediately after <head>
     html = html.replace(/<head>(\s*<meta charset=["']UTF-8["']\s*\/?>)?/i, `<head>\n  <meta charset="UTF-8" />\n  ${canonicalLink}\n  ${schemaScript}`);
 
-    
     if (meta) {
       html = html.replace(/<title>.*?<\/title>/, `<title>${meta.title}</title>`);
       
@@ -225,11 +313,14 @@ const schemaJson = {
         <nav style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 10px;">
           <a href="/" style="color: #c5a059;">Home</a>
           <a href="/locations/yelahanka/" style="color: #c5a059;">Yelahanka Centre</a>
-          <a href="/services/swedish-massage/" style="color: #c5a059;">Swedish Massage</a>
-          <a href="/services/traditional-thai-massage/" style="color: #c5a059;">Thai Massage</a>
-          <a href="/services/deep-tissue-massage/" style="color: #c5a059;">Deep Tissue</a>
-          <a href="/services/couples-massage/" style="color: #c5a059;">Couples Retreat</a>
           <a href="/pricing/" style="color: #c5a059;">Pricing & Tariff</a>
+          <a href="/services/muscle-relaxing-massage/" style="color: #c5a059;">Muscle Relaxing</a>
+          <a href="/services/swedish-massage/" style="color: #c5a059;">Swedish Massage</a>
+          <a href="/services/aromatherapy-massage/" style="color: #c5a059;">Aroma Therapy</a>
+          <a href="/services/traditional-thai-massage/" style="color: #c5a059;">Thai Massage</a>
+          <a href="/services/balinese-massage/" style="color: #c5a059;">Balinese Massage</a>
+          <a href="/services/deep-tissue-massage/" style="color: #c5a059;">Deep Tissue</a>
+          <a href="/services/four-hand-massage/" style="color: #c5a059;">Four Hand</a>
         </nav>
       </header>
       <main style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; color: #333333;">
@@ -248,74 +339,15 @@ const schemaJson = {
         <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
           <a href="https://www.facebook.com/tropicalspa.yelahanka/" style="color: #c5a059;">Facebook</a>
           <a href="https://www.instagram.com/tropicalspa.yelahanka/" style="color: #c5a059;">Instagram</a>
-          <a href="https://www.trustpilot.com/review/tropicalspa.in" style="color: #c5a059;">Trustpilot Reviews</a>
-          <a href="https://share.google/S8qcA1i8wY72WiVed" style="color: #c5a059;">Google Business Profile</a>
+          <a href="https://share.google/625MmYP0nILV8oq3x" style="color: #c5a059;">Google Profile</a>
         </div>
       </footer>
     `;
 
     html = html.replace('<div id="root"></div>', `<div id="root">${fallbackContent}</div>`);
-    
-    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+
+    fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf-8');
   }
 
-  // Ensure sitemap.xml strictly contains only the 7 primary canonical URLs
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://tropicalspa.in/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://tropicalspa.in/pricing/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tropicalspa.in/locations/yelahanka/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://tropicalspa.in/services/swedish-massage/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tropicalspa.in/services/traditional-thai-massage/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tropicalspa.in/services/deep-tissue-massage/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://tropicalspa.in/services/couples-massage/</loc>
-    <lastmod>2026-09-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-</urlset>
-`;
-  fs.writeFileSync(toAbsolute('dist/sitemap.xml'), sitemapXml);
-  fs.writeFileSync(toAbsolute('public/sitemap.xml'), sitemapXml);
-
-  // Ensure _headers and llms.txt exist in dist
-  if (fs.existsSync(toAbsolute('public/_headers'))) {
-    fs.copyFileSync(toAbsolute('public/_headers'), toAbsolute('dist/_headers'));
-  }
-  if (fs.existsSync(toAbsolute('public/llms.txt'))) {
-    fs.copyFileSync(toAbsolute('public/llms.txt'), toAbsolute('dist/llms.txt'));
-  }
-
-  console.log(`Successfully pre-rendered routes and generated sitemap with strictly 7 primary canonical URLs.`);
+  console.log(`Prerender complete: Generated ${allRoutes.length} pages successfully.`);
 })();

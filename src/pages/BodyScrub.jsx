@@ -3,45 +3,44 @@ import { SeoMeta } from '../components/SeoMeta';
 import { Button } from '../components/Button';
 import { spaConfig } from '../config/spaConfig';
 
-export const ThaiMassage = () => {
+export const BodyScrub = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹3,000", label: "Energy Flow Dry Therapy" },
-    { duration: "90 Minutes", price: "₹4,300", label: "Full Yoga Stretching" }
+    { duration: "30 Minutes", price: "₹1,600", label: "Deep Exfoliating Herbal Body Scrub" }
   ];
 
   const highlights = [
     {
-      title: "Passive Yoga Stretching",
-      desc: "Gentle, assisted yoga stretches increase range of motion, elongate muscles, and decompress tight spinal vertebrae."
+      title: "Deep Pores Cleansing",
+      desc: "Natural sea salts, mineral crystals, and organic botanical powders draw out deep-seated impurities and unclog pores."
     },
     {
-      title: "Acupressure & Sen Lines",
-      desc: "Thumb and palm pressure along vital Sen energy pathways stimulates blood circulation and releases blockages."
+      title: "Improves Texture & Tone",
+      desc: "Eliminates rough, flaky skin around elbows, knees, and back, restoring an even and velvety skin tone."
     },
     {
-      title: "Dry Restorative Therapy",
-      desc: "Performed traditionally on a soft floor mat in loose, comfortable clothing without the use of heavy oils."
+      title: "Enhances Oil & Moisture Absorption",
+      desc: "Prepares skin to absorb therapeutic oils and moisturizers far more effectively, making it an ideal precursor to any full-body massage."
     }
   ];
 
   return (
     <div>
       <SeoMeta 
-        title="Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa"
-        description="Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963."
-        canonical="https://tropicalspa.in/services/traditional-thai-massage/"
+        title="Body Scrub Treatment in Yelahanka Bengaluru | Tropical Spa"
+        description="Deeply cleanse and smooth your skin with an Exfoliating Body Scrub at Tropical Spa Yelahanka. Mineral crystals & organic oils. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/body-scrub/"
       />
 
       <div className="page-container">
         
         {/* Banner Section */}
-        <section className="service-hero-banner" aria-labelledby="thai-h1">
+        <section className="service-hero-banner" aria-labelledby="scrub-h1">
           <div className="service-banner-content">
-            <h1 id="thai-h1">{business.name} | Authentic Traditional Thai Massage</h1>
+            <h1 id="scrub-h1">{business.name} | Exfoliating Body Scrub</h1>
             <p className="service-desc">
-              Thai massage is an ancient bodywork system combining passive yoga stretches, rhythmic joint mobilization, and targeted acupressure along the body's natural Sen energy lines. Performed without heavy oils on specialized padded mats, this invigorating dry therapy decompresses the spine, increases joint flexibility, and relieves physical fatigue.
+              Our 30-minute Exfoliating Body Scrub is an invigorating full-body cleansing therapy. Using organic mineral salts, ground botanical herbs, and aromatic essential oils, our therapists gently slough away dead skin cells, stimulate lymphatic circulation, and leave your skin incredibly soft, vibrant, and refreshed.
             </p>
             
             <div className="cta-button-group" style={{ justifyContent: 'flex-start' }}>
@@ -49,7 +48,7 @@ export const ThaiMassage = () => {
                 Book Session: {business.phone}
               </Button>
               <Button 
-                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Traditional Thai Massage session.")}
+                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a 30 Min Body Scrub session.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-outline"
@@ -61,11 +60,11 @@ export const ThaiMassage = () => {
           
           <div className="service-image-holder">
             <picture>
-              <source type="image/webp" srcSet={`${spaConfig.images.heroCorridorWebp} 1x, /hero-corridor.webp 2x`} />
-              <source type="image/png" srcSet={`${spaConfig.images.heroCorridor} 1x, /hero-corridor.png 2x`} />
+              <source type="image/webp" srcSet={`${spaConfig.images.heroTowelsWebp} 1x, /hero-towels.webp 2x`} />
+              <source type="image/png" srcSet={`${spaConfig.images.heroTowels} 1x, /hero-towels.png 2x`} />
               <img 
-                src={spaConfig.images.heroCorridor} 
-                alt="Traditional Thai dry massage therapy at Tropical Spa" 
+                src={spaConfig.images.heroTowels} 
+                alt="Exfoliating Body Scrub treatment at Tropical Spa Yelahanka" 
                 loading="lazy"
                 decoding="async"
                 width="480"
@@ -78,8 +77,8 @@ export const ThaiMassage = () => {
         {/* Pricing & Duration Section */}
         <section aria-labelledby="pricing-heading" style={{ marginBottom: '4rem' }}>
           <div className="section-header-center">
-            <h2 id="pricing-heading">Therapy Durations &amp; Tariffs</h2>
-            <p>Select your treatment duration. Experience authentic dry bodywork on padded mats.</p>
+            <h2 id="pricing-heading">Therapy Duration &amp; Tariff</h2>
+            <p>Includes full body exfoliating scrub, hot shower rinse, and light hydration.</p>
           </div>
 
           <div className="service-price-cards">
@@ -89,7 +88,7 @@ export const ThaiMassage = () => {
                 <div className="price-amount">{pkg.price}</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
-                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Traditional Thai Massage (at ${pkg.price}).`)}
+                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Body Scrub (at ${pkg.price}).`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
@@ -105,8 +104,8 @@ export const ThaiMassage = () => {
         {/* Highlights/Benefits Section */}
         <section className="service-highlights-section" aria-labelledby="benefits-heading">
           <div className="section-header-center">
-            <h2 id="benefits-heading">Key Restorative Benefits</h2>
-            <p>Why this traditional dry massage has been practiced for over 2,500 years.</p>
+            <h2 id="benefits-heading">Key Exfoliation Benefits</h2>
+            <p>Why periodic body scrubbing is essential for healthy skin renewal.</p>
           </div>
 
           <div className="highlights-grid">
@@ -128,4 +127,5 @@ export const ThaiMassage = () => {
     </div>
   );
 };
-export default ThaiMassage;
+
+export default BodyScrub;

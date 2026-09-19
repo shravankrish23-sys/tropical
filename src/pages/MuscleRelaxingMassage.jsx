@@ -3,45 +3,45 @@ import { SeoMeta } from '../components/SeoMeta';
 import { Button } from '../components/Button';
 import { spaConfig } from '../config/spaConfig';
 
-export const ThaiMassage = () => {
+export const MuscleRelaxingMassage = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹3,000", label: "Energy Flow Dry Therapy" },
-    { duration: "90 Minutes", price: "₹4,300", label: "Full Yoga Stretching" }
+    { duration: "60 Minutes", price: "₹2,300", label: "Muscle Relief & Tension Release" },
+    { duration: "90 Minutes", price: "₹3,500", label: "Full Body Deep Muscular Relaxation" }
   ];
 
   const highlights = [
     {
-      title: "Passive Yoga Stretching",
-      desc: "Gentle, assisted yoga stretches increase range of motion, elongate muscles, and decompress tight spinal vertebrae."
+      title: "Sore Muscle Decompression",
+      desc: "Targeted rhythmic pressure eases lactic acid buildup, soothing stiffness and muscular fatigue from physical exertion or workout strain."
     },
     {
-      title: "Acupressure & Sen Lines",
-      desc: "Thumb and palm pressure along vital Sen energy pathways stimulates blood circulation and releases blockages."
+      title: "Thermal Herbal Oil Application",
+      desc: "Warm organic botanical oils deeply penetrate tight muscle fibers, improving localized circulation and restoring elasticity."
     },
     {
-      title: "Dry Restorative Therapy",
-      desc: "Performed traditionally on a soft floor mat in loose, comfortable clothing without the use of heavy oils."
+      title: "Full Body Stress Relief",
+      desc: "Systematically unwinds physical exhaustion, lowers nervous tension, and revitalizes energy levels across key stress zones."
     }
   ];
 
   return (
     <div>
       <SeoMeta 
-        title="Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa"
-        description="Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963."
-        canonical="https://tropicalspa.in/services/traditional-thai-massage/"
+        title="Muscle Relaxing Massage in Yelahanka Bengaluru | Tropical Spa"
+        description="Release muscular stiffness and chronic fatigue with Muscle Relaxing Massage at Tropical Spa Yelahanka. Certified therapists. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/muscle-relaxing-massage/"
       />
 
       <div className="page-container">
         
         {/* Banner Section */}
-        <section className="service-hero-banner" aria-labelledby="thai-h1">
+        <section className="service-hero-banner" aria-labelledby="muscle-relax-h1">
           <div className="service-banner-content">
-            <h1 id="thai-h1">{business.name} | Authentic Traditional Thai Massage</h1>
+            <h1 id="muscle-relax-h1">{business.name} | Muscle Relaxing Massage</h1>
             <p className="service-desc">
-              Thai massage is an ancient bodywork system combining passive yoga stretches, rhythmic joint mobilization, and targeted acupressure along the body's natural Sen energy lines. Performed without heavy oils on specialized padded mats, this invigorating dry therapy decompresses the spine, increases joint flexibility, and relieves physical fatigue.
+              Our Muscle Relaxing Massage is an intensive restorative bodywork session engineered to release tightness, eliminate lactic acid buildup, and soothe fatigued muscle groups. Utilizing rhythmic gliding pressures, specialized kneading, and warm herbal carrier oils, our certified therapists work systematically along tension lines in the back, shoulders, and legs to restore optimal muscle flexibility and full-body vitality.
             </p>
             
             <div className="cta-button-group" style={{ justifyContent: 'flex-start' }}>
@@ -49,7 +49,7 @@ export const ThaiMassage = () => {
                 Book Session: {business.phone}
               </Button>
               <Button 
-                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Traditional Thai Massage session.")}
+                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Muscle Relaxing Massage session.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-outline"
@@ -61,11 +61,11 @@ export const ThaiMassage = () => {
           
           <div className="service-image-holder">
             <picture>
-              <source type="image/webp" srcSet={`${spaConfig.images.heroCorridorWebp} 1x, /hero-corridor.webp 2x`} />
-              <source type="image/png" srcSet={`${spaConfig.images.heroCorridor} 1x, /hero-corridor.png 2x`} />
+              <source type="image/webp" srcSet={`${spaConfig.images.heroTowelsWebp} 1x, /hero-towels.webp 2x`} />
+              <source type="image/png" srcSet={`${spaConfig.images.heroTowels} 1x, /hero-towels.png 2x`} />
               <img 
-                src={spaConfig.images.heroCorridor} 
-                alt="Traditional Thai dry massage therapy at Tropical Spa" 
+                src={spaConfig.images.heroTowels} 
+                alt="Muscle Relaxing Massage treatment at Tropical Spa Yelahanka" 
                 loading="lazy"
                 decoding="async"
                 width="480"
@@ -79,7 +79,7 @@ export const ThaiMassage = () => {
         <section aria-labelledby="pricing-heading" style={{ marginBottom: '4rem' }}>
           <div className="section-header-center">
             <h2 id="pricing-heading">Therapy Durations &amp; Tariffs</h2>
-            <p>Select your treatment duration. Experience authentic dry bodywork on padded mats.</p>
+            <p>Select your treatment duration. Enjoy a private suite with attached shower and warm herbal oils.</p>
           </div>
 
           <div className="service-price-cards">
@@ -89,7 +89,7 @@ export const ThaiMassage = () => {
                 <div className="price-amount">{pkg.price}</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
-                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Traditional Thai Massage (at ${pkg.price}).`)}
+                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Muscle Relaxing Massage (at ${pkg.price}).`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
@@ -106,7 +106,7 @@ export const ThaiMassage = () => {
         <section className="service-highlights-section" aria-labelledby="benefits-heading">
           <div className="section-header-center">
             <h2 id="benefits-heading">Key Restorative Benefits</h2>
-            <p>Why this traditional dry massage has been practiced for over 2,500 years.</p>
+            <p>Tailored physical therapy to relieve post-workout fatigue and workday stiffness.</p>
           </div>
 
           <div className="highlights-grid">
@@ -128,4 +128,5 @@ export const ThaiMassage = () => {
     </div>
   );
 };
-export default ThaiMassage;
+
+export default MuscleRelaxingMassage;

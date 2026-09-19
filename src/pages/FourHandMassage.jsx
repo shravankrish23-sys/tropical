@@ -3,45 +3,45 @@ import { SeoMeta } from '../components/SeoMeta';
 import { Button } from '../components/Button';
 import { spaConfig } from '../config/spaConfig';
 
-export const ThaiMassage = () => {
+export const FourHandMassage = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "60 Minutes", price: "₹3,000", label: "Energy Flow Dry Therapy" },
-    { duration: "90 Minutes", price: "₹4,300", label: "Full Yoga Stretching" }
+    { duration: "60 Minutes", price: "₹4,300", label: "Dual-Therapist Synchronized Flow" },
+    { duration: "90 Minutes", price: "₹6,500", label: "VIP Four-Hand Master Experience" }
   ];
 
   const highlights = [
     {
-      title: "Passive Yoga Stretching",
-      desc: "Gentle, assisted yoga stretches increase range of motion, elongate muscles, and decompress tight spinal vertebrae."
+      title: "Synchronized Dual Choreography",
+      desc: "Two master therapists work in harmonious unison, applying mirrored strokes that completely overwhelm the mind's ability to anticipate touch."
     },
     {
-      title: "Acupressure & Sen Lines",
-      desc: "Thumb and palm pressure along vital Sen energy pathways stimulates blood circulation and releases blockages."
+      title: "Double the Muscular Tension Release",
+      desc: "Simultaneous upper and lower body therapy provides thorough coverage in half the time, unlocking stubborn knots and persistent tension."
     },
     {
-      title: "Dry Restorative Therapy",
-      desc: "Performed traditionally on a soft floor mat in loose, comfortable clothing without the use of heavy oils."
+      title: "Profound Mental Transcendence",
+      desc: "Forces the brain to relinquish control and slip into a deeply restorative delta-wave state of mental calmness and serenity."
     }
   ];
 
   return (
     <div>
       <SeoMeta 
-        title="Authentic Thai Massage in Yelahanka Bengaluru | Tropical Spa"
-        description="Experience authentic Thai dry massage and yoga stretching at Tropical Spa Yelahanka. Boost flexibility and energy. Call +91 95503 66963."
-        canonical="https://tropicalspa.in/services/traditional-thai-massage/"
+        title="Four Hand Massage in Yelahanka Bengaluru | Tropical Spa"
+        description="Experience the pinnacle of luxury with Four Hand Synchronized Massage at Tropical Spa Yelahanka. Two therapists, pure bliss. Book now: +91 95503 66963."
+        canonical="https://tropicalspa.in/services/four-hand-massage/"
       />
 
       <div className="page-container">
         
         {/* Banner Section */}
-        <section className="service-hero-banner" aria-labelledby="thai-h1">
+        <section className="service-hero-banner" aria-labelledby="fourhand-h1">
           <div className="service-banner-content">
-            <h1 id="thai-h1">{business.name} | Authentic Traditional Thai Massage</h1>
+            <h1 id="fourhand-h1">{business.name} | Four Hand Synchronized Massage</h1>
             <p className="service-desc">
-              Thai massage is an ancient bodywork system combining passive yoga stretches, rhythmic joint mobilization, and targeted acupressure along the body's natural Sen energy lines. Performed without heavy oils on specialized padded mats, this invigorating dry therapy decompresses the spine, increases joint flexibility, and relieves physical fatigue.
+              The four-hand massage represents the pinnacle of luxury spa experiences. Two certified master therapists work in flawless synchronized rhythm, delivering simultaneous therapeutic strokes across your entire body. Because your brain cannot track both sets of hands at once, mental resistance melts away quickly, ushering in an extraordinary sense of peace and full-body physical release.
             </p>
             
             <div className="cta-button-group" style={{ justifyContent: 'flex-start' }}>
@@ -49,7 +49,7 @@ export const ThaiMassage = () => {
                 Book Session: {business.phone}
               </Button>
               <Button 
-                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Traditional Thai Massage session.")}
+                href={links.whatsappUrl("Hi Tropical Spa! I would like to book a Four Hand Massage session.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cta-outline"
@@ -61,11 +61,11 @@ export const ThaiMassage = () => {
           
           <div className="service-image-holder">
             <picture>
-              <source type="image/webp" srcSet={`${spaConfig.images.heroCorridorWebp} 1x, /hero-corridor.webp 2x`} />
-              <source type="image/png" srcSet={`${spaConfig.images.heroCorridor} 1x, /hero-corridor.png 2x`} />
+              <source type="image/webp" srcSet={`${spaConfig.images.heroYogaWebp} 1x, /hero-yoga.webp 2x`} />
+              <source type="image/png" srcSet={`${spaConfig.images.heroYoga} 1x, /hero-yoga.png 2x`} />
               <img 
-                src={spaConfig.images.heroCorridor} 
-                alt="Traditional Thai dry massage therapy at Tropical Spa" 
+                src={spaConfig.images.heroYoga} 
+                alt="Four Hand Synchronized Massage at Tropical Spa Yelahanka" 
                 loading="lazy"
                 decoding="async"
                 width="480"
@@ -79,7 +79,7 @@ export const ThaiMassage = () => {
         <section aria-labelledby="pricing-heading" style={{ marginBottom: '4rem' }}>
           <div className="section-header-center">
             <h2 id="pricing-heading">Therapy Durations &amp; Tariffs</h2>
-            <p>Select your treatment duration. Experience authentic dry bodywork on padded mats.</p>
+            <p>Administered by two certified therapists simultaneously. Includes private luxury suite and steam access.</p>
           </div>
 
           <div className="service-price-cards">
@@ -89,7 +89,7 @@ export const ThaiMassage = () => {
                 <div className="price-amount">{pkg.price}</div>
                 <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
                 <Button 
-                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Traditional Thai Massage (at ${pkg.price}).`)}
+                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Four Hand Massage (at ${pkg.price}).`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
@@ -105,8 +105,8 @@ export const ThaiMassage = () => {
         {/* Highlights/Benefits Section */}
         <section className="service-highlights-section" aria-labelledby="benefits-heading">
           <div className="section-header-center">
-            <h2 id="benefits-heading">Key Restorative Benefits</h2>
-            <p>Why this traditional dry massage has been practiced for over 2,500 years.</p>
+            <h2 id="benefits-heading">Why Choose Four Hand Therapy</h2>
+            <p>The ultimate indulgence in neuromuscular relaxation and sensory serenity.</p>
           </div>
 
           <div className="highlights-grid">
@@ -128,4 +128,5 @@ export const ThaiMassage = () => {
     </div>
   );
 };
-export default ThaiMassage;
+
+export default FourHandMassage;
