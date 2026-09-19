@@ -306,45 +306,47 @@ const schemaJson = {
       }
     }
 
-    // Crawler-friendly semantic HTML inside #root
+    // Crawler-friendly semantic HTML inside <noscript> to avoid CLS when React mounts
     const fallbackContent = `
-      <header style="padding: 20px; text-align: center; background: #0c120c; color: #ffffff;">
-        <h2>Tropical Spa - Luxury Massage & Wellness Sanctuary</h2>
-        <nav style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 10px;">
-          <a href="/" style="color: #c5a059;">Home</a>
-          <a href="/locations/yelahanka/" style="color: #c5a059;">Yelahanka Centre</a>
-          <a href="/pricing/" style="color: #c5a059;">Pricing & Tariff</a>
-          <a href="/services/muscle-relaxing-massage/" style="color: #c5a059;">Muscle Relaxing</a>
-          <a href="/services/swedish-massage/" style="color: #c5a059;">Swedish Massage</a>
-          <a href="/services/aromatherapy-massage/" style="color: #c5a059;">Aroma Therapy</a>
-          <a href="/services/traditional-thai-massage/" style="color: #c5a059;">Thai Massage</a>
-          <a href="/services/balinese-massage/" style="color: #c5a059;">Balinese Massage</a>
-          <a href="/services/deep-tissue-massage/" style="color: #c5a059;">Deep Tissue</a>
-          <a href="/services/four-hand-massage/" style="color: #c5a059;">Four Hand</a>
-        </nav>
-      </header>
-      <main style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; color: #333333;">
-        <h1 style="font-size: 2.2rem; color: #141c15; margin-bottom: 12px;">${meta.heading}</h1>
-        <p style="font-size: 1.15rem; line-height: 1.6; color: #4a554a; margin-bottom: 25px;">${meta.subheading}</p>
-        <div style="background: #f4f6f2; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
-          <h3 style="margin-top: 0; color: #2d4030;">Special Voucher & Booking</h3>
-          <p>Claim your exclusive <strong>₹1,000 Gift Voucher</strong> on premium spa therapies with certified therapists and 100% money-back guarantee.</p>
-          <p><strong>Call / WhatsApp:</strong> <a href="tel:+919550366963" style="color: #2d4030; font-weight: bold;">+91 95503 66963</a></p>
-        </div>
-      </main>
-      <footer style="background: #141c15; color: #e0e0e0; padding: 30px 20px; text-align: center;">
-        <p><strong>Tropical Spa Yelahanka</strong></p>
-        <p>1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064</p>
-        <p>Hours: Open Daily 10:00 AM – 9:00 PM</p>
-        <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
-          <a href="https://www.facebook.com/tropicalspa.yelahanka/" style="color: #c5a059;">Facebook</a>
-          <a href="https://www.instagram.com/tropicalspa.yelahanka/" style="color: #c5a059;">Instagram</a>
-          <a href="https://share.google/625MmYP0nILV8oq3x" style="color: #c5a059;">Google Profile</a>
-        </div>
-      </footer>
+      <noscript id="seo-fallback-content">
+        <header style="padding: 20px; text-align: center; background: #0c120c; color: #ffffff;">
+          <h2>Tropical Spa - Luxury Massage &amp; Wellness Sanctuary</h2>
+          <nav style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 10px;">
+            <a href="/" style="color: #c5a059;">Home</a>
+            <a href="/locations/yelahanka/" style="color: #c5a059;">Yelahanka Centre</a>
+            <a href="/pricing/" style="color: #c5a059;">Pricing &amp; Tariff</a>
+            <a href="/services/muscle-relaxing-massage/" style="color: #c5a059;">Muscle Relaxing</a>
+            <a href="/services/swedish-massage/" style="color: #c5a059;">Swedish Massage</a>
+            <a href="/services/aromatherapy-massage/" style="color: #c5a059;">Aroma Therapy</a>
+            <a href="/services/traditional-thai-massage/" style="color: #c5a059;">Thai Massage</a>
+            <a href="/services/balinese-massage/" style="color: #c5a059;">Balinese Massage</a>
+            <a href="/services/deep-tissue-massage/" style="color: #c5a059;">Deep Tissue</a>
+            <a href="/services/four-hand-massage/" style="color: #c5a059;">Four Hand</a>
+          </nav>
+        </header>
+        <main style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; color: #333333;">
+          <h1 style="font-size: 2.2rem; color: #141c15; margin-bottom: 12px;">${meta.heading}</h1>
+          <p style="font-size: 1.15rem; line-height: 1.6; color: #4a554a; margin-bottom: 25px;">${meta.subheading}</p>
+          <div style="background: #f4f6f2; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+            <h3 style="margin-top: 0; color: #2d4030;">Special Voucher &amp; Booking</h3>
+            <p>Claim your exclusive <strong>₹1,000 Gift Voucher</strong> on premium spa therapies with certified therapists and 100% money-back guarantee.</p>
+            <p><strong>Call / WhatsApp:</strong> <a href="tel:+919550366963" style="color: #2d4030; font-weight: bold;">+91 95503 66963</a></p>
+          </div>
+        </main>
+        <footer style="background: #141c15; color: #e0e0e0; padding: 30px 20px; text-align: center;">
+          <p><strong>Tropical Spa Yelahanka</strong></p>
+          <p>1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064</p>
+          <p>Hours: Open Daily 10:00 AM – 9:00 PM</p>
+          <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
+            <a href="https://www.facebook.com/tropicalspa.yelahanka/" style="color: #c5a059;">Facebook</a>
+            <a href="https://www.instagram.com/tropicalspa.yelahanka/" style="color: #c5a059;">Instagram</a>
+            <a href="https://share.google/625MmYP0nILV8oq3x" style="color: #c5a059;">Google Profile</a>
+          </div>
+        </footer>
+      </noscript>
     `;
 
-    html = html.replace('<div id="root"></div>', `<div id="root">${fallbackContent}</div>`);
+    html = html.replace('<div id="root"></div>', `<div id="root"></div>\n${fallbackContent}`);
 
     fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf-8');
   }

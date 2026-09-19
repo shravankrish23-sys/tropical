@@ -191,9 +191,9 @@ export const Home = () => {
                 <div className="card-body-overview">
                   <h3 className="card-title-overview">{svc.title}</h3>
                   <p className="card-desc-overview">{svc.desc}</p>
-                  <Link to={svc.path} className="card-link-btn">
+                  <Link to={svc.path} className="card-link-btn" aria-label={`Read treatment details for ${svc.title}`}>
                     Read Treatment details
-                    <svg viewBox="0 0 16 16" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 16 16" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </Link>

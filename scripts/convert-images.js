@@ -7,11 +7,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const imageNames = [
-  'logo.png',
-  'hero-towels.png',
-  'hero-yoga.png',
-  'hero-corridor.png'
+const imageConfigs = [
+  { name: 'logo.png', maxWidth: 800, quality: 85, nearLossless: true },
+  { name: 'hero-towels.png', maxWidth: 800, quality: 78, nearLossless: false },
+  { name: 'hero-yoga.png', maxWidth: 800, quality: 78, nearLossless: false },
+  { name: 'hero-corridor.png', maxWidth: 800, quality: 78, nearLossless: false }
 ];
 
 const targetDirs = [
@@ -20,25 +20,25 @@ const targetDirs = [
 ];
 
 export async function convertImagesToWebP() {
-  console.log('🖼️  Converting images to WebP format...');
+  console.log('🖼️  Optimizing & Converting images to responsive WebP format...');
   
   for (const dir of targetDirs) {
     if (!fs.existsSync(dir)) continue;
 
-    for (const imgName of imageNames) {
-      const srcPath = path.join(dir, imgName);
+    for (const cfg of imageConfigs) {
+      const srcPath = path.join(dir, cfg.name);
       if (!fs.existsSync(srcPath)) continue;
 
-      const webpName = imgName.replace(/\.png$/, '.webp');
+      const webpName = cfg.name.replace(/\.png$/, '.webp');
       const destPath = path.join(dir, webpName);
 
       try {
-        const isLogo = imgName.includes('logo');
         await sharp(srcPath)
+          .resize({ width: cfg.maxWidth, withoutEnlargement: true })
           .webp({
-            quality: isLogo ? 90 : 80,
+            quality: cfg.quality,
             effort: 6,
-            nearLossless: isLogo
+            nearLossless: cfg.nearLossless
           })
           .toFile(destPath);
 
@@ -48,7 +48,7 @@ export async function convertImagesToWebP() {
 
         console.log(`  ✓ ${path.relative(rootDir, destPath)}: ${(srcSize / 1024).toFixed(0)}KB -> ${(destSize / 1024).toFixed(0)}KB (-${reduction}%)`);
       } catch (err) {
-        console.error(`  ✗ Failed to convert ${imgName}:`, err.message);
+        console.error(`  ✗ Failed to convert ${cfg.name}:`, err.message);
       }
     }
   }
