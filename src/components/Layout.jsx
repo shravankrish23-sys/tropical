@@ -119,12 +119,14 @@ export const Layout = () => {
               <li className="footer-link-item"><Link to="/services/aromatherapy-massage/">Aroma Therapy</Link></li>
               <li className="footer-link-item"><Link to="/services/balinese-massage/">Balinese Massage</Link></li>
               <li className="footer-link-item"><Link to="/services/four-hand-massage/">Four Hand Massage</Link></li>
+              <li className="footer-link-item"><Link to="/services/couples-massage/">VIP Couples Retreat</Link></li>
               <li className="footer-link-item"><Link to="/services/back-massage/">Back Massage (30 Min)</Link></li>
               <li className="footer-link-item"><Link to="/services/feet-massage/">Feet Reflexology (30 Min)</Link></li>
-              <li className="footer-link-item"><Link to="/services/body-polish/">Body Polish &amp; Scrub</Link></li>
-              <li className="footer-link-item"><Link to="/services/hot-stone-therapy/">Hot Stone &amp; Cupping</Link></li>
-              <li className="footer-link-item"><Link to="/services/head-massage/">Ayurvedic Head Massage</Link></li>
-              <li className="footer-link-item"><Link to="/services/couples-massage/">VIP Couples Retreat</Link></li>
+              <li className="footer-link-item"><Link to="/services/body-polish/">Body Polish (30 Min)</Link></li>
+              <li className="footer-link-item"><Link to="/services/body-scrub/">Body Scrub (30 Min)</Link></li>
+              <li className="footer-link-item"><Link to="/services/hot-stone-therapy/">Hot Stone Therapy</Link></li>
+              <li className="footer-link-item"><Link to="/services/cupping-therapy/">Cupping Therapy</Link></li>
+              <li className="footer-link-item"><Link to="/services/head-massage/">Head Massage &amp; Head Spa</Link></li>
             </ul>
           </div>
 

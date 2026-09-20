@@ -1,6 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './components/Layout';
+import { ScrollToTop } from './components/ScrollToTop';
 import { Home } from './pages/Home';
 import { LocationYelahanka } from './pages/LocationYelahanka';
 import { Pricing } from './pages/Pricing';
@@ -29,6 +30,7 @@ const HeadMassage = lazy(() => import('./pages/HeadMassage').then(m => ({ defaul
 export const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<Layout />}>
