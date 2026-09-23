@@ -1,0 +1,47 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "Tropical Spa",
+    "documentationUrl": "https://tropicalspa.in/llms.txt"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:tropicalspa.in:service:massages-wellness",
+      "displayName": "Tropical Spa Services & Wellness Catalog",
+      "type": "text/html",
+      "url": "https://tropicalspa.in/pricing",
+      "representativeQueries": [
+        "luxury spa in Yelahanka Bengaluru",
+        "massage centre pricing Bangalore",
+        "Swedish massage in Yelahanka",
+        "Traditional Thai massage Bengaluru",
+        "Aromatherapy massage tariff",
+        "Deep tissue massage Yelahanka",
+        "Couples massage retreat packages"
+      ]
+    },
+    {
+      "identifier": "urn:air:tropicalspa.in:booking:appointment",
+      "displayName": "Tropical Spa Appointment Booking & Location",
+      "type": "text/html",
+      "url": "https://tropicalspa.in/locations/yelahanka",
+      "representativeQueries": [
+        "book a massage appointment at Tropical Spa",
+        "Tropical Spa phone number and address",
+        "spa on Doddaballapura Main Rd Yelahanka",
+        "spa timings and voucher redemption"
+      ]
+    },
+    {
+      "identifier": "urn:air:tropicalspa.in:documentation:llm-context",
+      "displayName": "Tropical Spa LLM Context & Service Guide",
+      "type": "text/markdown",
+      "url": "https://tropicalspa.in/llms.txt",
+      "representativeQueries": [
+        "Tropical Spa complete service list",
+        "massage rates and descriptions",
+        "spa amenities and voucher guidelines"
+      ]
+    }
+  ]
+}

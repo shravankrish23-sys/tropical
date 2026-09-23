@@ -9,3 +9,11 @@
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+/.well-known/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*.json
+  Access-Control-Allow-Origin: *
+
