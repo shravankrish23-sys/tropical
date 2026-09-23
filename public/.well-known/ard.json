@@ -15,9 +15,7 @@
         "massage centre pricing Bangalore",
         "Swedish massage in Yelahanka",
         "Traditional Thai massage Bengaluru",
-        "Aromatherapy massage tariff",
-        "Deep tissue massage Yelahanka",
-        "Couples massage retreat packages"
+        "Aromatherapy massage tariff"
       ]
     },
     {
@@ -35,7 +33,7 @@
     {
       "identifier": "urn:air:tropicalspa.in:documentation:llm-context",
       "displayName": "Tropical Spa LLM Context & Service Guide",
-      "type": "text/markdown",
+      "type": "text/markdown; profile=\"urn:air:agent-skills\"",
       "url": "https://tropicalspa.in/llms.txt",
       "representativeQueries": [
         "Tropical Spa complete service list",
