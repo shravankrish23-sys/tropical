@@ -23,7 +23,7 @@ export const Home = () => {
       desc: "Targeted clinical therapy designed to alleviate chronic muscle tightness, adhesions, and deep myofascial tension.",
       path: "/services/deep-tissue-massage/",
       img: "/hero-yoga-480.webp",
-      webp: "/hero-yoga-480.webp",
+      webpSrcSet: "/hero-yoga-360.webp 360w, /hero-yoga-480.webp 480w",
       alt: "Deep Tissue Massage therapy session at Tropical Spa"
     },
     {
@@ -31,7 +31,7 @@ export const Home = () => {
       desc: "Ancient dry bodywork combining passive yoga stretches, rhythmic joint mobilization, and SEN energy line pressure.",
       path: "/services/traditional-thai-massage/",
       img: "/hero-corridor-480.webp",
-      webp: "/hero-corridor-480.webp",
+      webpSrcSet: "/hero-corridor-360.webp 360w, /hero-corridor-480.webp 480w",
       alt: "Traditional Thai dry massage therapy at Tropical Spa"
     },
     {
@@ -39,7 +39,7 @@ export const Home = () => {
       desc: "Quintessential relaxation massage utilizing long gliding strokes and organic essential oils to reduce everyday fatigue.",
       path: "/services/swedish-massage/",
       img: "/hero-towels-480.webp",
-      webp: "/hero-towels-480.webp",
+      webpSrcSet: "/hero-towels-360.webp 360w, /hero-towels-480.webp 480w",
       alt: "Classic Swedish massage therapy with organic essential oils at Tropical Spa"
     },
     {
@@ -47,7 +47,7 @@ export const Home = () => {
       desc: "Celebrate together with side-by-side full-body massages, warm herbal steam, and a shared hydrotherapy bath.",
       path: "/services/couples-massage/",
       img: "/hero-yoga-480.webp",
-      webp: "/hero-yoga-480.webp",
+      webpSrcSet: "/hero-yoga-360.webp 360w, /hero-yoga-480.webp 480w",
       alt: "VIP Couples Suite massage setup at Tropical Spa"
     }
   ];
@@ -136,7 +136,7 @@ export const Home = () => {
           <div className="about-grid">
             <div className="about-img-holder">
               <picture>
-                <source type="image/webp" srcSet="/hero-corridor-480.webp 480w, /hero-corridor-768.webp 768w" sizes="(max-width: 640px) 100vw, 540px" />
+                <source type="image/webp" srcSet="/hero-corridor-360.webp 360w, /hero-corridor-480.webp 480w, /hero-corridor-768.webp 768w" sizes="(max-width: 640px) 92vw, 540px" />
                 <img 
                   src="/hero-corridor-480.webp" 
                   alt="Luxury tranquil arched corridor therapy walkway at Tropical Spa" 
@@ -175,8 +175,7 @@ export const Home = () => {
               <article key={i} className="service-card-overview">
                 <div className="card-img-holder">
                   <picture>
-                    <source type="image/webp" srcSet={svc.webp} />
-                    <source type="image/png" srcSet={svc.img} />
+                    <source type="image/webp" srcSet={svc.webpSrcSet} sizes="(max-width: 640px) 92vw, 350px" />
                     <img 
                       src={svc.img} 
                       alt={svc.alt || svc.title} 

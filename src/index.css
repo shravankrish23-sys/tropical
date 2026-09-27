@@ -150,9 +150,18 @@ a:focus-visible, button:focus-visible {
 }
 
 .brand-logo-img {
-  height: 75px;
-  width: auto;
+  height: 54px;
+  width: 165px;
+  aspect-ratio: 165 / 54;
   object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .brand-logo-img {
+    height: 44px;
+    width: 134px;
+  }
 }
 
 .header-btn {

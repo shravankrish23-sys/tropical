@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { Layout } from './components/Layout';
 import { ScrollToTop } from './components/ScrollToTop';
 import { Home } from './pages/Home';
-import { LocationYelahanka } from './pages/LocationYelahanka';
-import { Pricing } from './pages/Pricing';
+const LocationYelahanka = lazy(() => import('./pages/LocationYelahanka').then(m => ({ default: m.LocationYelahanka })));
+const Pricing = lazy(() => import('./pages/Pricing').then(m => ({ default: m.Pricing })));
 
 // Lazy-loaded Full Body Services
 const DeepTissue = lazy(() => import('./pages/DeepTissue').then(m => ({ default: m.DeepTissue })));

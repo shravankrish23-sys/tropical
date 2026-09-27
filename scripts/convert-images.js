@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
 const heroImages = ['hero-yoga.png', 'hero-corridor.png', 'hero-towels.png'];
-const heroWidths = [480, 768, 1200];
+const heroWidths = [360, 480, 768, 1200];
 
 const targetDirs = [
   path.join(rootDir, 'public'),
@@ -32,18 +32,18 @@ export async function convertImagesToWebP() {
       const defaultDest = path.join(dir, `${baseName}.webp`);
       await sharp(srcPath)
         .resize({ width: 800, withoutEnlargement: true })
-        .webp({ quality: 78, effort: 6 })
+        .webp({ quality: 74, effort: 6, smartSubsample: true })
         .toFile(defaultDest);
 
-      // Generate responsive variants: 480px, 768px, 1200px
+      // Generate responsive variants: 360px, 480px, 768px, 1200px
       for (const w of heroWidths) {
         const destPath = path.join(dir, `${baseName}-${w}.webp`);
         await sharp(srcPath)
           .resize({ width: w, withoutEnlargement: true })
-          .webp({ quality: 78, effort: 6 })
+          .webp({ quality: 74, effort: 6, smartSubsample: true })
           .toFile(destPath);
         
-        const sizeKb = (fs.statSync(destPath).size / 1024).toFixed(0);
+        const sizeKb = (fs.statSync(destPath).size / 1024).toFixed(1);
         console.log(`  ✓ ${path.relative(rootDir, destPath)} (${w}w): ${sizeKb}KB`);
       }
     }
@@ -54,14 +54,14 @@ export async function convertImagesToWebP() {
       // 800px fallback logo.webp
       await sharp(logoSrc)
         .resize({ width: 800, withoutEnlargement: true })
-        .webp({ quality: 85, effort: 6, nearLossless: true })
+        .webp({ quality: 80, effort: 6, nearLossless: true })
         .toFile(path.join(dir, 'logo.webp'));
 
       // 320px optimized logo.webp
       const logo320Webp = path.join(dir, 'logo-320.webp');
       await sharp(logoSrc)
         .resize({ width: 320, withoutEnlargement: true })
-        .webp({ quality: 85, effort: 6, nearLossless: true })
+        .webp({ quality: 80, effort: 6, nearLossless: true })
         .toFile(logo320Webp);
 
       // 320px optimized logo.png

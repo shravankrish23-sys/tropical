@@ -54,8 +54,8 @@ export const Hero = () => {
             <picture>
               <source 
                 type="image/webp" 
-                srcSet="/hero-yoga-480.webp 480w, /hero-yoga-768.webp 768w, /hero-yoga-1200.webp 1200w" 
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 450px" 
+                srcSet="/hero-yoga-360.webp 360w, /hero-yoga-480.webp 480w, /hero-yoga-768.webp 768w, /hero-yoga-1200.webp 1200w" 
+                sizes="(max-width: 480px) 90vw, (max-width: 1024px) 45vw, 450px" 
               />
               <img
                 src="/hero-yoga-480.webp"
@@ -74,8 +74,8 @@ export const Hero = () => {
               <picture>
                 <source 
                   type="image/webp" 
-                  srcSet="/hero-corridor-480.webp 480w, /hero-corridor-768.webp 768w, /hero-corridor-1200.webp 1200w" 
-                  sizes="(max-width: 640px) 45vw, 380px" 
+                  srcSet="/hero-corridor-360.webp 360w, /hero-corridor-480.webp 480w, /hero-corridor-768.webp 768w, /hero-corridor-1200.webp 1200w" 
+                  sizes="(max-width: 480px) 45vw, (max-width: 1024px) 22vw, 380px" 
                 />
                 <img
                   src="/hero-corridor-480.webp"
@@ -91,8 +91,8 @@ export const Hero = () => {
               <picture>
                 <source 
                   type="image/webp" 
-                  srcSet="/hero-towels-480.webp 480w, /hero-towels-768.webp 768w, /hero-towels-1200.webp 1200w" 
-                  sizes="(max-width: 640px) 45vw, 380px" 
+                  srcSet="/hero-towels-360.webp 360w, /hero-towels-480.webp 480w, /hero-towels-768.webp 768w, /hero-towels-1200.webp 1200w" 
+                  sizes="(max-width: 480px) 45vw, (max-width: 1024px) 22vw, 380px" 
                 />
                 <img
                   src="/hero-towels-480.webp"
