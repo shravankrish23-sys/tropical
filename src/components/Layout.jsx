@@ -96,6 +96,18 @@ export const Layout = () => {
                     <path d="M12 11.5v3.6h5.8c-.3 1.5-1.7 4.4-5.8 4.4-3.5 0-6.4-2.9-6.4-6.5s2.9-6.5 6.4-6.5c2 0 3.3.8 4.1 1.6l2.8-2.7C16.8 3.3 14.6 2.4 12 2.4 6.7 2.4 2.4 6.7 2.4 12s4.3 9.6 9.6 9.6c5.5 0 9.2-3.9 9.2-9.4 0-.6-.1-1.1-.2-1.7H12z"/>
                   </svg>
                 </a>
+                <a
+                  href={business.appleMapsPlaceUrl || "https://maps.apple/p/dzVHn1Tm1-qLiv"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-social-icon-btn social-apple"
+                  aria-label="View Tropical Spa on Apple Maps"
+                  title="Apple Maps - Tropical Spa"
+                >
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.62-.75 1.04-1.8 1.01-2.87-.9.04-2 .6-2.65 1.34-.56.64-.95 1.7-.91 2.75.99.08 1.99-.48 2.55-1.22z"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -107,7 +119,7 @@ export const Layout = () => {
             <ul className="footer-links-list" style={{ marginBottom: '2rem' }}>
               <li className="footer-link-item"><Link to="/">Home Sanctuary</Link></li>
               <li className="footer-link-item"><Link to="/locations/yelahanka/">Yelahanka Centre</Link></li>
-              <li className="footer-link-item"><Link to="/pricing/">Pricing & Menu</Link></li>
+              <li className="footer-link-item"><Link to="/pricing/">Menu &amp; Packages</Link></li>
             </ul>
 
             <h3 className="footer-col-title">Wellness Therapies</h3>
@@ -181,12 +193,38 @@ export const Layout = () => {
         <div className="footer-bottom">
           <p>&copy; {new Date().getFullYear()} {business.name}. All Rights Reserved. Designed for local wellness Excellence.</p>
           <div className="footer-bottom-links">
-            <Link to="/">Privacy Policy</Link>
-            <Link to="/">Terms of Service</Link>
+            <Link to="/privacy-policy/">Privacy Policy</Link>
+            <Link to="/terms/">Terms of Service</Link>
             <Link to="/pricing/">Sitemap</Link>
           </div>
         </div>
       </footer>
+
+      {/* Persistent Sticky Mobile Action Bar (<768px) */}
+      <nav className="sticky-mobile-bar" aria-label="Quick mobile contact actions">
+        <a 
+          href={links.telUrl} 
+          className="mobile-bar-btn mobile-call-btn"
+          aria-label={`Call Tropical Spa at ${business.phone}`}
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 6.5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z"/>
+          </svg>
+          <span>Call Desk</span>
+        </a>
+        <a 
+          href={links.whatsappUrl(business.voucherMessage)} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="mobile-bar-btn mobile-wa-btn"
+          aria-label="Claim ₹1,000 Gift Voucher on WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+          </svg>
+          <span>₹1,000 Voucher</span>
+        </a>
+      </nav>
     </div>
   );
 };

@@ -71,28 +71,7 @@ export const MapFacade = ({
           1st Floor, ACSS Complex, Doddaballapura Main Rd, Yelahanka
         </p>
 
-        <div style={{ display: 'flex', gap: '0.6rem', marginTop: '0.4rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-          <button
-            type="button"
-            onClick={() => setIsLoaded(true)}
-            className="btn"
-            style={{
-              minHeight: '36px',
-              padding: '0.4rem 1.1rem',
-              fontSize: '0.85rem',
-              borderRadius: '8px',
-              cursor: 'pointer'
-            }}
-            aria-label="Load interactive Google map"
-          >
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px' }}>
-              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
-              <line x1="8" y1="2" x2="8" y2="18"></line>
-              <line x1="16" y1="6" x2="16" y2="22"></line>
-            </svg>
-            Load Map
-          </button>
-
+        <div style={{ display: 'flex', marginTop: '0.5rem', justifyContent: 'center' }}>
           <a
             href={mapDirectUrl}
             target="_blank"
@@ -100,7 +79,7 @@ export const MapFacade = ({
             className="btn cta-outline"
             style={{
               minHeight: '36px',
-              padding: '0.4rem 1.1rem',
+              padding: '0.4rem 1.3rem',
               fontSize: '0.85rem',
               borderRadius: '8px',
               display: 'inline-flex',

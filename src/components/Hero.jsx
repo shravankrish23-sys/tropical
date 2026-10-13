@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Section } from './Section';
 import { Button } from './Button';
 import { spaConfig } from '../config/spaConfig';
@@ -46,6 +47,17 @@ export const Hero = () => {
           >
             Claim the offer
           </Button>
+
+          {/* Terms & Conditions Link */}
+          <div style={{ marginTop: '0.75rem', fontSize: '0.82rem' }}>
+            <Link 
+              to="/terms/" 
+              style={{ color: 'rgba(255, 255, 255, 0.65)', textDecoration: 'underline' }}
+              aria-label="View Terms and Conditions"
+            >
+              *Terms &amp; conditions apply
+            </Link>
+          </div>
         </div>
 
         {/* Right Column: Visual Composition */}

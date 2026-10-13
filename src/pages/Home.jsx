@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { SeoMeta } from '../components/SeoMeta';
 import { Hero } from '../components/Hero';
 import { Button } from '../components/Button';
+import { Testimonials } from '../components/Testimonials';
 import { spaConfig } from '../config/spaConfig';
 
 export const Home = () => {
@@ -122,8 +123,8 @@ export const Home = () => {
   return (
     <div>
       <SeoMeta 
-        title="Tropical Spa | Luxury Spa & Massage Centre in Yelahanka, Bengaluru"
-        description="Visit Tropical Spa on Doddaballapura Main Rd, Yelahanka. Certified therapists, premium private rooms, complimentary beverages & ₹1000 special vouchers. Call +91 95503 66963."
+        title="Tropical Spa Yelahanka | ₹1,000 Voucher | Doddaballapura Rd"
+        description="Looking for the best luxury spa near you in Yelahanka? Tropical Spa on Doddaballapura Main Rd offers certified Deep Tissue, Thai, Swedish & Couples massage with ₹1,000 vouchers. Open daily 10 AM - 9 PM. Call +91 95503 66963."
         canonical="https://tropicalspa.in/"
       />
 
@@ -223,6 +224,12 @@ export const Home = () => {
           </div>
         </div>
       </section>
+ 
+      {/* Real Customer Reviews & Experiences */}
+      <Testimonials 
+        title="What Our Guests Say"
+        subtitle="Genuine experiences from verified guests who visited Tropical Spa Yelahanka."
+      />
 
       {/* FAQ Accordion Section */}
       <section className="faq-accordion-section" aria-labelledby="faq-heading">

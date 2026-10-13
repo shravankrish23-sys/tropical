@@ -26,6 +26,8 @@ const BodyScrub = lazy(() => import('./pages/BodyScrub').then(m => ({ default: m
 const HotStoneTherapy = lazy(() => import('./pages/HotStoneTherapy').then(m => ({ default: m.HotStoneTherapy })));
 const CuppingTherapy = lazy(() => import('./pages/CuppingTherapy').then(m => ({ default: m.CuppingTherapy })));
 const HeadMassage = lazy(() => import('./pages/HeadMassage').then(m => ({ default: m.HeadMassage })));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(m => ({ default: m.PrivacyPolicy })));
+const Terms = lazy(() => import('./pages/Terms').then(m => ({ default: m.Terms })));
 
 export const App = () => {
   return (
@@ -87,6 +89,9 @@ export const App = () => {
             
             <Route path="services/head-massage" element={<HeadMassage />} />
             <Route path="head-massage" element={<Navigate to="/services/head-massage/" replace />} />
+
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="terms" element={<Terms />} />
 
             {/* Fallback route back to home */}
             <Route path="*" element={<Home />} />

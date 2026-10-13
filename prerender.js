@@ -12,6 +12,8 @@ const primaryRoutes = [
   '/',
   '/pricing',
   '/locations/yelahanka',
+  '/privacy-policy',
+  '/terms',
   '/services/muscle-relaxing-massage',
   '/services/swedish-massage',
   '/services/aromatherapy-massage',
@@ -54,22 +56,34 @@ const allRoutes = [...primaryRoutes, ...Object.keys(aliasMap)];
 
 const metadata = {
   '/': {
-    title: 'Tropical Spa | Luxury Spa & Massage Centre in Yelahanka, Bengaluru',
-    description: 'Visit Tropical Spa on Doddaballapura Main Rd, Yelahanka. Certified therapists, premium private rooms, complimentary beverages & ₹1000 special vouchers. Call +91 95503 66963.',
-    heading: 'Experience the Tropical Spa Sanctuary in Yelahanka',
-    subheading: 'Premium holistic wellness, certified body therapies, and private relaxation suites in Doddaballapura Main Rd, Bengaluru.'
+    title: 'Tropical Spa Yelahanka | ₹1,000 Voucher | Doddaballapura Rd',
+    description: 'Looking for the best luxury spa near you in Yelahanka? Tropical Spa on Doddaballapura Main Rd offers certified Deep Tissue, Thai, Swedish & Couples massage with ₹1,000 vouchers. Open daily 10 AM - 9 PM. Call +91 95503 66963.',
+    heading: 'Tropical Spa — Luxury Day Spa & Massage Sanctuary in Yelahanka',
+    subheading: 'Sanctuary of holistic wellness, certified body therapies, private attached shower suites, and ₹1,000 special welcome gift vouchers on Doddaballapura Main Rd, Bengaluru.'
   },
   '/pricing': {
-    title: 'Spa Tariff & Menu | Tropical Spa Yelahanka Bengaluru',
-    description: 'Official transparent tariffs for full body massages, 30 min express therapies & add-ons at Tropical Spa Yelahanka. Book now at +91 95503 66963.',
-    heading: 'Tropical Spa Menu & Official Tariffs in Yelahanka',
-    subheading: 'Transparent rates for full body therapies, express treatments, and specialized add-ons with ₹1,000 gift vouchers.'
+    title: 'Therapy Menu & Custom Packages | Tropical Spa Yelahanka Bengaluru',
+    description: 'Explore certified massage therapies & customized packages at Tropical Spa Yelahanka. Connect with our front desk for package tariffs & claim your ₹1,000 gift voucher.',
+    heading: 'Tropical Spa Menu & Package Offerings in Yelahanka',
+    subheading: 'Personalized wellness packages, certified full body therapies, and exclusive ₹1,000 welcome gift vouchers.'
   },
   '/locations/yelahanka': {
     title: 'Best Spa in Yelahanka Bengaluru | Tropical Spa Doddaballapura Main Rd',
     description: 'Looking for the best spa in Yelahanka? Tropical Spa at ACSS Complex on Doddaballapura Main Rd (next to Nice Mart) offers Deep Tissue, Thai, Swedish & Couples massage. Book now: +91 95503 66963.',
     heading: 'Tropical Spa Yelahanka Sanctuary',
     subheading: 'Conveniently located on Doddaballapura Main Road, next to Nice Mart, Yelahanka, Bengaluru.'
+  },
+  '/privacy-policy': {
+    title: 'Privacy Policy | Tropical Spa Yelahanka Bengaluru',
+    description: 'Official Privacy Policy for Tropical Spa in Yelahanka, Bengaluru. Information handling, appointment safety, and user privacy.',
+    heading: 'Privacy Policy — Tropical Spa Yelahanka',
+    subheading: 'Transparent information handling and appointment privacy for our guests.'
+  },
+  '/terms': {
+    title: 'Terms of Service | Tropical Spa Yelahanka Bengaluru',
+    description: 'Official Terms of Service for Tropical Spa in Yelahanka, Bengaluru. Appointment guidelines, ₹1,000 voucher rules, and spa etiquette.',
+    heading: 'Terms of Service — Tropical Spa Yelahanka',
+    subheading: 'Appointment terms, ₹1,000 voucher conditions, and professional spa guidelines.'
   },
   '/services/muscle-relaxing-massage': {
     title: 'Muscle Relaxing Massage in Yelahanka Bengaluru | Tropical Spa',
@@ -167,6 +181,205 @@ const metadata = {
 for (const [alias, master] of Object.entries(aliasMap)) {
   metadata[alias] = metadata[master];
 }
+
+// In-depth semantic profiles for all 15 services (SEO crawler optimization)
+const serviceDetails = {
+  '/services/deep-tissue-massage': {
+    category: 'Full Body Clinical Therapy',
+    benefits: [
+      'Myofascial Trigger Point Decompression: Resolves stubborn physical adhesions along upper back and neck muscles.',
+      'Postural Alignment Restoration: Counteracts strain from prolonged desk sitting, laptop use, and driving.',
+      'Lactic Acid Flush: Accelerates recovery after intensive workouts or demanding physical activity.',
+      'Deep Nervous System Reset: Transitions the body from chronic sympathetic stress into parasympathetic healing.',
+      'Sub-Layer Fascial Mobility: Enhances flexibility, shoulder range-of-motion, and spinal ease.',
+      'Enduring Pain Relief: Provides therapeutic structural relief far superior to surface-level rubdowns.'
+    ],
+    durations: '60 Minutes & 90 Minutes options tailored to your physical recovery goals.',
+    therapistNote: 'Administered by certified orthopedic therapists in temperature-controlled private suites with attached hot showers.'
+  },
+  '/services/traditional-thai-massage': {
+    category: 'Full Body Ancient Bodywork',
+    benefits: [
+      'Passive Yoga Stretching: Gently mobilizes stiff joints, lengthening hamstrings, spine, and hip flexors.',
+      'Sen Energy Line Acupressure: Stimulates vital bio-energetic pathways without the use of massage oils.',
+      'Complete Musculoskeletal Decompression: Relieves lower back strain and stiffness from sedentary routines.',
+      'Enhanced Flexibility: Restores natural mobility and physical lightness across all major muscle groups.',
+      'Zero-Residue Dry Bodywork: Performed in comfortable loose spa attire on heated ergonomic mats.',
+      'Mental Focus & Vitality: Leaves you feeling alert, balanced, and invigorated rather than lethargic.'
+    ],
+    durations: '60 Minutes & 90 Minutes dry bodywork sessions.',
+    therapistNote: 'Guided by master therapists trained in authentic Eastern stretching and joint mobilization traditions.'
+  },
+  '/services/swedish-massage': {
+    category: 'Full Body European Relaxation',
+    benefits: [
+      'Gliding Effleurage Strokes: Gently melts muscular tension using warm organic botanical oils.',
+      'Circulatory System Stimulation: Boosts blood and oxygen delivery to oxygen-deprived tissues.',
+      'Cortisol Level Reduction: Drastically lowers stress hormones while fostering deep mental calm.',
+      'Lymphatic Drainage Support: Helps the body naturally clear metabolic waste and reduce fluid retention.',
+      'Sleep Quality Enhancement: Helps restore natural circadian rhythms and overcomes insomnia.',
+      'Whole-Body Sensory Restoration: A serene journey of gentle pampering and physical renewal.'
+    ],
+    durations: '60 Minutes & 90 Minutes classic relaxation sessions.',
+    therapistNote: 'Features cold-pressed botanicals, warm towels, and a private attached shower for post-massage comfort.'
+  },
+  '/services/muscle-relaxing-massage': {
+    category: 'Full Body Orthopedic Care',
+    benefits: [
+      'Targeted Muscle Fiber Release: Loosens tight muscle knots and chronic shoulder tension.',
+      'Post-Workout Recovery: Accelerates cellular repair and reduces delayed onset muscle soreness (DOMS).',
+      'Improved Cellular Oxygenation: Enhances deep microcirculation throughout fatigue-prone muscles.',
+      'Relief for Stiff Joints: Restores fluid ease to hips, shoulders, and lower lumbar region.',
+      'Custom Pressure Calibration: Tailored from medium to firm based on personal comfort preferences.',
+      'Revitalizing Herbal Infusion: Warm therapeutic oils soothe tired muscles deeply.'
+    ],
+    durations: '60 Minutes & 90 Minutes intensive sessions.',
+    therapistNote: 'Trusted by fitness enthusiasts and busy professionals across Yelahanka New Town and Sahakar Nagar.'
+  },
+  '/services/aromatherapy-massage': {
+    category: 'Sensory Holistic Healing',
+    benefits: [
+      'Pure Essential Botanical Oils: 100% therapeutic-grade plant essences customized to your sensory profile.',
+      'Limbic System Relaxation: Aromas trigger immediate neural relaxation, dissolving anxiety and tension.',
+      'Gentle Rhythmic Stroking: Enhances skin nourishment and nervous system balance.',
+      'Mental Clarity & Stress Relief: Ideal antidote for digital fatigue, screen burnout, and busy lifestyles.',
+      'Deep Cellular Hydration: Botanical carrier oils leave skin luminous and conditioned.',
+      'Aromatherapeutic Steam: Private attached shower with herbal diffusion completes the experience.'
+    ],
+    durations: '60 Minutes & 90 Minutes sensory sessions.',
+    therapistNote: 'Therapists conduct a pre-session aroma consultation to match your mood and physical needs.'
+  },
+  '/services/balinese-massage': {
+    category: 'Traditional Indonesian Healing',
+    benefits: [
+      'Exotic Oil Blends: Infused with tropical floral and spice essences rooted in Balinese tradition.',
+      'Acupressure & Skin Rolling: Stimulates deep micro-meridians and breaks up surface fascial tension.',
+      'Rhythmic Percussive Strokes: Warms up deep tissues while calming overstimulated nerves.',
+      'Holistic Mind-Body Balance: Brings profound physical stillness and emotional equanimity.',
+      'Detoxification Support: Promotes lymphatic flow and gentle toxin elimination.',
+      'Total Restorative Renewal: Leaves you feeling recharged, supple, and peaceful.'
+    ],
+    durations: '60 Minutes & 90 Minutes authentic Balinese sessions.',
+    therapistNote: 'Administered in ambient private suites with dim lighting and soothing traditional soundscapes.'
+  },
+  '/services/four-hand-massage': {
+    category: 'VIP Luxury Synchronized Therapy',
+    benefits: [
+      'Dual Master Therapists: Two certified therapists working in complete harmonic synchronicity.',
+      'Cognitive De-patterning: Brain cannot track dual simultaneous strokes, producing rapid mental surrender.',
+      'Doubled Muscular Coverage: Full upper and lower body receiving continuous therapy at the same time.',
+      'Ultimate Luxury Indulgence: The undisputed pinnacle of modern spa therapy and pampering.',
+      'Profound Relaxation Depth: Reaches meditative states rarely achieved in single-therapist sessions.',
+      'VIP Suite Experience: Complete privacy, attached shower, and complimentary refreshments.'
+    ],
+    durations: '60 Minutes & 90 Minutes synchronized master sessions.',
+    therapistNote: 'Pre-booking required to coordinate our certified senior dual therapist team.'
+  },
+  '/services/couples-massage': {
+    category: 'VIP Double Suite Retreat',
+    benefits: [
+      'Spacious VIP Couple Suite: Acoustic-isolated private suite designed for couples, friends, or family.',
+      'Side-by-Side Dual Bodywork: Simultaneous therapies administered by two dedicated therapists.',
+      'Shared Hydrotherapy Bath: Jacuzzi hydrotherapy soaking tub with warm herbal bubbles.',
+      'Warm Herbal Steam: Private attached steam room to detoxify and open skin pores.',
+      'Complimentary Beverages: Welcome drinks, fresh hot towels, and post-session organic tea.',
+      'Unforgettable Celebrations: Perfect for anniversaries, birthdays, or weekend relaxation retreats.'
+    ],
+    durations: '90 Minutes & 120 Minutes comprehensive couple retreats.',
+    therapistNote: 'Complete private suite with attached showers and romantic ambient lighting.'
+  },
+  '/services/back-massage': {
+    category: 'Targeted Express Therapy (30 Min)',
+    benefits: [
+      'Focus on Lumbar & Thoracic Spine: Direct relief for lower back aches and shoulder blade tension.',
+      'Counteracts Tech-Neck: Resolves cervical spine tightness from hours at computer monitors.',
+      'Rapid Time-Efficient Relief: 30 minutes of high-impact therapy fitting into busy workdays.',
+      'Cross-Fiber Friction Work: Dissolves stubborn knots along trapezius and rhomboid muscles.',
+      'Improves Driving Fatigue: Soothes strain accumulated during daily commutes along Bellary Road.',
+      'Instant Physical Lightness: Leaves your upper torso feeling loose, aligned, and refreshed.'
+    ],
+    durations: '30 Minutes express therapy.',
+    therapistNote: 'Available as a standalone express session or as a targeted upgrade to any full-body session.'
+  },
+  '/services/feet-massage': {
+    category: 'Targeted Reflexology (30 Min)',
+    benefits: [
+      'Plantar Fascia Decompression: Relieves heel pain, arch strain, and lower calf fatigue.',
+      'Acupressure Reflexology Points: Stimulates corresponding systemic zones across the body.',
+      'Peripheral Circulation Boost: Reduces swelling and heaviness in ankles and lower legs.',
+      'Calming Parasympathetic Trigger: Foot reflexology deeply soothes whole-body nervous tension.',
+      'Revitalizing Foot Scrub: Warm towel cleanse and herbal cream application.',
+      'Ideal for Daily Walkers: Essential recovery for people on their feet throughout the day.'
+    ],
+    durations: '30 Minutes focused reflexology.',
+    therapistNote: 'Relax in our ergonomic reclining spa lounger with warm herbal tea.'
+  },
+  '/services/body-polish': {
+    category: 'Botanical Skin Resurfacing (30 Min)',
+    benefits: [
+      'Dead Skin Cell Elimination: Gentle micro-exfoliation sweeps away dullness without abrasion.',
+      'Deep Dermal Hydration: Nourishing botanical creams penetrate deeply into exfoliated layers.',
+      'Velvety Skin Softness: Leaves skin touchably smooth, conditioned, and revitalized.',
+      'Enhanced Skin Tone & Radiance: Promotes healthy cell turnover and natural glow.',
+      'Soothing Organic Botanicals: Enriched with natural plant extracts and antioxidants.',
+      'Post-Treatment Private Shower: Clean rinse with luxury amenities in private suite.'
+    ],
+    durations: '30 Minutes skin renewal treatment.',
+    therapistNote: 'Pairs beautifully as a preparation step before any full-body relaxation massage.'
+  },
+  '/services/body-scrub': {
+    category: 'Exfoliating Mineral Therapy (30 Min)',
+    benefits: [
+      'Mineral Crystal Exfoliation: Sea salt and herbal grains unclog congested skin pores.',
+      'Cellular Oxygenation Boost: Vigorous application stimulates surface microcirculation.',
+      'Detoxifies Skin Surface: Extracts environmental impurities and dead epidermal layers.',
+      'Silky Smooth Texture: Restores even softness to rough elbows, knees, and back.',
+      'Prepares Skin for Oil Absorption: Maximizes benefits of subsequent massage botanicals.',
+      'Enlivening Full-Body Glow: Leaves skin radiant, purified, and visibly energized.'
+    ],
+    durations: '30 Minutes purifying scrub.',
+    therapistNote: 'Followed by a warm private shower to rinse clean and restore comfort.'
+  },
+  '/services/hot-stone-therapy': {
+    category: 'Therapeutic Thermal Bodywork',
+    benefits: [
+      'Radiant Volcanic Basalt Stones: Smooth heated stones deliver penetrating heat into deep muscles.',
+      'Rapid Muscle Relaxation: Heat loosens stiff fibers without requiring uncomfortable pressure.',
+      'Accelerated Blood Flow: Vasodilation floods tissues with fresh oxygen and nutrients.',
+      'Mental Stillness: The grounding weight and warmth of volcanic stones soothes anxiety.',
+      'Arthritic & Joint Comfort: Eases chronic joint stiffness, bursitis, and dull aches.',
+      'Deep Regenerative Warmth: An extraordinary winter or rainy-day therapy.'
+    ],
+    durations: '20 Minutes add-on or integrated specialized therapy.',
+    therapistNote: 'Stones are sanitized and heated to therapeutic temperatures in specialized warmers.'
+  },
+  '/services/cupping-therapy': {
+    category: 'Myofascial Decompression',
+    benefits: [
+      'Negative Pressure Suction: Pulls fascial layers upward rather than pressing down.',
+      'Breaks Deep Fascial Adhesions: Separates bound connective tissues that cause chronic pain.',
+      'Accelerates Toxin Drainage: Flushes stagnant cellular debris and metabolic byproducts.',
+      'Relieves Stubborn Knots: Highly effective for shoulder impingement and chronic back stiffness.',
+      'Enhanced Tissue Elasticity: Restores suppleness to stubborn tight areas.',
+      'Favored by Athletes: Used worldwide for rapid muscular reset and sports recovery.'
+    ],
+    durations: '20 Minutes targeted add-on therapy.',
+    therapistNote: 'Certified therapists calibrate suction pressure precisely to client comfort.'
+  },
+  '/services/head-massage': {
+    category: 'Ayurvedic Scalp & Temple Care',
+    benefits: [
+      'Shiroabhyanga Acupressure: Releases intense stress held in scalp, temples, and cranial base.',
+      'Alleviates Tension Headaches: Dissolves constriction causing migraines and eye strain.',
+      'Nourishing Herbal Hair Oils: Conditions hair follicles and revitalizes scalp health.',
+      'Digital Fatigue Antidote: Calms overstimulated minds from screens, emails, and multitasking.',
+      'Promotes Deeper Sleep: Calming cranial stimulation fosters tranquil, uninterrupted rest.',
+      'Mental Clarity & Balance: Reboots cognitive freshness and emotional lightness.'
+    ],
+    durations: '30 Minutes dedicated head and scalp therapy.',
+    therapistNote: 'Available with warm herbal oils or dry acupressure based on preference.'
+  }
+};
 
 const schemaJson = {
   "@context": "https://schema.org",
@@ -306,7 +519,34 @@ const schemaJson = {
       }
     }
 
-    // Crawler-friendly semantic HTML inside <noscript> to avoid CLS when React mounts
+    // Build rich, crawler-friendly semantic HTML inside <noscript> for full SEO indexing
+    const targetService = serviceDetails[masterTarget];
+    let serviceBodyHtml = '';
+
+    if (targetService) {
+      serviceBodyHtml = `
+        <section style="margin-bottom: 30px;">
+          <h2 style="font-size: 1.5rem; color: #1e281f; margin-bottom: 15px;">Key Restorative Benefits</h2>
+          <ul style="line-height: 1.8; color: #333; padding-left: 20px;">
+            ${targetService.benefits.map(b => `<li style="margin-bottom: 8px;">${b}</li>`).join('\n')}
+          </ul>
+        </section>
+
+        <section style="margin-bottom: 30px; background: #fdfdfd; border: 1px solid #e2e8df; border-radius: 8px; padding: 20px;">
+          <h3 style="color: #243425; margin-top: 0;">Session Duration &amp; Custom Packages</h3>
+          <p style="color: #444; line-height: 1.6;">${targetService.durations}</p>
+          <p style="color: #555; font-size: 0.95rem;">${targetService.therapistNote}</p>
+        </section>
+
+        <section style="margin-bottom: 30px; background: #f9fbf8; border-left: 4px solid #639832; padding: 18px;">
+          <h4 style="margin: 0 0 8px 0; color: #1e281f;">Private Attached Shower &amp; Hygiene Standards</h4>
+          <p style="margin: 0; color: #444; line-height: 1.6;">
+            Every therapy room at Tropical Spa Yelahanka is an acoustically isolated private suite equipped with an attached hot shower, luxury toiletries, sterilized linens, and fresh towels for total privacy and clinical cleanliness.
+          </p>
+        </section>
+      `;
+    }
+
     const fallbackContent = `
       <noscript id="seo-fallback-content">
         <header style="padding: 20px; text-align: center; background: #0c120c; color: #ffffff;">
@@ -314,32 +554,43 @@ const schemaJson = {
           <nav style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 10px;">
             <a href="/" style="color: #c5a059;">Home</a>
             <a href="/locations/yelahanka/" style="color: #c5a059;">Yelahanka Centre</a>
-            <a href="/pricing/" style="color: #c5a059;">Pricing &amp; Tariff</a>
-            <a href="/services/muscle-relaxing-massage/" style="color: #c5a059;">Muscle Relaxing</a>
-            <a href="/services/swedish-massage/" style="color: #c5a059;">Swedish Massage</a>
-            <a href="/services/aromatherapy-massage/" style="color: #c5a059;">Aroma Therapy</a>
-            <a href="/services/traditional-thai-massage/" style="color: #c5a059;">Thai Massage</a>
-            <a href="/services/balinese-massage/" style="color: #c5a059;">Balinese Massage</a>
+            <a href="/pricing/" style="color: #c5a059;">Menu &amp; Packages</a>
             <a href="/services/deep-tissue-massage/" style="color: #c5a059;">Deep Tissue</a>
+            <a href="/services/traditional-thai-massage/" style="color: #c5a059;">Thai Massage</a>
+            <a href="/services/swedish-massage/" style="color: #c5a059;">Swedish Massage</a>
+            <a href="/services/couples-massage/" style="color: #c5a059;">Couples Retreat</a>
+            <a href="/services/muscle-relaxing-massage/" style="color: #c5a059;">Muscle Relaxing</a>
+            <a href="/services/aromatherapy-massage/" style="color: #c5a059;">Aroma Therapy</a>
+            <a href="/services/balinese-massage/" style="color: #c5a059;">Balinese Massage</a>
             <a href="/services/four-hand-massage/" style="color: #c5a059;">Four Hand</a>
           </nav>
         </header>
         <main style="max-width: 900px; margin: 40px auto; padding: 0 20px; font-family: sans-serif; color: #333333;">
           <h1 style="font-size: 2.2rem; color: #141c15; margin-bottom: 12px;">${meta.heading}</h1>
           <p style="font-size: 1.15rem; line-height: 1.6; color: #4a554a; margin-bottom: 25px;">${meta.subheading}</p>
+          
+          ${serviceBodyHtml}
+
           <div style="background: #f4f6f2; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
-            <h3 style="margin-top: 0; color: #2d4030;">Special Voucher &amp; Booking</h3>
-            <p>Claim your exclusive <strong>₹1,000 Gift Voucher</strong> on premium spa therapies with certified therapists and 100% money-back guarantee.</p>
-            <p><strong>Call / WhatsApp:</strong> <a href="tel:+919550366963" style="color: #2d4030; font-weight: bold;">+91 95503 66963</a></p>
+            <h3 style="margin-top: 0; color: #2d4030;">Claim Your ₹1,000 Gift Voucher</h3>
+            <p>Experience certified therapists, private suites, and complimentary beverages with ₹1,000 applied to your session.</p>
+            <p><strong>Call Desk:</strong> <a href="tel:+919550366963" style="color: #2d4030; font-weight: bold;">+91 95503 66963</a></p>
+            <p><strong>WhatsApp Booking:</strong> <a href="https://wa.me/919550366963?text=Hello%20Tropical%20Spa!%20I%20would%20like%20to%20claim%20the%20Rs.1000%20voucher." style="color: #2d4030; font-weight: bold;">Chat on WhatsApp</a></p>
           </div>
+
+          <section style="margin-top: 25px; border-top: 1px solid #e0e0e0; padding-top: 20px;">
+            <h4 style="color: #141c15;">Verified Guest Experiences at Tropical Spa</h4>
+            <p style="font-style: italic; color: #555;">&ldquo;This place is a peaceful escape from the everyday chaos. Special thanks to therapist Sonam, she is a great therapist, never met one like her before.&rdquo; &mdash; <strong>Jhon Thamos</strong></p>
+            <p style="font-style: italic; color: #555;">&ldquo;The massage was great as well as the ambiance. Rosy was excellent. The shower at the end was an excellent touch. I left feeling very relaxed.&rdquo; &mdash; <strong>Valerie Pinilla</strong></p>
+          </section>
         </main>
         <footer style="background: #141c15; color: #e0e0e0; padding: 30px 20px; text-align: center;">
           <p><strong>Tropical Spa Yelahanka</strong></p>
           <p>1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064</p>
           <p>Hours: Open Daily 10:00 AM – 9:00 PM</p>
           <div style="margin-top: 15px; display: flex; justify-content: center; gap: 20px;">
-            <a href="https://www.facebook.com/tropicalspa.yelahanka/" style="color: #c5a059;">Facebook</a>
-            <a href="https://www.instagram.com/tropicalspa.yelahanka/" style="color: #c5a059;">Instagram</a>
+            <a href="/privacy-policy/" style="color: #c5a059;">Privacy Policy</a>
+            <a href="/terms/" style="color: #c5a059;">Terms of Service</a>
             <a href="https://share.google/625MmYP0nILV8oq3x" style="color: #c5a059;">Google Profile</a>
           </div>
         </footer>
@@ -351,5 +602,5 @@ const schemaJson = {
     fs.writeFileSync(path.join(outDir, 'index.html'), html, 'utf-8');
   }
 
-  console.log(`Prerender complete: Generated ${allRoutes.length} pages successfully.`);
+  console.log(`Prerender complete: Generated ${allRoutes.length} pages successfully with full SEO HTML.`);
 })();

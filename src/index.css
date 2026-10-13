@@ -514,6 +514,10 @@ a:focus-visible, button:focus-visible {
     padding: 1rem 2rem;
   }
   
+  .header-phone-link {
+    display: none;
+  }
+  
   .brand-logo-img {
     height: 60px;
   }
@@ -635,12 +639,13 @@ a:focus-visible, button:focus-visible {
 /* Mobile Medium (480px and below) */
 @media (max-width: 480px) {
   .header-container {
-    flex-direction: column;
-    gap: 0.6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding: 0.8rem 1rem;
   }
-  .header-phone-link {
-    margin-right: 0;
+  .header-actions {
+    gap: 0.55rem;
   }
 }
 
@@ -1005,6 +1010,12 @@ a:focus-visible, button:focus-visible {
   background: #ffffff;
   border-color: #ffffff;
   color: #ea4335;
+}
+
+.social-apple:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
 }
 
 .footer-col-title {
@@ -1845,6 +1856,9 @@ a:focus-visible, button:focus-visible {
 }
 
 @media (max-width: 768px) {
+  .header-phone-link {
+    display: none;
+  }
   .header-nav {
     display: none;
   }
@@ -1872,4 +1886,251 @@ a:focus-visible, button:focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   Testimonials & Social Proof Styling
+   ========================================================================== */
+.testimonials-section {
+  padding: 4.5rem 0;
+  position: relative;
+}
+
+.testimonials-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(158, 184, 117, 0.12);
+  border: 1px solid rgba(158, 184, 117, 0.25);
+  border-radius: 20px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1rem;
+  color: var(--clr-btn-bg);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.testimonial-card {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(20, 28, 21, 0.6) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(158, 184, 117, 0.35);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.stars-row {
+  color: #f59e0b;
+  font-size: 1.15rem;
+  letter-spacing: 2px;
+}
+
+.testimonial-source-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--clr-olive-light);
+  background: rgba(158, 184, 117, 0.12);
+  padding: 0.25rem 0.65rem;
+  border-radius: 12px;
+}
+
+.testimonial-highlight-tag {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--clr-btn-bg);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.testimonial-quote-text {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1.6rem;
+  flex-grow: 1;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 1.2rem;
+}
+
+.testimonial-author-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--clr-btn-bg), var(--clr-check-bg));
+  color: var(--clr-btn-text);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-author-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-author-name {
+  font-weight: 700;
+  color: var(--clr-white);
+  font-size: 0.95rem;
+}
+
+.testimonial-therapist-badge {
+  font-size: 0.8rem;
+  color: var(--clr-olive-light);
+  margin-top: 0.2rem;
+}
+
+.testimonials-verify-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.2rem 1.8rem;
+}
+
+.verify-strip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.verify-strip-text span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.verify-strip-text strong {
+  font-size: 1.05rem;
+  color: var(--clr-white);
+}
+
+.verify-google-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(158, 184, 117, 0.15);
+  color: var(--clr-btn-bg);
+  border: 1px solid rgba(158, 184, 117, 0.3);
+  padding: 0.55rem 1.3rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+}
+
+.verify-google-btn:hover {
+  background: var(--clr-btn-bg);
+  color: var(--clr-btn-text);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .testimonials-verify-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================================================
+   Sticky Mobile Action Bar (<768px)
+   ========================================================================== */
+.sticky-mobile-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sticky-mobile-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 0.65rem 1rem;
+    padding-bottom: calc(0.65rem + env(safe-area-inset-bottom, 0px));
+    gap: 0.75rem;
+    background: rgba(18, 26, 19, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(158, 184, 117, 0.28);
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.45);
+  }
+
+  body {
+    padding-bottom: 74px;
+  }
+
+  .mobile-bar-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    min-height: 44px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  .mobile-bar-btn:active {
+    transform: scale(0.97);
+  }
+
+  .mobile-call-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--clr-white);
+  }
+
+  .mobile-wa-btn {
+    background: var(--clr-btn-bg);
+    border: 1px solid var(--clr-btn-hover);
+    color: var(--clr-btn-text);
+    box-shadow: 0 4px 12px rgba(158, 184, 117, 0.25);
+  }
+}
+
+
 

@@ -7,8 +7,8 @@ export const CouplesMassage = () => {
   const { business, links } = spaConfig;
 
   const packages = [
-    { duration: "90 Minutes", price: "₹4,999", label: "Classic Couples Retreat" },
-    { duration: "120 Minutes", price: "₹6,299", label: "VIP Premium Hydrotherapy Package" }
+    { duration: "90 Minutes", label: "Classic Couples Retreat", desc: "Side-by-side full body relaxation with calming essential oils and private shower." },
+    { duration: "120 Minutes", label: "VIP Premium Hydrotherapy Package", desc: "Extended dual bodywork, herbal steam bath, and private jacuzzi hydrotherapy." }
   ];
 
   const highlights = [
@@ -78,24 +78,24 @@ export const CouplesMassage = () => {
         {/* Pricing & Duration Section */}
         <section aria-labelledby="pricing-heading" style={{ marginBottom: '4rem' }}>
           <div className="section-header-center">
-            <h2 id="pricing-heading">VIP Couples Packages &amp; Tariffs</h2>
-            <p>Pricing is inclusive for two guests. Includes side-by-side massages, steam, and jacuzzi access.</p>
+            <h2 id="pricing-heading">VIP Couples Packages &amp; Session Options</h2>
+            <p>Inclusive for two guests. Connect with our front desk to receive custom package tariffs and schedule your private suite.</p>
           </div>
 
           <div className="service-price-cards">
             {packages.map((pkg, i) => (
               <div key={i} className="price-card">
                 <div className="price-duration">{pkg.duration}</div>
-                <div className="price-amount">{pkg.price}</div>
-                <div style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>{pkg.label}</div>
+                <h3 style={{ fontSize: '1.25rem', color: 'var(--clr-white)', margin: '0.5rem 0' }}>{pkg.label}</h3>
+                <p style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.88rem', marginBottom: '1.5rem', lineHeight: '1.5' }}>{pkg.desc}</p>
                 <Button 
-                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} VIP Couples Retreat (at ${pkg.price}).`)}
+                  href={links.whatsappUrl(`Hello Tropical Spa! I would like to inquire about package pricing and availability for the ${pkg.duration} ${pkg.label}.`)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn"
                   style={{ width: '100%', minHeight: '40px' }}
                 >
-                  Book Retreat
+                  💬 Inquire Package
                 </Button>
               </div>
             ))}

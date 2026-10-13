@@ -66,7 +66,8 @@ export const localBusinessSchema = {
     businessInfo.socialLinks.facebook,
     businessInfo.socialLinks.instagram,
     businessInfo.socialLinks.trustpilot,
-    businessInfo.socialLinks.googleProfile
+    businessInfo.socialLinks.googleProfile,
+    businessInfo.socialLinks.appleMaps
   ]
 };
 

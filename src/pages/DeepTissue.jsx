@@ -263,7 +263,7 @@ export const DeepTissue = () => {
                     className="btn"
                     style={{ width: '100%', minHeight: '46px', fontSize: '0.95rem' }}
                   >
-                    Click to See Price &amp; Tariffs &rarr;
+                    View Menu &amp; Package Options &rarr;
                   </Link>
                   <Button 
                     href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Deep Tissue Massage.`)}

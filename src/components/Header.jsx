@@ -91,7 +91,7 @@ export const Header = () => {
 
                 <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', margin: '0.5rem 0 0' }}>
                   <Link to="/pricing/" className="dropdown-item" style={{ color: 'var(--clr-btn-bg)', fontWeight: '600' }}>
-                    View Complete Tariff Menu &rarr;
+                    View Complete Menu &amp; Packages &rarr;
                   </Link>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export const Header = () => {
                 to="/pricing/" 
                 className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               >
-                Pricing Tariff
+                Menu &amp; Packages
               </NavLink>
             </li>
           </ul>
@@ -110,10 +110,6 @@ export const Header = () => {
 
         {/* Actions (Call, WhatsApp, Hamburger) */}
         <div className="header-actions">
-          <a href={links.telUrl} className="header-phone-link" aria-label={`Call Tropical Spa at ${business.phone}`}>
-            <span className="header-phone-text" style={{ verticalAlign: 'middle' }}>{business.phone}</span>
-          </a>
-
           <Button
             href={links.telUrl}
             className="header-icon-btn"
@@ -192,7 +188,7 @@ export const Header = () => {
               className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
               onClick={closeMobileNav}
             >
-              Tariff &amp; Pricing Menu
+              Menu &amp; Packages
             </NavLink>
           </li>
           <li>
