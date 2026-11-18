@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1668112728000475');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1668112728000475&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Tropical Spa - Instant comfort for tired Mind and Body</title>
+    <meta name="description" content="Claim your exclusive ₹1000 gift voucher from Instagram. Instant comfort for tired Mind and Body at Tropical Spa Yelahanka, Bengaluru.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tropical Spa - Instant comfort for tired Mind and Body | ₹1000 OFF">
+    <meta property="og:description" content="Exclusive Instagram voucher: ₹1000 OFF Swedish, Aroma & Deep Tissue therapies.">
+    <meta property="og:image" content="/hero-yoga.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <!-- Performance & Preconnect Optimizations -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://connect.facebook.net">
+    <link rel="dns-prefetch" href="https://connect.facebook.net">
+    <link rel="preload" as="image" href="/carousel-therapist.webp" type="image/webp" fetchpriority="high">
+
+    <!-- Tailwind CSS & Inter Font -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f3f4f6; /* Subtle gray background for desktop */
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Hide scrollbar for horizontal scrolling areas */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* App container constraint for desktop viewing (simulating mobile) */
+        .app-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="app-container pb-24"> <!-- pb-24 ensures content isn't hidden behind sticky footer -->
+        
+        <!-- Hero Section -->
+        <div class="relative h-72 w-full overflow-hidden group bg-gray-100">
+            
+            <!-- Swipeable Carousel -->
+            <div id="image-carousel" class="flex overflow-x-auto snap-x snap-mandatory h-full w-full hide-scrollbar scroll-smooth">
+                <!-- Slide 1: Therapist (First slide as requested) -->
+                <div class="min-w-full h-full snap-center relative">
+                    <picture>
+                        <source srcset="/carousel-therapist.webp" type="image/webp">
+                        <img id="img-slide-1" src="/carousel-therapist.jpg" width="1024" height="764" alt="Expert Certified Therapists - Tropical Spa" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high">
+                    </picture>
+                </div>
+                <!-- Slide 2: Premium Oils -->
+                <div class="min-w-full h-full snap-center relative">
+                    <picture>
+                        <source srcset="/carousel-oils.webp" type="image/webp">
+                        <img id="img-slide-2" src="/carousel-oils.jpg" width="1024" height="764" alt="Premium Massage Oils - Tropical Spa" class="w-full h-full object-cover object-center" loading="lazy">
+                    </picture>
+                </div>
+                <!-- Slide 3: Premium Rooms -->
+                <div class="min-w-full h-full snap-center relative">
+                    <picture>
+                        <source srcset="/carousel-rooms.webp" type="image/webp">
+                        <img id="img-slide-3" src="/carousel-rooms.jpg" width="1024" height="764" alt="Luxury Private Therapy Rooms - Tropical Spa" class="w-full h-full object-cover object-center" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+            
+            <!-- Swipe Indicator Dots -->
+            <div class="absolute bottom-3 left-0 right-0 flex justify-center gap-1.5 pointer-events-none z-10">
+                <div id="dot-0" class="w-2.5 h-2.5 rounded-full bg-white shadow-md ring-1 ring-black/10 transition-all duration-200"></div>
+                <div id="dot-1" class="w-2 h-2 rounded-full bg-white/60 shadow-md transition-all duration-200"></div>
+                <div id="dot-2" class="w-2 h-2 rounded-full bg-white/60 shadow-md transition-all duration-200"></div>
+            </div>
+
+            <!-- Carousel Arrows -->
+            <button onclick="scrollCarousel(-1)" aria-label="Previous Slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md z-10 opacity-75 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+            </button>
+            <button onclick="scrollCarousel(1)" aria-label="Next Slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-md z-10 opacity-75 md:opacity-0 md:group-hover:opacity-100 transition-opacity">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+            </button>
+        </div>
+
+        <!-- Header Info Section (UrbanCompany Style) -->
+        <div class="px-6 pt-5 pb-5 border-b border-gray-100 bg-white">
+            <h1 class="text-[25px] sm:text-[27px] leading-[1.28] text-gray-900 font-bold mb-2.5 tracking-tight">
+                Instant comfort for tired<br>
+                Mind and Body
+            </h1>
+            
+            <div class="flex items-center mb-1.5">
+                <span class="text-green-700 text-lg mr-1">★</span>
+                <span class="text-gray-900 font-bold text-sm mr-1">4.9</span>
+                <span class="text-gray-500 text-sm underline decoration-gray-300 underline-offset-2">(332 reviews)</span>
+            </div>
+            
+            <div class="text-sm text-gray-500 font-medium flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-gray-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Premium Massages at Yelahanka
+            </div>
+        </div>
+
+        <!-- Service Selection -->
+        <div id="therapy-selection" class="p-6 border-b border-gray-100">
+            <h2 class="text-2xl font-bold mb-2 text-gray-900">Select your therapy</h2>
+            
+            <div class="flex items-center text-green-700 text-sm font-semibold mb-5 bg-green-50 px-2.5 py-1.5 rounded w-max border border-green-200">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                Rs. 1000 gift voucher applied
+            </div>
+            
+            <div class="grid grid-cols-1 gap-3">
+                
+                <!-- Swedish Massage Option -->
+                <div id="card-swedish" class="service-card flex items-center relative border-2 border-[#2a3f38] bg-[#f2f7f5] rounded-2xl p-4 cursor-pointer transition-all" onclick="selectService('swedish')">
+                    <div class="mr-4">
+                        <div id="radio-swedish" class="w-6 h-6 rounded-full border-2 border-[#2a3f38] flex items-center justify-center">
+                            <div id="radio-inner-swedish" class="w-3 h-3 rounded-full bg-[#2a3f38]"></div>
+                        </div>
+                    </div>
+                    <div class="flex-grow flex justify-between items-center gap-2">
+                        <div>
+                            <div class="text-lg font-bold text-gray-900 leading-snug">Swedish Massage</div>
+                            <div class="text-xs text-gray-500 font-medium mt-0.5">60 min • Stress Relief • Full Body</div>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <div class="text-sm text-red-500 line-through font-medium">₹2,600</div>
+                            <div class="text-xl font-bold text-gray-900">₹1,600</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aroma Therapy Option -->
+                <div id="card-aroma" class="service-card flex items-center relative border border-gray-200 bg-white rounded-2xl p-4 cursor-pointer transition-all hover:border-gray-300" onclick="selectService('aroma')">
+                    <div class="mr-4">
+                        <div id="radio-aroma" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-colors">
+                            <div id="radio-inner-aroma" class="w-3 h-3 rounded-full bg-transparent transition-colors"></div>
+                        </div>
+                    </div>
+                    <div class="flex-grow flex justify-between items-center gap-2">
+                        <div>
+                            <div class="text-lg font-bold text-gray-900 leading-snug">Aroma Therapy</div>
+                            <div class="text-xs text-gray-500 font-medium mt-0.5">60 min • Deep Relaxation • Essential Oils</div>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <div class="text-sm text-red-500 line-through font-medium">₹2,800</div>
+                            <div class="text-xl font-bold text-gray-900">₹1,800</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deep Tissue Option -->
+                <div id="card-deep" class="service-card flex items-center relative border border-gray-200 bg-white rounded-2xl p-4 cursor-pointer transition-all hover:border-gray-300" onclick="selectService('deep')">
+                    <div class="mr-4">
+                        <div id="radio-deep" class="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-colors">
+                            <div id="radio-inner-deep" class="w-3 h-3 rounded-full bg-transparent transition-colors"></div>
+                        </div>
+                    </div>
+                    <div class="flex-grow flex justify-between items-center gap-2">
+                        <div>
+                            <div class="text-lg font-bold text-gray-900 leading-snug">Deep Tissue Massage</div>
+                            <div class="text-xs text-gray-500 font-medium mt-0.5">60 min • Pain Relief • High Pressure</div>
+                        </div>
+                        <div class="text-right flex-shrink-0">
+                            <div class="text-sm text-red-500 line-through font-medium">₹3,100</div>
+                            <div class="text-xl font-bold text-gray-900">₹2,100</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Inline Book Button -->
+            <a href="#" id="inline-book-btn" target="_blank" rel="noopener noreferrer" class="mt-5 w-full bg-[#2a3f38] hover:bg-[#1f2e29] text-white py-3.5 rounded-xl font-bold text-base shadow-md flex items-center justify-center text-center transition-transform active:scale-95">
+                <span id="inline-book-text">Book Swedish Massage — ₹1,600</span>
+            </a>
+        </div>
+
+        <!-- Ideal For Section -->
+        <div class="p-6 border-b border-gray-100">
+            <h3 class="text-xl font-bold mb-4 text-gray-900">Ideal for</h3>
+            
+            <!-- Horizontal Scroll Cards -->
+            <div class="flex overflow-x-auto gap-4 pb-2 hide-scrollbar">
+                <!-- Card 1: Strain from long desk hours -->
+                <div class="min-w-[140px] flex flex-col items-center">
+                    <picture class="w-full">
+                        <source srcset="/ideal-desk.webp" type="image/webp">
+                        <img id="ideal-desk-img" src="/ideal-desk.jpg" width="400" height="260" alt="Strain from long desk hours" class="w-full h-24 object-cover rounded-xl mb-2 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                    <p class="text-xs text-center font-medium text-gray-700 leading-snug">Strain from<br>long desk hours</p>
+                </div>
+                <!-- Card 2: Muscle tension -->
+                <div class="min-w-[140px] flex flex-col items-center">
+                    <picture class="w-full">
+                        <source srcset="/ideal-muscle.webp" type="image/webp">
+                        <img id="ideal-muscle-img" src="/ideal-muscle.jpg" width="400" height="260" alt="Muscle tension" class="w-full h-24 object-cover rounded-xl mb-2 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                    <p class="text-xs text-center font-medium text-gray-700 leading-snug">Muscle<br>tension</p>
+                </div>
+                <!-- Card 3: Deep stress & mental fatigue -->
+                <div class="min-w-[140px] flex flex-col items-center">
+                    <picture class="w-full">
+                        <source srcset="/ideal-stress.webp" type="image/webp">
+                        <img id="ideal-stress-img" src="/ideal-stress.jpg" width="400" height="260" alt="Deep stress and mental fatigue" class="w-full h-24 object-cover rounded-xl mb-2 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                    <p class="text-xs text-center font-medium text-gray-700 leading-snug">Deep stress &<br>mental fatigue</p>
+                </div>
+            </div>
+
+            <!-- When to avoid -->
+            <div class="mt-6">
+                <h4 class="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">When to avoid</h4>
+                <div class="flex items-center text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-sm font-medium">Recent surgery or fractures</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service Includes (Step-by-step) -->
+        <div class="p-6 border-b border-gray-100 bg-[#fafafa]">
+            <h3 class="text-xl font-bold mb-6 text-gray-900">Service includes</h3>
+            
+            <div class="relative border-l-2 border-gray-200 ml-4 space-y-8 pb-4">
+                
+                <!-- Step 1 -->
+                <div class="relative pl-6">
+                    <div class="absolute -left-[17px] top-0 bg-white border-2 border-gray-200 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-gray-600 shadow-sm">1</div>
+                    <h4 class="font-bold text-gray-900 text-lg leading-tight">Pre-massage consultation</h4>
+                    <p class="text-gray-500 text-sm mt-1">Tell our therapists about your preferences. They'll personalise the service based on intensity & pain points.</p>
+                    <picture>
+                        <source srcset="/step-consultation.webp" type="image/webp">
+                        <img id="step-img-1" src="/step-consultation.jpg" width="600" height="360" alt="Pre-massage consultation at Tropical Spa" class="w-full h-36 object-cover rounded-xl mt-3 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative pl-6">
+                    <div class="absolute -left-[17px] top-0 bg-white border-2 border-gray-200 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-gray-600 shadow-sm">2</div>
+                    <h4 class="font-bold text-gray-900 text-lg leading-tight">Foot Cleansing & Warm-up</h4>
+                    <p class="text-gray-500 text-sm mt-1">Foot cleansing with a warm towel, followed by a gentle warm-up massage.</p>
+                    <picture>
+                        <source srcset="/step-foot-cleansing.webp" type="image/webp">
+                        <img id="step-img-2" src="/step-foot-cleansing.jpg" width="600" height="360" alt="Foot Cleansing & Warm-up at Tropical Spa" class="w-full h-36 object-cover rounded-xl mt-3 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative pl-6">
+                    <div class="absolute -left-[17px] top-0 bg-white border-2 border-gray-200 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-gray-600 shadow-sm">3</div>
+                    <h4 class="font-bold text-gray-900 text-lg leading-tight">Essential Oil Selection</h4>
+                    <p class="text-gray-500 text-sm mt-1">Choose your preferred essential oil based on your fragrance preference and relaxation needs.</p>
+                    <picture>
+                        <source srcset="/step-oil-selection.webp" type="image/webp">
+                        <img id="step-img-3" src="/step-oil-selection.jpg" width="600" height="360" alt="Essential Oil Selection at Tropical Spa" class="w-full h-36 object-cover rounded-xl mt-3 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative pl-6">
+                    <div class="absolute -left-[17px] top-0 bg-white border-2 border-gray-200 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-gray-600 shadow-sm">4</div>
+                    <h4 class="font-bold text-gray-900 text-lg leading-tight">Warm Oil Body Massage</h4>
+                    <p class="text-gray-500 text-sm mt-1">Your selected essential oil is gently warmed and applied during a relaxing full-body massage, tailored to your comfort and preferences.</p>
+                    <picture>
+                        <source srcset="/step-body-massage.webp" type="image/webp">
+                        <img id="step-img-4" src="/step-body-massage.jpg" width="600" height="360" alt="Warm Oil Body Massage at Tropical Spa" class="w-full h-36 object-cover rounded-xl mt-3 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="relative pl-6">
+                    <div class="absolute -left-[17px] top-0 bg-white border-2 border-gray-200 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-gray-600 shadow-sm">5</div>
+                    <h4 class="font-bold text-gray-900 text-lg leading-tight">Relaxing Finish</h4>
+                    <p class="text-gray-500 text-sm mt-1">Refresh with a soothing head massage, followed by a shower and a complimentary herbal drink.</p>
+                    <picture>
+                        <source srcset="/step-relaxing-finish.webp" type="image/webp">
+                        <img id="step-img-5" src="/step-relaxing-finish.jpg" width="600" height="360" alt="Relaxing Finish at Tropical Spa" class="w-full h-36 object-cover rounded-xl mt-3 bg-gray-100 shadow-sm" loading="lazy">
+                    </picture>
+                </div>
+
+            </div>
+
+            <!-- Book Now CTA immediately below Service Includes -->
+            <div class="mt-8">
+                <a href="#therapy-selection" class="w-full bg-[#2a3f38] hover:bg-[#1f2e29] text-white py-3.5 rounded-xl font-bold text-base shadow-md flex items-center justify-center text-center transition-transform active:scale-95">
+                    Book Now
+                </a>
+            </div>
+        </div>
+
+        <!-- Trust Section -->
+        <div class="p-6 bg-[#f2f7f5] rounded-t-3xl mt-2 relative overflow-hidden">
+            <!-- Decorative background element -->
+            <svg class="absolute top-0 right-0 text-[#2a3f38] opacity-5 w-48 h-48 transform translate-x-12 -translate-y-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            
+            <div class="relative z-10">
+                <h3 class="text-2xl font-bold mb-6 text-gray-900 leading-snug">Expertise you can trust,<br>care you can feel.</h3>
+                
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-[#2a3f38] mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-900">Trained & certified staff</span>
+                            <span class="block text-sm text-gray-600">Rigorous 200+ hours of training.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-[#2a3f38] mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-900">Premium therapy rooms</span>
+                            <span class="block text-sm text-gray-600">Aesthetic, sanitized, and relaxing.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="h-6 w-6 text-[#2a3f38] mr-3 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        <div>
+                            <span class="block font-semibold text-gray-900">Sensitivity trained</span>
+                            <span class="block text-sm text-gray-600">Dedicated to your comfort & privacy.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Reviews Section -->
+        <div class="p-6 bg-white border-t border-gray-100 pb-12">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900">What our clients say</h3>
+            
+            <div class="flex overflow-x-auto gap-4 pb-4 hide-scrollbar snap-x snap-mandatory">
+                
+                <!-- Review Card 1 -->
+                <div class="min-w-[90%] sm:min-w-[320px] bg-white rounded-2xl p-5 snap-center flex flex-col border border-gray-200 shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex text-yellow-400 text-sm gap-0.5 tracking-tight">
+                            ★★★★★
+                        </div>
+                        <span class="bg-green-50 text-green-700 text-[10px] px-2.5 py-1 rounded-full font-medium border border-green-200">Verified Google Review</span>
+                    </div>
+                    <h4 class="text-gray-900 font-bold text-[15px] mb-2.5">Mind & Body Reset</h4>
+                    <p class="text-gray-600 text-sm italic mb-6 leading-relaxed flex-grow">"This place is a peaceful escape from the everyday chaos. Everything was smooth and relaxing, and it left me feeling like I hit the reset button on my mind and body. Special thanks to therapist Sonam, she is a great therapist, never met one like her before."</p>
+                    <div class="flex items-center mt-auto border-t border-gray-100 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-[#f2f7f5] text-[#2a3f38] flex items-center justify-center font-bold text-lg mr-3">J</div>
+                        <div>
+                            <div class="text-gray-900 font-bold text-sm">Jhon Thamos</div>
+                            <div class="text-gray-500 text-xs mt-0.5">Therapist: Sonam</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="min-w-[90%] sm:min-w-[320px] bg-white rounded-2xl p-5 snap-center flex flex-col border border-gray-200 shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex text-yellow-400 text-sm gap-0.5 tracking-tight">
+                            ★★★★★
+                        </div>
+                        <span class="bg-green-50 text-green-700 text-[10px] px-2.5 py-1 rounded-full font-medium border border-green-200">Verified Google Review</span>
+                    </div>
+                    <h4 class="text-gray-900 font-bold text-[15px] mb-2.5">Ambience & Package Value</h4>
+                    <p class="text-gray-600 text-sm italic mb-6 leading-relaxed flex-grow">"Just giving the review to help others to get a wonderful experience of Tropical Spa, excellent. No words to explain, you must visit to feel the ambience and hygiene. Therapists are well trained and most importantly very reasonable price, took the package and will visit regularly."</p>
+                    <div class="flex items-center mt-auto border-t border-gray-100 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-[#f2f7f5] text-[#2a3f38] flex items-center justify-center font-bold text-lg mr-3">R</div>
+                        <div>
+                            <div class="text-gray-900 font-bold text-sm">Ravi Mahto</div>
+                            <div class="text-gray-500 text-xs mt-0.5">Therapist: Master Therapists</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="min-w-[90%] sm:min-w-[320px] bg-white rounded-2xl p-5 snap-center flex flex-col border border-gray-200 shadow-sm">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex text-yellow-400 text-sm gap-0.5 tracking-tight">
+                            ★★★★★
+                        </div>
+                        <span class="bg-green-50 text-green-700 text-[10px] px-2.5 py-1 rounded-full font-medium border border-green-200">Verified Google Review</span>
+                    </div>
+                    <h4 class="text-gray-900 font-bold text-[15px] mb-2.5">Relaxing Ambiance & Private Shower</h4>
+                    <p class="text-gray-600 text-sm italic mb-6 leading-relaxed flex-grow">"The massage was great as well as the ambiance. Rosy was excellent. The shower at the end was an excellent touch. I left feeling very relaxed."</p>
+                    <div class="flex items-center mt-auto border-t border-gray-100 pt-4">
+                        <div class="w-10 h-10 rounded-full bg-[#f2f7f5] text-[#2a3f38] flex items-center justify-center font-bold text-lg mr-3">V</div>
+                        <div>
+                            <div class="text-gray-900 font-bold text-sm">Valerie Pinilla</div>
+                            <div class="text-gray-500 text-xs mt-0.5">Therapist: Rosy</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="p-6 bg-white border-t border-gray-100">
+            <h3 class="text-2xl font-bold mb-6 text-gray-900">Frequently Asked Questions</h3>
+            
+            <div class="space-y-3">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all">
+                    <button type="button" class="w-full p-4 text-left font-bold text-gray-900 flex justify-between items-center gap-3 transition-colors hover:text-[#2a3f38]" onclick="toggleFaq(1)" aria-expanded="false">
+                        <span class="text-[15px] leading-snug">Where is Tropical Spa located?</span>
+                        <svg id="faq-icon-1" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-ans-1" class="hidden px-4 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-50 pt-2">
+                        Tropical Spa is located at 1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka, Bengaluru - 560064.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all">
+                    <button type="button" class="w-full p-4 text-left font-bold text-gray-900 flex justify-between items-center gap-3 transition-colors hover:text-[#2a3f38]" onclick="toggleFaq(2)" aria-expanded="false">
+                        <span class="text-[15px] leading-snug">How do I claim the ₹1,000 gift voucher?</span>
+                        <svg id="faq-icon-2" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-ans-2" class="hidden px-4 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-50 pt-2">
+                        Call or WhatsApp us at +91 95503 66963 or visit us in Yelahanka to claim your ₹1,000 gift voucher on select therapies.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm transition-all">
+                    <button type="button" class="w-full p-4 text-left font-bold text-gray-900 flex justify-between items-center gap-3 transition-colors hover:text-[#2a3f38]" onclick="toggleFaq(3)" aria-expanded="false">
+                        <span class="text-[15px] leading-snug">What are your operating hours?</span>
+                        <svg id="faq-icon-3" class="w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-ans-3" class="hidden px-4 pb-4 text-sm text-gray-600 leading-relaxed border-t border-gray-50 pt-2">
+                        We are open 7 days a week from 10:00 AM to 9:00 PM.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Receptionist Contact Section -->
+        <div class="p-6 bg-gray-50 border-t border-gray-100 pb-10">
+            <div class="bg-white rounded-3xl p-6 border border-gray-200 shadow-sm text-center">
+                <div class="w-12 h-12 mx-auto rounded-full bg-[#f2f7f5] text-[#2a3f38] flex items-center justify-center mb-3 border border-[#2a3f38]/15">
+                    <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Still have a question?</h3>
+                <p class="text-sm text-gray-600 leading-relaxed mb-6 max-w-sm mx-auto">
+                    Our receptionist is here to help. Talk or chat with us for assistance with your booking or any other queries.
+                </p>
+
+                <div class="space-y-3">
+                    <!-- Talk to receptionist button -->
+                    <a href="tel:+919550366963" class="w-full bg-[#1f2937] hover:bg-gray-900 text-white py-3.5 px-4 rounded-xl font-bold text-base shadow-sm flex items-center justify-center gap-2.5 transition-transform active:scale-95">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        <span>Talk to our receptionist</span>
+                    </a>
+
+                    <!-- Chat with receptionist button -->
+                    <a href="https://wa.me/919550366963?text=Hi%2C%20I%20have%20a%20question%20about%20Tropical%20Spa%20services%20and%20booking." target="_blank" rel="noopener noreferrer" class="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-3.5 px-4 rounded-xl font-bold text-base shadow-sm flex items-center justify-center gap-2.5 transition-transform active:scale-95">
+                        <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>Chat with our receptionist</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Floating Action Buttons - Smaller Simple Icons Only -->
+        <div class="fixed bottom-5 left-1/2 -translate-x-1/2 w-full max-w-[480px] pointer-events-none px-4 flex justify-end gap-3 z-50">
+            <!-- Call Button (Icon Only) -->
+            <a href="tel:+919550366963" aria-label="Call Tropical Spa" class="pointer-events-auto w-12 h-12 rounded-full bg-[#1f2937] hover:bg-gray-900 text-white shadow-xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-current" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                </svg>
+            </a>
+            <!-- WhatsApp Button (Icon Only) -->
+            <a href="https://wa.me/919550366963" id="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Tropical Spa" class="pointer-events-auto w-12 h-12 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- Interactive Script -->
+    <script>
+        const WA_PHONE = "919550366963";
+
+        const therapyDisplayNames = {
+            'swedish': { name: 'Swedish Massage', price: '₹1,600', val: 1600 },
+            'aroma': { name: 'Aroma Therapy', price: '₹1,800', val: 1800 },
+            'deep': { name: 'Deep Tissue Massage', price: '₹2,100', val: 2100 }
+        };
+
+        let currentSelected = 'swedish';
+
+        function selectService(serviceId) {
+            currentSelected = serviceId;
+            const services = ['swedish', 'aroma', 'deep'];
+            
+            // Reset all cards to default (unselected) state
+            services.forEach(id => {
+                let card = document.getElementById('card-' + id);
+                let radioBorder = document.getElementById('radio-' + id);
+                let radioInner = document.getElementById('radio-inner-' + id);
+
+                if(card) {
+                    card.className = "service-card flex items-center relative border border-gray-200 bg-white rounded-2xl p-4 cursor-pointer transition-all hover:border-gray-300";
+                    radioBorder.className = "w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center transition-colors";
+                    radioInner.className = "w-3 h-3 rounded-full bg-transparent transition-colors";
+                }
+            });
+
+            // Set active (selected) state for the clicked card
+            let activeCard = document.getElementById('card-' + serviceId);
+            let activeRadioBorder = document.getElementById('radio-' + serviceId);
+            let activeRadioInner = document.getElementById('radio-inner-' + serviceId);
+
+            if(activeCard) {
+                activeCard.className = "service-card flex items-center relative border-2 border-[#2a3f38] bg-[#f2f7f5] rounded-2xl p-4 cursor-pointer transition-all shadow-sm";
+                activeRadioBorder.className = "w-6 h-6 rounded-full border-2 border-[#2a3f38] flex items-center justify-center transition-colors";
+                activeRadioInner.className = "w-3 h-3 rounded-full bg-[#2a3f38] transition-colors";
+            }
+
+            // Update Dynamic WhatsApp message
+            const therapy = therapyDisplayNames[serviceId];
+            const message = `Hi, I'm reaching out from Instagram to claim my ₹1000 gift voucher. I'd like to book ${therapy.name} (${therapy.price}). Please help me schedule an appointment.`;
+            const waUrl = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(message)}`;
+
+            let whatsappBtn = document.getElementById('whatsapp-btn');
+            if(whatsappBtn) {
+                whatsappBtn.href = waUrl;
+            }
+
+            let inlineBookBtn = document.getElementById('inline-book-btn');
+            let inlineBookText = document.getElementById('inline-book-text');
+            if(inlineBookBtn) {
+                inlineBookBtn.href = waUrl;
+            }
+            if(inlineBookText) {
+                inlineBookText.textContent = `Book ${therapy.name} — ${therapy.price}`;
+            }
+
+            // Facebook Pixel: AddToCart event on service selection
+            if (typeof fbq === 'function') {
+                fbq('track', 'AddToCart', {
+                    content_name: therapy.name,
+                    content_type: 'product',
+                    value: therapy.val,
+                    currency: 'INR'
+                });
+            }
+        }
+
+        // Carousel Scroll Logic, 3-Second Infinite Auto Loop & Dot Sync
+        let carouselInterval = null;
+
+        function autoAdvanceCarousel() {
+            const carousel = document.getElementById('image-carousel');
+            if (!carousel) return;
+            const scrollWidth = carousel.scrollWidth;
+            const clientWidth = carousel.clientWidth;
+            const maxScroll = scrollWidth - clientWidth;
+            if (carousel.scrollLeft >= maxScroll - 15) {
+                carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: clientWidth, behavior: 'smooth' });
+            }
+        }
+
+        function startCarouselAuto() {
+            stopCarouselAuto();
+            carouselInterval = setInterval(autoAdvanceCarousel, 3000);
+        }
+
+        function stopCarouselAuto() {
+            if (carouselInterval) clearInterval(carouselInterval);
+        }
+
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('image-carousel');
+            if (!carousel) return;
+            const scrollAmount = carousel.clientWidth;
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            if (direction > 0 && carousel.scrollLeft >= maxScroll - 15) {
+                carousel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direction < 0 && carousel.scrollLeft <= 15) {
+                carousel.scrollTo({ left: maxScroll, behavior: 'smooth' });
+            } else {
+                carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+            }
+            startCarouselAuto();
+        }
+
+        const carousel = document.getElementById('image-carousel');
+        if (carousel) {
+            carousel.addEventListener('scroll', () => {
+                const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
+                [0, 1, 2].forEach(i => {
+                    const dot = document.getElementById('dot-' + i);
+                    if (dot) {
+                        if (i === index) {
+                            dot.className = "w-2.5 h-2.5 rounded-full bg-white shadow-md ring-1 ring-black/10 transition-all duration-200";
+                        } else {
+                            dot.className = "w-2 h-2 rounded-full bg-white/60 shadow-md transition-all duration-200";
+                        }
+                    }
+                });
+            }, { passive: true });
+
+            carousel.addEventListener('touchstart', stopCarouselAuto, { passive: true });
+            carousel.addEventListener('touchend', startCarouselAuto, { passive: true });
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(id) {
+            const ans = document.getElementById('faq-ans-' + id);
+            const icon = document.getElementById('faq-icon-' + id);
+            if (!ans) return;
+            const isHidden = ans.classList.contains('hidden');
+            [1, 2, 3].forEach(i => {
+                const a = document.getElementById('faq-ans-' + i);
+                const ic = document.getElementById('faq-icon-' + i);
+                if (a && i !== id) a.classList.add('hidden');
+                if (ic && i !== id) ic.classList.remove('rotate-180');
+            });
+            if (isHidden) {
+                ans.classList.remove('hidden');
+                if (icon) icon.classList.add('rotate-180');
+            } else {
+                ans.classList.add('hidden');
+                if (icon) icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Facebook Pixel Event Listeners
+        document.getElementById('inline-book-btn')?.addEventListener('click', () => {
+            if (typeof fbq === 'function') {
+                const therapy = therapyDisplayNames[currentSelected];
+                fbq('track', 'InitiateCheckout', {
+                    content_name: therapy.name,
+                    value: therapy.val,
+                    currency: 'INR'
+                });
+            }
+        });
+
+        document.getElementById('whatsapp-btn')?.addEventListener('click', () => {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact', { content_name: 'WhatsApp Sticky Footer' });
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            selectService('swedish');
+            startCarouselAuto();
+        });
+    </script>
+</body>
+</html>

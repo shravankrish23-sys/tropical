@@ -11,8 +11,23 @@ function imageWebpOptimizerPlugin() {
   };
 }
 
+function serveInstagramLanding() {
+  return {
+    name: 'serve-instagram-landing',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (req.url === '/instagram' || req.url === '/instagram/') {
+          req.url = '/instagram/index.html';
+        }
+        next();
+      });
+    }
+  };
+}
+
 export default defineConfig({
   plugins: [
+    serveInstagramLanding(),
     imageWebpOptimizerPlugin(),
     react()
   ],
