@@ -23,15 +23,15 @@
     <!-- End Facebook Pixel Code -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Tropical Spa - Instant comfort for tired Mind and Body</title>
-    <meta name="description" content="Claim your exclusive ₹1000 gift voucher from Instagram. Instant comfort for tired Mind and Body at Tropical Spa Yelahanka, Bengaluru.">
+    <title>Tropical Spa - Full Body Relaxation Massage at Unbeatable Price</title>
+    <meta name="description" content="Claim your exclusive ₹1000 gift voucher from Instagram. Full body relaxation massage at an unbeatable price at Tropical Spa Yelahanka, Bengaluru.">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Tropical Spa - Instant comfort for tired Mind and Body | ₹1000 OFF">
+    <meta property="og:title" content="Tropical Spa - Full Body Relaxation Massage at Unbeatable Price | ₹1000 OFF">
     <meta property="og:description" content="Exclusive Instagram voucher: ₹1000 OFF Swedish, Aroma & Deep Tissue therapies.">
-    <meta property="og:image" content="/hero-yoga.png">
+    <meta property="og:image" content="/carousel-voucher.jpg">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
@@ -44,7 +44,7 @@
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://connect.facebook.net">
     <link rel="dns-prefetch" href="https://connect.facebook.net">
-    <link rel="preload" as="image" href="/carousel-therapist.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/carousel-voucher.webp" type="image/webp" fetchpriority="high">
 
     <!-- Fonts & Static CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -73,6 +73,13 @@
             position: relative;
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        .carousel-hero-container {
+            width: 100%;
+            aspect-ratio: 1024 / 764;
+            position: relative;
+            overflow: hidden;
+            background-color: #f3f4f6;
+        }
     </style>
 </head>
 <body class="antialiased text-gray-800">
@@ -80,29 +87,36 @@
     <div class="app-container pb-24"> <!-- pb-24 ensures content isn't hidden behind sticky footer -->
         
         <!-- Hero Section -->
-        <div class="relative h-72 w-full overflow-hidden group bg-gray-100">
+        <div class="carousel-hero-container relative w-full overflow-hidden group bg-gray-100" style="aspect-ratio: 1024 / 764;">
             
             <!-- Swipeable Carousel -->
             <div id="image-carousel" class="flex overflow-x-auto snap-x snap-mandatory h-full w-full hide-scrollbar scroll-smooth">
-                <!-- Slide 1: Therapist (First slide as requested) -->
-                <div class="min-w-full h-full snap-center relative">
-                    <picture>
+                <!-- Slide 1: ₹1000 Voucher (First slide) -->
+                <div class="min-w-full w-full flex-shrink-0 h-full snap-center relative">
+                    <picture class="block w-full h-full">
+                        <source srcset="/carousel-voucher.webp" type="image/webp">
+                        <img id="img-slide-1" src="/carousel-voucher.jpg" width="1024" height="764" alt="Get a Rs. 1000 Gift Voucher - Tropical Spa" class="w-full h-full object-cover object-center block" loading="eager" fetchpriority="high">
+                    </picture>
+                </div>
+                <!-- Slide 2: Therapist -->
+                <div class="min-w-full w-full flex-shrink-0 h-full snap-center relative">
+                    <picture class="block w-full h-full">
                         <source srcset="/carousel-therapist.webp" type="image/webp">
-                        <img id="img-slide-1" src="/carousel-therapist.jpg" width="1024" height="764" alt="Expert Certified Therapists - Tropical Spa" class="w-full h-full object-cover object-center" loading="eager" fetchpriority="high">
+                        <img id="img-slide-2" src="/carousel-therapist.jpg" width="1024" height="764" alt="Expert Certified Therapists - Tropical Spa" class="w-full h-full object-cover object-center block" loading="lazy">
                     </picture>
                 </div>
-                <!-- Slide 2: Premium Oils -->
-                <div class="min-w-full h-full snap-center relative">
-                    <picture>
-                        <source srcset="/carousel-oils.webp" type="image/webp">
-                        <img id="img-slide-2" src="/carousel-oils.jpg" width="1024" height="764" alt="Premium Massage Oils - Tropical Spa" class="w-full h-full object-cover object-center" loading="lazy">
-                    </picture>
-                </div>
-                <!-- Slide 3: Premium Rooms -->
-                <div class="min-w-full h-full snap-center relative">
-                    <picture>
+                <!-- Slide 3: Rooms -->
+                <div class="min-w-full w-full flex-shrink-0 h-full snap-center relative">
+                    <picture class="block w-full h-full">
                         <source srcset="/carousel-rooms.webp" type="image/webp">
-                        <img id="img-slide-3" src="/carousel-rooms.jpg" width="1024" height="764" alt="Luxury Private Therapy Rooms - Tropical Spa" class="w-full h-full object-cover object-center" loading="lazy">
+                        <img id="img-slide-3" src="/carousel-rooms.jpg" width="1024" height="764" alt="Your Peaceful Escape - Premium Therapy Rooms - Tropical Spa" class="w-full h-full object-cover object-center block" loading="lazy">
+                    </picture>
+                </div>
+                <!-- Slide 4: Premium Oils -->
+                <div class="min-w-full w-full flex-shrink-0 h-full snap-center relative">
+                    <picture class="block w-full h-full">
+                        <source srcset="/carousel-oils.webp" type="image/webp">
+                        <img id="img-slide-4" src="/carousel-oils.jpg" width="1024" height="764" alt="Natural & Nourishing - 100% Organic Oils - Tropical Spa" class="w-full h-full object-cover object-center block" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -112,6 +126,7 @@
                 <div id="dot-0" class="w-2.5 h-2.5 rounded-full bg-white shadow-md ring-1 ring-black/10 transition-all duration-200"></div>
                 <div id="dot-1" class="w-2 h-2 rounded-full bg-white/60 shadow-md transition-all duration-200"></div>
                 <div id="dot-2" class="w-2 h-2 rounded-full bg-white/60 shadow-md transition-all duration-200"></div>
+                <div id="dot-3" class="w-2 h-2 rounded-full bg-white/60 shadow-md transition-all duration-200"></div>
             </div>
 
             <!-- Carousel Arrows -->
@@ -126,8 +141,8 @@
         <!-- Header Info Section (UrbanCompany Style) -->
         <div class="px-6 pt-5 pb-5 border-b border-gray-100 bg-white">
             <h1 class="text-[25px] sm:text-[27px] leading-[1.28] text-gray-900 font-bold mb-2.5 tracking-tight">
-                Instant comfort for tired<br>
-                Mind and Body
+                Full Body Relaxation Massage<br>
+                at Unbeatable Price
             </h1>
             
             <div class="flex items-center mb-1.5">
@@ -649,7 +664,7 @@
         if (carousel) {
             carousel.addEventListener('scroll', () => {
                 const index = Math.round(carousel.scrollLeft / carousel.clientWidth);
-                [0, 1, 2].forEach(i => {
+                [0, 1, 2, 3].forEach(i => {
                     const dot = document.getElementById('dot-' + i);
                     if (dot) {
                         if (i === index) {
