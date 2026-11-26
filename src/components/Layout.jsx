@@ -202,27 +202,39 @@ export const Layout = () => {
 
       {/* Persistent Sticky Mobile Action Bar (<768px) */}
       <nav className="sticky-mobile-bar" aria-label="Quick mobile contact actions">
-        <a 
-          href={links.telUrl} 
-          className="mobile-bar-btn mobile-call-btn"
-          aria-label={`Call Tropical Spa at ${business.phone}`}
+        <a
+          href={links.whatsappUrl("Hi Tropical Spa Yelahanka! I would like to request a quick video call or virtual tour of your suites.")}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sticky-icon-btn"
+          aria-label="Request a video call or virtual tour on WhatsApp"
+          title="Video Call / Virtual Tour"
         >
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+          </svg>
+        </a>
+        <a
+          href={links.telUrl}
+          className="sticky-icon-btn"
+          aria-label={`Call Tropical Spa at ${business.phone}`}
+          title={`Call ${business.phone}`}
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
             <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 6.5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.01l-2.2 2.21z"/>
           </svg>
-          <span>Call Desk</span>
         </a>
-        <a 
-          href={links.whatsappUrl(business.voucherMessage)} 
-          target="_blank" 
+        <a
+          href={links.whatsappUrl(business.bookingMessage)}
+          target="_blank"
           rel="noopener noreferrer"
-          className="mobile-bar-btn mobile-wa-btn"
-          aria-label="Claim ₹1,000 Gift Voucher on WhatsApp"
+          className="sticky-icon-btn"
+          aria-label="Message Tropical Spa on WhatsApp"
+          title="Message on WhatsApp"
         >
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
           </svg>
-          <span>₹1,000 Voucher</span>
         </a>
       </nav>
     </div>

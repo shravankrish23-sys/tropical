@@ -5,159 +5,360 @@ import { Button } from '../components/Button';
 import { spaConfig } from '../config/spaConfig';
 import aromaImg from '../assets/aromatherapy-spa.jpg';
 
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DaySpa",
+      "@id": "https://tropicalspa.in/#organization",
+      "name": "Tropical Spa",
+      "url": "https://tropicalspa.in/",
+      "telephone": "+91-95503-66963",
+      "email": "tropicalventures23@gmail.com",
+      "priceRange": "₹1,800 - ₹4,100",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd, next to Nice Mart, Yelahanka",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560064",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "10:00",
+          "closes": "21:00"
+        }
+      ],
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Acoustically Isolated Private Therapy Suites", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Attached Private Hot Showers", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Ample Highway Parking", "value": true }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://tropicalspa.in/services/aromatherapy-massage/#service",
+      "name": "Aromatherapy Massage in Yelahanka",
+      "alternateName": [
+        "Aroma Oil Massage Yelahanka",
+        "Essential Oil Massage Bangalore"
+      ],
+      "serviceType": "Aromatherapy Massage",
+      "description": "Calming full-body aromatherapy massage in Yelahanka using 100% pure essential oils (French Lavender, Crisp Eucalyptus, Sweet Orange, Chamomile & Frangipani) diluted into warm cold-pressed sweet almond or jojoba carrier oils inside acoustically isolated private suites with attached hot showers.",
+      "url": "https://tropicalspa.in/services/aromatherapy-massage/",
+      "provider": { "@id": "https://tropicalspa.in/#organization" },
+      "areaServed": [
+        { "@type": "Place", "name": "Yelahanka, Bengaluru" },
+        { "@type": "Place", "name": "Yelahanka New Town, Bengaluru" },
+        { "@type": "Place", "name": "Sahakaranagar, Bengaluru" },
+        { "@type": "Place", "name": "Jakkur, Bengaluru" },
+        { "@type": "Place", "name": "Hebbal, Bengaluru" },
+        { "@type": "Place", "name": "Vidyaranyapura, Bengaluru" },
+        { "@type": "Place", "name": "Manyata Tech Park, Bengaluru" },
+        { "@type": "Place", "name": "North Bengaluru" }
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "60-Minute Aromatherapy Massage — First-Visit Rate (After ₹1,000 Welcome Voucher)",
+          "price": "1800",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tropicalspa.in/services/aromatherapy-massage/",
+          "description": "First-time guest offer: full 60 minutes of hands-on aromatherapy oil massage in a private attached-shower suite after applying the ₹1,000 welcome voucher."
+        },
+        {
+          "@type": "Offer",
+          "name": "60-Minute Aromatherapy Massage — Standard Rate",
+          "price": "2800",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tropicalspa.in/services/aromatherapy-massage/",
+          "description": "Full 60 minutes of hands-on aromatherapy oil massage with pure essential oils, private attached hot shower, and complimentary herbal tea."
+        },
+        {
+          "@type": "Offer",
+          "name": "90-Minute Aromatherapy Massage — First-Visit Rate (After ₹1,000 Welcome Voucher)",
+          "price": "3100",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tropicalspa.in/services/aromatherapy-massage/",
+          "description": "First-time guest offer: full 90 minutes of hands-on aromatherapy oil massage with extended scalp, neck, and foot attention after applying the ₹1,000 welcome voucher."
+        },
+        {
+          "@type": "Offer",
+          "name": "90-Minute Aromatherapy Massage — Standard Rate",
+          "price": "4100",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://tropicalspa.in/services/aromatherapy-massage/",
+          "description": "Full 90 minutes of hands-on aromatherapy oil massage with pure essential oils, private attached hot shower, and complimentary herbal tea."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://tropicalspa.in/services/aromatherapy-massage/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does an Aromatherapy Massage cost at Tropical Spa Yelahanka, and how does the ₹1,000 voucher work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our standard Aromatherapy Massage rates are ₹2,800 for 60 minutes and ₹4,100 for 90 minutes. First-time guests receive a flat ₹1,000 Welcome Voucher when booking via WhatsApp or phone, bringing your first-visit rate down to ₹1,800 for 60 minutes or ₹3,100 for 90 minutes, with our 100% money-back satisfaction guarantee included."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What carrier oils do you use, and is Aromatherapy Massage safe for sensitive skin or nut allergies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We dilute our 100% pure essential oils—French Lavender, Crisp Eucalyptus, Sweet Orange, and Chamomile & Frangipani—into warm, cold-pressed sweet almond or jojoba carrier oil, with no harsh mineral oils or artificial perfumes. If you have sensitive skin or a nut allergy, let your therapist know during your welcome consultation so we can use gentle jojoba oil, soften the scent strength, or perform a quick skin-comfort check first."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How firm is the massage pressure, what should I wear, and is there a private shower in the room?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aromatherapy Massage uses smooth, light-to-medium flowing strokes designed for deep calm without soreness, and your therapist checks in so you can ask for gentler or slightly firmer pressure anytime. Arrive in comfortable everyday clothes; we provide disposable spa undergarments, follow strict full-body draping for modesty, and every private suite includes an attached hot shower with fresh towels and luxury toiletries."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I choose a male or female therapist, and how private are the therapy suites?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Tropical Spa has background-verified, certified male and female therapists, and you can request your preferred therapist when booking your slot. Every session takes place inside an acoustically isolated private suite with its own attached hot shower so you enjoy complete quiet and privacy."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I choose a 60-minute or 90-minute session, and does shower time cut into my massage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choose 60 minutes for a thorough full-body reset, or 90 minutes if you want a slower pace with extra time on your scalp, neck, shoulders, and feet—especially helpful for restless sleep and heavy work burnout. Your scent consultation, changing time, private hot shower, and complimentary herbal tea are completely separate, so you always receive the full 60 or 90 minutes of hands-on massage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an advance appointment, and is parking available on Doddaballapura Main Road?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are open daily from 10:00 AM to 9:00 PM, and while walk-ins are welcome when suites are open, booking ahead via WhatsApp or call at +91 95503 66963 is recommended for evenings and weekends. We are located on the 1st Floor of Building No. 1, ACSS Complex, Doddaballapura Main Rd (next to Nice Mart) in Yelahanka, with ample highway parking directly outside."
+          }
+        }
+      ]
+    }
+  ]
+};
+
 export const AromaTherapy = () => {
-  const { business, links } = spaConfig;
+  const { links } = spaConfig;
   const [openFaq, setOpenFaq] = useState(0);
 
-  const pillars = [
-    {
-      badge: "Step 1: Scent Discovery",
-      title: "Personalized Essential Oil Consultation",
-      desc: "At Tropical Spa Yelahanka, every Aromatherapy Massage begins with a personalized scent discovery consultation. You are invited to sample our curated library of 100% pure, therapeutic-grade botanical essential oils—ranging from calming French lavender and soothing Chamomile to uplifting Sweet Orange, crisp Eucalyptus, and exotic Frangipani. Once you select the custom blend that resonates with your emotional and physical needs, your therapist expertly dilutes these active essences into a warm, skin-nourishing carrier oil, such as cold-pressed sweet almond or jojoba oil."
-    },
-    {
-      badge: "Step 2: Mindful Bodywork",
-      title: "Gentle, Rhythmic Full-Body Glides",
-      desc: "The treatment unfolds in a quiet, softly lit therapy room infused with subtle, calming aromas. Your therapist uses long, sweeping effleurage strokes, gentle palmar glides, and light, rhythmic petrissage (kneading) across your full body. Rather than using aggressive force, the movements are deliberate, fluid, and continuous, designed to soothe superficial muscle tension while encouraging deep, easy breathing."
-    },
-    {
-      badge: "Step 3: The Holistic Science",
-      title: "Dual Inhalation & Dermal Absorption",
-      desc: "The science and tradition of aromatherapy work through dual pathways: inhalation and dermal absorption. As you breathe in the natural aromatic molecules, volatile micro-compounds travel directly to your olfactory bulb, stimulating the limbic system—the emotional and memory center of the brain. Simultaneously, the nourishing oils are absorbed into the skin, conditioning the dermal barrier and promoting localized microcirculation. This dual action signals your central nervous system to shift out of \"fight-or-flight\" stress mode and into a state of deep parasympathetic rest, leaving you feeling balanced, renewed, and completely grounded."
-    }
+  const quickDecision = [
+    { label: "Duration", value: "60 Min or 90 Min (Full Hands-On Therapy Time)" },
+    { label: "Starting Price (INR)", value: "₹1,800 First Visit* (Standard ₹2,800 | After ₹1,000 Welcome Voucher)" },
+    { label: "Pressure & Oil Style", value: "Light-to-Medium Flowing Strokes (Pure Essential Oils in Warm Cold-Pressed Sweet Almond or Jojoba Oil)" },
+    { label: "Suite Facility", value: "Sound-Isolated Private Suite (Attached Hot Shower, Fresh Linens & Herbal Tea)" }
   ];
 
-  const highlights = [
+  const essentialOils = [
     {
-      title: "1. Profound Mental Calm & Stress Reduction",
-      desc: "By stimulating the brain’s limbic pathways, pure essential oils help quiet overactive thoughts, lower nervous tension, and reduce feelings of anxiety, bringing immediate emotional balance and clarity.",
-      featured: true
+      blend: "French Lavender",
+      character: "Soft, floral, deeply soothing",
+      benefits: "Quiets racing thoughts, softens evening stress, and makes an ideal lavender oil massage for better sleep in Bangalore."
     },
     {
-      title: "2. Gentle Muscle Loosening & Tension Relief",
-      desc: "Smooth, rhythmic glides and warm botanical oils ease tightness in hypertonic shoulders, neck, and back muscles without the intense discomfort sometimes associated with deeper clinical bodywork."
+      blend: "Crisp Eucalyptus",
+      character: "Cool, clean, herbaceous",
+      benefits: "Clears stuffy airways for sinus relief, lifts mental fatigue, and refreshes tired daily commuters."
     },
     {
-      title: "3. Enhanced Circulation & Skin Hydration",
-      desc: "The combination of gentle palmar pressure and rich, cold-pressed carrier oils stimulates capillary blood flow, assisting natural fluid movement while leaving your skin deeply moisturized, soft, and radiant."
+      blend: "Sweet Orange",
+      character: "Bright, sunny, lightly citrus",
+      benefits: "Lifts low moods, clears midday sluggishness, and restores natural energy without feeling wired."
     },
     {
-      title: "4. Deep, Restful Sleep Enhancement",
-      desc: "Calming essential oil blends like lavender and chamomile, paired with soothing full-body strokes, help regulate your internal relaxation response, making it easier to drift into deep, restorative sleep after your session."
-    },
-    {
-      title: "5. Holistic Mood Elevation & Rejuvenation",
-      desc: "Uplifting botanical aromas like citrus and blossom oils stimulate the release of natural feel-good neurotransmitters, helping to refresh your energy, combat mental fatigue, and brighten your spirit."
-    }
-  ];
-
-  const packages = [
-    { 
-      duration: "60-Minute Session", 
-      title: "60-Minute Aromatherapy Massage",
-      label: "Express Stress Relief",
-      desc: "A comprehensive full-body session covering the back, neck, shoulders, legs, and arms. Perfect for a mid-week reset or an effective quick escape from daily city stress.",
-      popular: false
-    },
-    { 
-      duration: "90-Minute Ritual", 
-      title: "90-Minute Extended Ritual",
-      label: "Ultimate Deep Rejuvenation",
-      desc: "Our most popular choice for complete relaxation. The extended 90-minute format allows your therapist to work at an unhurried, deeply soothing pace, including dedicated extra time for a calming scalp massage, facial acupressure touch, extended back work, and foot relaxation.",
-      popular: true
+      blend: "Chamomile & Frangipani",
+      character: "Delicate, warm, tropical floral",
+      benefits: "Brings gentle anxiety relief while soothing dry, sensitive, or weather-stressed skin."
     }
   ];
 
   const journeySteps = [
     {
       step: "01",
-      title: "Aromatic Welcome & Scent Selection",
-      desc: "You are greeted into our serene reception lounge with a refreshing welcome drink and a warm towel. You will complete a brief consultation form to discuss your wellness goals, any skin sensitivities, and select your preferred essential oil blend."
+      title: "Aromatic Welcome & Scent Discovery",
+      desc: "Relax in our lounge with a welcome drink and warm towel while your therapist asks about your stress level, sleep, and skin sensitivities before guiding your essential oil choice."
     },
     {
       step: "02",
-      title: "Private Suite & Modesty Draping",
-      desc: "You will be escorted to a private, climate-controlled therapy suite equipped with soft ambient lighting and soothing background melodies. After disrobing to your comfort level in complete privacy, you will rest beneath fresh, luxurious linens. Our therapists strictly adhere to professional draping protocols, ensuring that only the specific area being massaged is exposed at any given time."
+      title: "Private Sound-Isolated Suite",
+      desc: "Enter your climate-controlled suite with soft lighting and quiet music. You change in full privacy, and your therapist uses respectful full-body draping so only the area being massaged is uncovered."
     },
     {
       step: "03",
-      title: "The Aromatherapy Experience",
-      desc: "Your therapist applies the warm, scented oil blend with smooth, flowing strokes, maintaining gentle communication to ensure the room temperature, music volume, and light-to-medium pressure are perfectly comfortable."
+      title: "Full 60 or 90 Minutes of Flowing Oil Therapy",
+      desc: "Warm, scented botanical oil is worked across your back, shoulders, neck, arms, and legs with smooth, rhythmic strokes. Consultation, changing, and shower time happen outside your therapy clock—so you always get the full 60 or 90 minutes of hands-on massage."
     },
     {
       step: "04",
-      title: "Post-Therapy Tea & Unhurried Departure",
-      desc: "Following your session, you are given ample time to dress at your own pace before enjoying a warm cup of organic chamomile or ginger herbal tea in our relaxation lounge, allowing your mind and body to integrate the benefits of the treatment before stepping back into your day."
+      title: "Attached Hot Shower & Herbal Tea",
+      desc: "Refresh at your own pace in your suite's attached hot shower with fresh towels and luxury toiletries, then finish with complimentary herbal tea."
+    }
+  ];
+
+  const packages = [
+    {
+      duration: "60 Minutes",
+      title: "60-Minute Aromatherapy Massage",
+      label: "Full-Body Stress Reset",
+      basePrice: "₹2,800",
+      firstVisitPrice: "₹1,800*",
+      desc: "Full-body stress reset, calm mind, shoulder and neck ease.",
+      popular: false
+    },
+    {
+      duration: "90 Minutes",
+      title: "90-Minute Extended Aromatherapy Ritual",
+      label: "Deep Sleep Prep & Slower Pace",
+      basePrice: "₹4,100",
+      firstVisitPrice: "₹3,100*",
+      desc: "Deep sleep prep, slower full-body pace + extra scalp, neck, and foot attention.",
+      popular: true
+    }
+  ];
+
+  const idealFor = [
+    {
+      title: "Stressed IT & Corporate Professionals",
+      desc: "Unwinding from Manyata Tech Park or Hebbal workdays filled with screen fatigue, headaches, and tight shoulders."
+    },
+    {
+      title: "Light or Restless Sleepers",
+      desc: "Anyone who lies awake replaying the day and wants a soothing evening ritual for deeper sleep."
+    },
+    {
+      title: "First-Time Spa Guests",
+      desc: "Looking for a gentle aroma oil massage in Yelahanka with light-to-medium pressure and zero next-day soreness."
+    },
+    {
+      title: "Sinus-Tired Commuters & Travelers",
+      desc: "Seeking crisp eucalyptus clarity after dusty commutes, weather shifts, or long flights."
+    },
+    {
+      title: "Guests Wanting Soft, Hydrated Skin",
+      desc: "Warm cold-pressed sweet almond and jojoba oils leave dry skin noticeably smooth and glowing."
+    }
+  ];
+
+  const comparisonRows = [
+    { feature: "Pressure Level", aroma: "Light to medium (gentle, flowing)", swedish: "Light to medium (long strokes + light kneading)", balinese: "Medium to firm (deeper kneading + gentle stretches)" },
+    { feature: "Oil & Scent", aroma: "Custom pure essential oil blend in warm almond or jojoba oil", swedish: "Warm nourishing oil with mild or neutral scent", balinese: "Warm aromatic botanical oil blend" },
+    { feature: "Primary Goal", aroma: "Mental calm, anxiety relief, better sleep, hydrated skin", swedish: "Everyday tiredness and gentle muscle ease", balinese: "Deeper back and shoulder release with full-body calm" },
+    { feature: "Best Choice If…", aroma: "Scent, peace of mind, and restful sleep matter most", swedish: "You want classic physical relaxation without strong scents", balinese: "You prefer firmer work than Aromatherapy without intense deep-tissue pressure" }
+  ];
+
+  const addOns = [
+    {
+      title: "Swedish Massage",
+      desc: "Prefer classic full-body relaxation with long gliding strokes and a mild or unscented warm oil? Our Swedish Massage focuses purely on soothing tired muscles.",
+      path: "/services/swedish-massage/"
+    },
+    {
+      title: "Body Polish (30 Min)",
+      desc: "Pair your visit into our signature \"Body Polish + Aromatherapy\" glow bundle—a 30-minute botanical buffing treatment that lifts dry skin before your warm oil massage.",
+      path: "/services/body-polish/"
+    },
+    {
+      title: "Couples & Jacuzzi Retreat",
+      desc: "Unwind side by side in our sound-isolated double suite with synchronized aromatherapy massages, warm herbal steam, and a private Jacuzzi soak.",
+      path: "/services/couples-massage/"
     }
   ];
 
   const faqs = [
     {
-      q: "Can I customize my essential oil blend at Tropical Spa Yelahanka?",
-      a: "Yes, absolutely! Every Aromatherapy Massage at our Yelahanka spa includes a complimentary pre-treatment scent consultation. You can sample our pure essential oil single notes and custom blends to choose the exact aroma that matches your personal preference and mood."
+      q: "How much does an Aromatherapy Massage cost at Tropical Spa Yelahanka, and how does the ₹1,000 voucher work?",
+      a: "Our standard Aromatherapy Massage rates are ₹2,800 for 60 minutes and ₹4,100 for 90 minutes. First-time guests receive a flat ₹1,000 Welcome Voucher when booking via WhatsApp or phone, bringing your first-visit rate down to ₹1,800 for 60 minutes or ₹3,100 for 90 minutes, with our 100% money-back satisfaction guarantee included."
     },
     {
-      q: "What is the difference between Aromatherapy Massage and Swedish Massage?",
-      a: "While both treatments utilize gentle-to-medium gliding strokes, Aromatherapy Massage focuses heavily on olfactory wellness and emotional balance through custom pure essential oils. Swedish Massage focuses more directly on mechanical muscle loosening using unscented or lightly scented carrier oils."
+      q: "What carrier oils do you use, and is Aromatherapy Massage safe for sensitive skin or nut allergies?",
+      a: "We dilute our 100% pure essential oils—French Lavender, Crisp Eucalyptus, Sweet Orange, and Chamomile & Frangipani—into warm, cold-pressed sweet almond or jojoba carrier oil, with no harsh mineral oils or artificial perfumes. If you have sensitive skin or a nut allergy, let your therapist know during your welcome consultation so we can use gentle jojoba oil, soften the scent strength, or perform a quick skin-comfort check first."
     },
     {
-      q: "Is parking available at Tropical Spa in Yelahanka?",
-      a: "Yes, Tropical Spa provides convenient, hassle-free parking for all our guests. Located centrally in Yelahanka with seamless access from Yelahanka New Town, Kogilu Cross, and Judicial Layout, arriving at your appointment is stress-free."
+      q: "How firm is the massage pressure, what should I wear, and is there a private shower in the room?",
+      a: "Aromatherapy Massage uses smooth, light-to-medium flowing strokes designed for deep calm without soreness, and your therapist checks in so you can ask for gentler or slightly firmer pressure anytime. Arrive in comfortable everyday clothes; we provide disposable spa undergarments, follow strict full-body draping for modesty, and every private suite includes an attached hot shower with fresh towels and luxury toiletries."
     },
     {
-      q: "How should I prepare for my Aromatherapy Massage session?",
-      a: "We recommend arriving 10 to 15 minutes before your scheduled appointment time to relax and complete your scent selection. It is best to avoid heavy meals for an hour before your massage and leave the natural botanical oils on your skin for a few hours post-treatment to maximize hydration and absorption."
+      q: "Can I choose a male or female therapist, and how private are the therapy suites?",
+      a: "Yes, Tropical Spa has background-verified, certified male and female therapists, and you can request your preferred therapist when booking your slot. Every session takes place inside an acoustically isolated private suite with its own attached hot shower so you enjoy complete quiet and privacy."
+    },
+    {
+      q: "Should I choose a 60-minute or 90-minute session, and does shower time cut into my massage?",
+      a: "Choose 60 minutes for a thorough full-body reset, or 90 minutes if you want a slower pace with extra time on your scalp, neck, shoulders, and feet—especially helpful for restless sleep and heavy work burnout. Your scent consultation, changing time, private hot shower, and complimentary herbal tea are completely separate, so you always receive the full 60 or 90 minutes of hands-on massage."
+    },
+    {
+      q: "Do I need an advance appointment, and is parking available on Doddaballapura Main Road?",
+      a: "We are open daily from 10:00 AM to 9:00 PM, and while walk-ins are welcome when suites are open, booking ahead via WhatsApp or call at +91 95503 66963 is recommended for evenings and weekends. We are located on the 1st Floor of Building No. 1, ACSS Complex, Doddaballapura Main Rd (next to Nice Mart) in Yelahanka, with ample highway parking directly outside."
     }
   ];
 
+  const whatsappBookingMsg = "Hi Tropical Spa Yelahanka! I'd like to book an Aromatherapy Massage and claim the ₹1,000 welcome voucher (first-visit rate starting at ₹1,800). Please share available slots today.";
+
   return (
     <div>
-      <SeoMeta 
-        title="Aromatherapy Massage in Yelahanka, Bengaluru | Tropical Spa"
-        description="Step into a world of serene sensory indulgence at Tropical Spa Yelahanka. Pure botanical essential oils for complete mind-body harmony. Book: +91 95503 66963."
+      <SeoMeta
+        title="Aromatherapy Massage in Yelahanka ₹1,800* | Tropical Spa"
+        description="Ease stress & sleep deeper with pure essential oils on Doddaballapura Rd, Yelahanka. Claim your ₹1,000 welcome voucher (₹1,800*)—book on WhatsApp now!"
         canonical="https://tropicalspa.in/services/aromatherapy-massage/"
+        schema={pageSchema}
       />
 
       <div className="page-container">
-        
+
         {/* 1. Hero Banner */}
         <section className="service-hero-banner" aria-labelledby="aroma-h1">
           <div className="service-banner-content">
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(158, 184, 117, 0.12)', border: '1px solid rgba(158, 184, 117, 0.25)', borderRadius: '20px', padding: '0.35rem 1rem', marginBottom: '1.2rem', color: 'var(--clr-btn-bg)', fontSize: '0.82rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-              ✦ Holistic Botanical Wellness | Yelahanka
+              ✦ Pure Essential Oil Therapy | Yelahanka
             </div>
-            
+
             <h1 id="aroma-h1" style={{ lineHeight: '1.2', marginBottom: '1.2rem' }}>
-              Aromatherapy Massage in Yelahanka, Bengaluru | Tropical Spa
+              Aromatherapy Massage in Yelahanka — Pure Essential Oil Therapy for Deep Calm &amp; Better Sleep
             </h1>
-            
+
             <p className="service-desc" style={{ marginBottom: '1.2rem' }}>
-              Step into a world of serene sensory indulgence at <strong>Tropical Spa</strong>, North Bengaluru’s premier destination for holistic bodywork, botanical wellness, and peaceful rejuvenation. If you are searching for an exceptional <strong>spa in Yelahanka</strong> to escape the noise and pressure of daily life, our sanctuary offers a tranquil haven tailored for complete mind-body harmony. Conveniently situated to serve guests across Yelahanka New Town, Kogilu Cross, and Judicial Layout, Tropical Spa is the trusted choice for those seeking the finest, most relaxing <strong>massage in Yelahanka</strong>.
+              Long hours in front of screens, North Bengaluru traffic, and late-night work pings leave more than tired shoulders—they leave your mind buzzing long after your head hits the pillow. Our <strong>aromatherapy massage in Yelahanka</strong> pairs unhurried, flowing full-body strokes with 100% pure essential oils to melt away mental burnout, ease everyday anxiety, and help you drift into deep, restful sleep.
             </p>
 
             <p className="service-desc" style={{ marginBottom: '1.8rem' }}>
-              Our Aromatherapy Massage is a luxurious sensory ritual designed to melt away mental fatigue, quiet a restless mind, and restore natural vitality. By harmonizing gentle, rhythmic <Link to="/services/swedish-massage/" style={{ color: 'var(--clr-btn-bg)', textDecoration: 'underline' }}>Swedish bodywork</Link> with the therapeutic power of pure, plant-derived essential oils, this treatment engages both your sense of smell and tactile touch. Whether you are seeking relief from the stress of a demanding workweek, dealing with urban fatigue, or simply craving an unhurried afternoon of self-care, Tropical Spa invites you to slow down, breathe deeply, and surrender to total tranquility.
+              Whether you need a trusted <strong>stress relief spa in North Bengaluru</strong> after a demanding week or a gentle <strong>essential oil massage in Bangalore</strong> that leaves your skin soft and glowing, Tropical Spa welcomes you into a quiet sanctuary on Doddaballapura Main Road.
             </p>
-            
-            {/* Single Action CTA */}
+
             <div className="cta-button-group" style={{ justifyContent: 'flex-start' }}>
-              <Button 
-                href={links.whatsappUrl("Hi Tropical Spa! I would like to book an Aromatherapy Massage session.")}
+              <Button
+                href={links.whatsappUrl(whatsappBookingMsg)}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ padding: '0.9rem 2.5rem', fontSize: '1.1rem', boxShadow: '0 8px 24px rgba(158, 184, 117, 0.25)' }}
+                style={{ padding: '0.9rem 2.2rem', fontSize: '1.05rem', boxShadow: '0 8px 24px rgba(158, 184, 117, 0.25)' }}
               >
-                Book Now
+                Claim ₹1,000 Voucher &amp; Book Aromatherapy on WhatsApp &rarr;
               </Button>
             </div>
           </div>
-          
+
           <div className="service-image-holder">
             <picture>
               <source type="image/jpeg" srcSet={aromaImg} />
-              <img 
-                src={aromaImg} 
-                alt="Aromatherapy massage botanical essential oils, frangipani flowers, and luxury towels at Tropical Spa Yelahanka" 
+              <img
+                src={aromaImg}
+                alt="Aromatherapy massage pure essential oils and warm towels at Tropical Spa Yelahanka"
                 loading="lazy"
                 decoding="async"
                 width="480"
@@ -167,154 +368,64 @@ export const AromaTherapy = () => {
           </div>
         </section>
 
-        {/* 2. Detailed Technique & The Experience (3 Visual Pillars) */}
-        <section style={{ marginBottom: '4.5rem' }}>
-          <div className="section-header-center">
-            <h2>Detailed Technique &amp; The Experience</h2>
-            <p>A multisensory journey uniting personalized botanical aromatherapy with rhythmic touch.</p>
-          </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.8rem' }}>
-            {pillars.map((p, i) => (
-              <div 
-                key={i} 
+        {/* Above-the-Fold Quick-Decision Bar */}
+        <section aria-label="Quick decision summary" style={{ marginBottom: '4.5rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.2rem' }}>
+            {quickDecision.map((item, i) => (
+              <div
+                key={i}
                 style={{
-                  background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(20, 28, 21, 0.6) 100%)',
-                  border: '1px solid rgba(255, 255, 255, 0.07)',
-                  borderRadius: '18px',
-                  padding: '2.2rem 1.8rem',
-                  display: 'flex',
-                  flexDirection: 'column'
+                  background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(20, 28, 21, 0.75) 100%)',
+                  border: '1px solid rgba(158, 184, 117, 0.22)',
+                  borderRadius: '14px',
+                  padding: '1.4rem 1.3rem'
                 }}
               >
-                <div style={{ fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--clr-btn-bg)', fontWeight: '700', marginBottom: '0.6rem' }}>
-                  {p.badge}
+                <div style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'var(--clr-btn-bg)', fontWeight: '700', marginBottom: '0.45rem' }}>
+                  {item.label}
                 </div>
-                <h3 style={{ fontSize: '1.25rem', color: 'var(--clr-white)', marginBottom: '1rem', lineHeight: '1.3' }}>
-                  {p.title}
-                </h3>
-                <p style={{ fontSize: '0.96rem', lineHeight: '1.7', color: 'rgba(255, 255, 255, 0.85)', margin: 0, flex: 1 }}>
-                  {p.desc}
-                </p>
+                <div style={{ fontSize: '0.95rem', color: 'var(--clr-white)', lineHeight: '1.5', fontWeight: '500' }}>
+                  {item.value}
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        {/* 3. Key Restorative Benefits (Balanced Visual Layout) */}
-        <section className="service-highlights-section" aria-labelledby="benefits-heading" style={{ marginBottom: '4.5rem' }}>
+        {/* Choose Your Essential Oil Blend */}
+        <section aria-labelledby="oils-heading" style={{ marginBottom: '4.5rem' }}>
           <div className="section-header-center">
-            <h2 id="benefits-heading">Key Restorative Benefits</h2>
-            <p>Experience deep physical relief and mental renewal through botanical essences and flowing touch.</p>
+            <h2 id="oils-heading">Choose Your Essential Oil Blend</h2>
+            <p>Every session begins with a personal scent discovery, never a generic bottle. You sample our pure, therapeutic-grade plant oils, and your therapist blends your choice fresh into warm, cold-pressed sweet almond or jojoba carrier oil.</p>
           </div>
 
-          <div className="highlights-grid">
-            {highlights.map((item, i) => (
-              <div 
-                key={i} 
-                className="highlight-card"
-                style={item.featured ? { gridColumn: 'span 1' } : {}}
-              >
-                <h3 className="highlight-title">
-                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  {item.title}
-                </h3>
-                <p className="highlight-desc">{item.desc}</p>
-              </div>
-            ))}
+          <div className="pricing-table-wrap" style={{ overflowX: 'auto', marginBottom: '1rem' }}>
+            <table className="pricing-table">
+              <thead>
+                <tr>
+                  <th>Essential Oil Blend</th>
+                  <th>Scent Character</th>
+                  <th>Plain-Language Benefits</th>
+                </tr>
+              </thead>
+              <tbody>
+                {essentialOils.map((oil, i) => (
+                  <tr key={i}>
+                    <td style={{ fontWeight: '700', color: 'var(--clr-btn-bg)' }}>{oil.blend}</td>
+                    <td style={{ color: 'var(--clr-white)' }}>{oil.character}</td>
+                    <td style={{ color: 'rgba(255, 255, 255, 0.85)', lineHeight: '1.6' }}>{oil.benefits}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
 
-        {/* 4. Therapy Durations & Pricing Structure */}
-        <section aria-labelledby="pricing-heading" style={{ marginBottom: '4.5rem' }}>
-          <div className="section-header-center">
-            <h2 id="pricing-heading">Therapy Durations &amp; Pricing Structure</h2>
-            <p>To help you customize your visit to Tropical Spa Yelahanka, we offer flexible session lengths tailored to your schedule and desired level of relaxation:</p>
-          </div>
-
-          <div className="service-price-cards" style={{ maxWidth: '900px', margin: '0 auto' }}>
-            {packages.map((pkg, i) => (
-              <div 
-                key={i} 
-                className="price-card" 
-                style={{ 
-                  display: 'flex', 
-                  flexDirection: 'column', 
-                  justifyContent: 'space-between',
-                  position: 'relative',
-                  border: pkg.popular ? '1px solid var(--clr-btn-bg)' : '1px solid rgba(255, 255, 255, 0.08)',
-                  background: pkg.popular ? 'linear-gradient(145deg, rgba(158, 184, 117, 0.08) 0%, rgba(20, 28, 21, 0.8) 100%)' : 'rgba(255, 255, 255, 0.03)'
-                }}
-              >
-                {pkg.popular && (
-                  <div style={{ position: 'absolute', top: '-12px', right: '20px', background: 'var(--clr-btn-bg)', color: 'var(--clr-btn-text)', fontSize: '0.75rem', fontWeight: '800', textTransform: 'uppercase', padding: '0.25rem 0.8rem', borderRadius: '12px', letterSpacing: '0.05em' }}>
-                    ✦ Most Recommended
-                  </div>
-                )}
-                
-                <div>
-                  <div className="price-duration">{pkg.duration}</div>
-                  <h3 style={{ fontSize: '1.35rem', color: 'var(--clr-white)', marginBottom: '0.4rem' }}>{pkg.title}</h3>
-                  <div style={{ color: 'var(--clr-btn-bg)', fontSize: '0.92rem', fontWeight: '600', marginBottom: '1.2rem' }}>{pkg.label}</div>
-                  <p style={{ fontSize: '0.92rem', color: 'rgba(255, 255, 255, 0.82)', lineHeight: '1.6', marginBottom: '2rem' }}>{pkg.desc}</p>
-                </div>
-                
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
-                  <Link 
-                    to="/pricing/" 
-                    className="btn"
-                    style={{ width: '100%', minHeight: '46px', fontSize: '0.95rem' }}
-                  >
-                    View Menu &amp; Package Options &rarr;
-                  </Link>
-                  <Button 
-                    href={links.whatsappUrl(`Hello Tropical Spa! I would like to book the ${pkg.duration} Aromatherapy Massage.`)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="cta-outline"
-                    style={{ width: '100%', minHeight: '40px', fontSize: '0.9rem' }}
-                  >
-                    Book on WhatsApp
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <p style={{ textAlign: 'center', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem', fontStyle: 'italic', marginTop: '1.8rem' }}>
-            *All prices are inclusive of your personalized essential oil selection, private consultation, and post-treatment herbal tea service.*
-          </p>
-        </section>
-
-        {/* 5. Luxury Gift Voucher Incentive */}
-        <section style={{ marginBottom: '4.5rem', background: 'linear-gradient(135deg, rgba(20, 28, 21, 0.95) 0%, rgba(30, 40, 31, 0.9) 100%)', border: '1px solid rgba(158, 184, 117, 0.25)', borderRadius: '20px', padding: '2.5rem 2rem', textAlign: 'center' }}>
-          <div style={{ display: 'inline-block', background: 'var(--clr-btn-bg)', color: 'var(--clr-btn-text)', padding: '0.35rem 1rem', borderRadius: '16px', fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', marginBottom: '1rem', letterSpacing: '0.06em' }}>
-            🎁 Special Welcome Voucher
-          </div>
-          <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--clr-white)', marginBottom: '0.8rem' }}>
-            Claim Your ₹1,000 Special Gift Voucher
-          </h3>
-          <p style={{ color: 'rgba(255, 255, 255, 0.85)', maxWidth: '650px', margin: '0 auto 1.5rem', lineHeight: '1.6', fontSize: '1rem' }}>
-            Experience our certified therapists, premium private rooms, and soothing herbal teas with our 100% money-back satisfaction guarantee.
-          </p>
-          <a
-            href={links.whatsappUrl("Hello Tropical Spa! I would like to claim the special gift voucher of Rs.1000 and book an appointment.")}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-            style={{ padding: '0.75rem 2rem', fontSize: '1rem' }}
-          >
-            Claim ₹1,000 Voucher on WhatsApp
-          </a>
-        </section>
-
-        {/* 6. What to Expect & Session Journey */}
+        {/* 2. What to Expect: Step-by-Step Aromatherapy Ritual */}
         <section style={{ marginBottom: '4.5rem' }}>
           <div className="section-header-center">
-            <h2>What to Expect &amp; Session Journey</h2>
-            <p>From the moment you step into Tropical Spa in Yelahanka, your comfort and peace of mind are our highest priorities:</p>
+            <h2>What to Expect: Your Step-by-Step Aromatherapy Ritual</h2>
+            <p>From the moment you step inside, everything moves at a calm, unhurried pace so you can switch off completely:</p>
           </div>
 
           <div className="voucher-steps" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
@@ -328,16 +439,207 @@ export const AromaTherapy = () => {
           </div>
         </section>
 
-        {/* 7. Local FAQ Section */}
+        {/* 3. Aromatherapy Massage Price in Yelahanka & Session Durations */}
+        <section aria-labelledby="pricing-heading" style={{ marginBottom: '4.5rem' }}>
+          <div className="section-header-center">
+            <h2 id="pricing-heading">Aromatherapy Massage Price in Yelahanka &amp; Session Durations</h2>
+            <p>Our aromatherapy massage price in Yelahanka is transparent and upfront, with no surprise add-ons for essential oils or private suite amenities. First-time guests receive a flat ₹1,000 Welcome Voucher, bringing a 60-minute luxury suite session down to ₹1,800.</p>
+          </div>
+
+          <div className="service-price-cards" style={{ maxWidth: '900px', margin: '0 auto' }}>
+            {packages.map((pkg, i) => (
+              <div
+                key={i}
+                className="price-card"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  position: 'relative',
+                  border: pkg.popular ? '1px solid var(--clr-btn-bg)' : '1px solid rgba(255, 255, 255, 0.08)',
+                  background: pkg.popular ? 'linear-gradient(145deg, rgba(158, 184, 117, 0.08) 0%, rgba(20, 28, 21, 0.8) 100%)' : 'rgba(255, 255, 255, 0.03)'
+                }}
+              >
+                {pkg.popular && (
+                  <div style={{ position: 'absolute', top: '-12px', right: '20px', background: 'var(--clr-btn-bg)', color: 'var(--clr-btn-text)', fontSize: '0.75rem', fontWeight: '800', textTransform: 'uppercase', padding: '0.25rem 0.8rem', borderRadius: '12px', letterSpacing: '0.05em' }}>
+                    ✦ Most Recommended
+                  </div>
+                )}
+
+                <div>
+                  <div className="price-duration">{pkg.duration}</div>
+                  <h3 style={{ fontSize: '1.35rem', color: 'var(--clr-white)', marginBottom: '0.4rem' }}>{pkg.title}</h3>
+                  <div style={{ color: 'var(--clr-btn-bg)', fontSize: '0.92rem', fontWeight: '600', marginBottom: '1rem' }}>{pkg.label}</div>
+
+                  <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.8rem', marginBottom: '1rem', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--clr-white)' }}>{pkg.firstVisitPrice}</span>
+                    <span style={{ fontSize: '0.95rem', color: 'rgba(255, 255, 255, 0.55)', textDecoration: 'line-through' }}>{pkg.basePrice}</span>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--clr-btn-bg)', fontWeight: '700', background: 'rgba(158, 184, 117, 0.14)', padding: '0.2rem 0.6rem', borderRadius: '8px' }}>
+                      First Visit (₹1,000 Off)
+                    </span>
+                  </div>
+
+                  <p style={{ fontSize: '0.92rem', color: 'rgba(255, 255, 255, 0.82)', lineHeight: '1.6', marginBottom: '2rem' }}>{pkg.desc}</p>
+                </div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                  <Button
+                    href={links.whatsappUrl(`Hi Tropical Spa Yelahanka! I'd like to book a ${pkg.duration} Aromatherapy Massage and claim the ₹1,000 welcome voucher.`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn"
+                    style={{ width: '100%', minHeight: '46px', fontSize: '0.95rem' }}
+                  >
+                    Book {pkg.duration} on WhatsApp &rarr;
+                  </Button>
+                  <Link
+                    to="/pricing/"
+                    className="btn cta-outline"
+                    style={{ width: '100%', minHeight: '40px', fontSize: '0.9rem', textAlign: 'center' }}
+                  >
+                    View Full Menu &amp; Pricing
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p style={{ textAlign: 'center', color: 'rgba(255, 255, 255, 0.7)', fontSize: '0.9rem', fontStyle: 'italic', marginTop: '1.8rem' }}>
+            *The ₹1,000 welcome voucher applies to your first 60-minute or 90-minute Aromatherapy session. Every visit includes our 100% money-back satisfaction guarantee.
+          </p>
+        </section>
+
+        {/* 4. Who Is This Aromatherapy Massage Best For? */}
+        <section className="service-highlights-section" aria-labelledby="ideal-for-heading" style={{ marginBottom: '4.5rem' }}>
+          <div className="section-header-center">
+            <h2 id="ideal-for-heading">Who Is This Aromatherapy Massage Best For?</h2>
+            <p>Tailored for calm minds, restful sleep, and soft, nourished skin:</p>
+          </div>
+
+          <div className="highlights-grid">
+            {idealFor.map((item, i) => (
+              <div key={i} className="highlight-card">
+                <h3 className="highlight-title">
+                  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {item.title}
+                </h3>
+                <p className="highlight-desc">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 5. Aromatherapy vs. Swedish vs. Balinese Massage — Quick Comparison */}
+        <section aria-labelledby="comparison-heading" style={{ marginBottom: '4.5rem' }}>
+          <div className="section-header-center">
+            <h2 id="comparison-heading">Aromatherapy vs. Swedish vs. Balinese Massage — Quick Comparison</h2>
+            <p>Undecided between our relaxing full-body oil therapies? Compare them at a glance:</p>
+          </div>
+
+          <div className="pricing-table-wrap" style={{ overflowX: 'auto', marginBottom: '1rem' }}>
+            <table className="pricing-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Aromatherapy Massage</th>
+                  <th>Swedish Massage</th>
+                  <th>Balinese Massage</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row, i) => (
+                  <tr key={i}>
+                    <td style={{ fontWeight: '600', color: 'var(--clr-white)' }}>{row.feature}</td>
+                    <td style={{ color: 'var(--clr-btn-bg)', fontWeight: '500' }}>{row.aroma}</td>
+                    <td style={{ color: 'rgba(255, 255, 255, 0.85)' }}>{row.swedish}</td>
+                    <td style={{ color: 'rgba(255, 255, 255, 0.85)' }}>{row.balinese}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* 6. Why Choose Tropical Spa Yelahanka? & Complementary Therapies */}
+        <section style={{ marginBottom: '4.5rem' }}>
+          <div className="section-header-center">
+            <h2>Why Choose Tropical Spa Yelahanka?</h2>
+            <p>Skip noisy salon cubicles and rushed timers.</p>
+          </div>
+
+          <div style={{ background: 'rgba(255, 255, 255, 0.02)', border: '1px solid rgba(255, 255, 255, 0.07)', borderRadius: '18px', padding: '2rem', marginBottom: '2.5rem', lineHeight: '1.7', color: 'rgba(255, 255, 255, 0.88)' }}>
+            <p style={{ marginBottom: '1rem' }}>
+              Every room at Tropical Spa is an <strong>acoustically isolated private suite with an attached hot shower, sanitized fresh linens, and warm hospitality</strong>. Our <strong>background-verified, certified male and female therapists</strong> tailor every stroke to your comfort, backed by a <strong>100% money-back satisfaction guarantee</strong>.
+            </p>
+            <p style={{ margin: 0 }}>
+              Booking a calming full body oil massage near Yelahanka New Town is effortless. Visit us at 1st Floor, Building No. 1, ACSS Complex, Doddaballapura Main Rd (next to Nice Mart), Yelahanka, with <strong>ample highway parking right outside</strong>. We are under 5 minutes from Yelahanka New Town, roughly 7–12 minutes in light traffic from Sahakaranagar and Vidyaranyapura, and a straightforward drive from Jakkur, Hebbal, and Manyata Tech Park. Open daily 10:00 AM – 9:00 PM.
+            </p>
+          </div>
+
+          <div className="section-header-center" style={{ marginBottom: '1.5rem' }}>
+            <h3 style={{ fontSize: '1.5rem', color: 'var(--clr-white)' }}>Complementary Add-Ons &amp; Similar Therapies</h3>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
+            {addOns.map((addon, i) => (
+              <Link
+                key={i}
+                to={addon.path}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.03)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '16px',
+                  padding: '1.6rem',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <div>
+                  <h4 style={{ color: 'var(--clr-btn-bg)', fontSize: '1.1rem', marginBottom: '0.6rem' }}>{addon.title}</h4>
+                  <p style={{ color: 'rgba(255, 255, 255, 0.82)', fontSize: '0.92rem', lineHeight: '1.6', marginBottom: '1rem' }}>{addon.desc}</p>
+                </div>
+                <span style={{ color: 'var(--clr-white)', fontSize: '0.88rem', fontWeight: '600' }}>Explore Therapy &rarr;</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Luxury Gift Voucher Incentive */}
+        <section style={{ marginBottom: '4.5rem', background: 'linear-gradient(135deg, rgba(20, 28, 21, 0.95) 0%, rgba(30, 40, 31, 0.9) 100%)', border: '1px solid rgba(158, 184, 117, 0.25)', borderRadius: '20px', padding: '2.5rem 2rem', textAlign: 'center' }}>
+          <div style={{ display: 'inline-block', background: 'var(--clr-btn-bg)', color: 'var(--clr-btn-text)', padding: '0.35rem 1rem', borderRadius: '16px', fontSize: '0.8rem', fontWeight: '800', textTransform: 'uppercase', marginBottom: '1rem', letterSpacing: '0.06em' }}>
+            🎁 Special Welcome Voucher
+          </div>
+          <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--clr-white)', marginBottom: '0.8rem' }}>
+            Claim Your ₹1,000 Welcome Voucher
+          </h3>
+          <p style={{ color: 'rgba(255, 255, 255, 0.85)', maxWidth: '650px', margin: '0 auto 1.5rem', lineHeight: '1.6', fontSize: '1rem' }}>
+            Book a 60-minute Aromatherapy Massage for ₹1,800 (standard ₹2,800) or 90 minutes for ₹3,100 (standard ₹4,100) with our 100% money-back satisfaction guarantee.
+          </p>
+          <a
+            href={links.whatsappUrl(whatsappBookingMsg)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+            style={{ padding: '0.75rem 2rem', fontSize: '1rem' }}
+          >
+            Claim ₹1,000 Voucher &amp; Book Aromatherapy on WhatsApp &rarr;
+          </a>
+        </section>
+
+        {/* 7. Six Buyer-Objection FAQs */}
         <section className="faq-accordion-section" aria-labelledby="faq-heading" style={{ marginBottom: '2rem' }}>
           <h2 id="faq-heading" className="faq-title-center">Frequently Asked Questions</h2>
-          
+
           <div className="faq-list-wrap">
             {faqs.map((faq, i) => (
               <div key={i} className={openFaq === i ? "faq-item-card open" : "faq-item-card"}>
-                <button 
-                  type="button" 
-                  className="faq-question-btn" 
+                <button
+                  type="button"
+                  className="faq-question-btn"
                   onClick={() => setOpenFaq(openFaq === i ? -1 : i)}
                 >
                   <span>{faq.q}</span>

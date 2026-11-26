@@ -12,73 +12,73 @@ export const Pricing = () => {
   const pricingData = [
     // 1. Full Body Spa Services (60 min & 90 min)
     {
-      name: "Muscle Relaxing Massage",
-      desc: "Intensive bodywork designed to alleviate stiffness, release lactic acid, and restore muscle elasticity.",
-      category: "full_body",
-      path: "/services/muscle-relaxing-massage/",
-      options: [
-        { duration: "60 Min", badge: "Signature" },
-        { duration: "90 Min", badge: "Extended Deep Care" }
-      ]
-    },
-    {
       name: "Swedish Massage",
-      desc: "Quintessential relaxation therapy utilizing long gliding strokes and organic botanical oils.",
+      desc: "Calm, unhurried full-body oil therapy using gentle, flowing strokes and cold-pressed organic oils.",
       category: "full_body",
       path: "/services/swedish-massage/",
       options: [
-        { duration: "60 Min", badge: "Relaxation" },
-        { duration: "90 Min", badge: "Full Stress Relief" }
+        { duration: "60 Min", badge: "Relaxation", price: "₹2,600", firstVisit: "₹1,600" },
+        { duration: "90 Min", badge: "Full Stress Relief", price: "₹3,800", firstVisit: "₹2,800" }
       ]
     },
     {
       name: "Aroma Therapy",
-      desc: "Holistic sensory bodywork infused with pure organic essential oils to balance the central nervous system.",
+      desc: "Pure essential oils (French Lavender, Eucalyptus, Sweet Orange, Chamomile) blended into warm cold-pressed carrier oil.",
       category: "full_body",
       path: "/services/aromatherapy-massage/",
       options: [
-        { duration: "60 Min", badge: "Sensory Calm" },
-        { duration: "90 Min", badge: "Total Renewal" }
+        { duration: "60 Min", badge: "Sensory Calm", price: "₹2,800", firstVisit: "₹1,800" },
+        { duration: "90 Min", badge: "Total Renewal", price: "₹4,100", firstVisit: "₹3,100" }
       ]
     },
     {
       name: "Thai Massage",
-      desc: "Ancient dry bodywork combining passive yoga stretches, rhythmic joint mobilization, and Sen line acupressure.",
+      desc: "100% oil-free dry stretching massage in provided loose cotton attire on a wide cushioned floor mat.",
       category: "full_body",
       path: "/services/traditional-thai-massage/",
       options: [
-        { duration: "60 Min", badge: "Flexibility & Energy" },
-        { duration: "90 Min", badge: "Full Body Mobility" }
+        { duration: "60 Min", badge: "Flexibility & Energy", price: "₹3,000", firstVisit: "₹2,000" },
+        { duration: "90 Min", badge: "Full Body Mobility", price: "₹4,100", firstVisit: "₹3,100" }
+      ]
+    },
+    {
+      name: "Muscle Relaxing Massage",
+      desc: "Medium-to-firm full-body recovery massage for gym soreness, DOMS, and everyday stiffness. (₹1,000 welcome voucher not applicable.)",
+      category: "full_body",
+      path: "/services/muscle-relaxing-massage/",
+      options: [
+        { duration: "60 Min", badge: "Full-Body Recovery", price: "₹2,300" },
+        { duration: "90 Min", badge: "Extended Deep Care", price: "₹3,500" }
       ]
     },
     {
       name: "Balinese Massage",
-      desc: "Traditional Indonesian healing combining gentle stretching, acupressure rolling, and scented exotic oils.",
+      desc: "Traditional Indonesian healing combining warm aromatic oils, gentle acupressure, and light stretching.",
       category: "full_body",
       path: "/services/balinese-massage/",
       options: [
-        { duration: "60 Min", badge: "Exotic Relaxation" },
-        { duration: "90 Min", badge: "Deep Restoration" }
+        { duration: "60 Min", badge: "Exotic Relaxation", price: "₹3,000", firstVisit: "₹2,000" },
+        { duration: "90 Min", badge: "Deep Restoration", price: "₹4,300", firstVisit: "₹3,300" }
       ]
     },
     {
       name: "Deep Tissue Massage",
-      desc: "Clinical myofascial therapy with firm cross-fiber pressure targeting chronic pain, stiff neck, and deep knots.",
+      desc: "Firm, custom-paced deep tissue therapy targeting stubborn back, neck, shoulder knots, and sports recovery.",
       category: "full_body",
       path: "/services/deep-tissue-massage/",
       options: [
-        { duration: "60 Min", badge: "Myofascial Release" },
-        { duration: "90 Min", badge: "Chronic Pain Relief" }
+        { duration: "60 Min", badge: "Myofascial Release", price: "₹3,100", firstVisit: "₹2,100" },
+        { duration: "90 Min", badge: "Full-Body Deep Work", price: "₹4,400", firstVisit: "₹3,400" }
       ]
     },
     {
       name: "Four Hand Massage",
-      desc: "The pinnacle of luxury with two certified master therapists delivering synchronized mirrored strokes.",
+      desc: "Synchronized dual-therapist luxury massage with two certified therapists moving in mirrored rhythm.",
       category: "full_body",
       path: "/services/four-hand-massage/",
       options: [
-        { duration: "60 Min", badge: "Dual Therapist Sync" },
-        { duration: "90 Min", badge: "Ultimate VIP Luxury" }
+        { duration: "60 Min", badge: "Dual Therapist Sync", price: "₹4,300", firstVisit: "₹3,300" },
+        { duration: "90 Min", badge: "Ultimate VIP Luxury", price: "₹6,500", firstVisit: "₹5,500" }
       ]
     },
 
@@ -175,56 +175,28 @@ export const Pricing = () => {
 
   return (
     <div>
-      <SeoMeta 
-        title="Therapy Menu & Custom Packages | Tropical Spa Yelahanka Bengaluru"
-        description="Explore certified massage therapies & customized packages at Tropical Spa Yelahanka. Connect with our front desk for package tariffs & claim your ₹1,000 gift voucher."
+      <SeoMeta
+        title="Therapy Menu & Transparent Pricing | Tropical Spa Yelahanka Bengaluru"
+        description="Explore transparent massage prices & ₹1,000 first-visit welcome voucher offers at Tropical Spa Yelahanka. Swedish from ₹1,600, Aromatherapy from ₹1,800, Thai & Balinese from ₹2,000."
         canonical="https://tropicalspa.in/pricing/"
       />
 
       <div className="page-container">
-        
+
         {/* Page Header */}
         <header className="page-header">
           <div className="pricing-badge-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(158, 184, 117, 0.12)', border: '1px solid rgba(158, 184, 117, 0.25)', borderRadius: '20px', padding: '0.35rem 1rem', marginBottom: '1rem', color: 'var(--clr-btn-bg)', fontSize: '0.85rem', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-            ✦ Personalized Wellness Packages
+            ✦ Transparent Therapy Menu &amp; Pricing
           </div>
-          <h1 className="page-h1">Tropical Spa Menu &amp; Package Offerings</h1>
+          <h1 className="page-h1">Tropical Spa Menu &amp; Transparent Pricing</h1>
           <p className="page-subtitle" style={{ maxWidth: '750px', margin: '0 auto' }}>
-            We provide tailored individual sessions, multi-visit wellness packages, and couple retreats. Connect directly with our front desk to receive the complete tariff card and personalized package recommendations.
+            Every 60- or 90-minute session guarantees 100% hands-on therapy time in an acoustically isolated private suite with an attached hot shower and herbal tea. First-time guests receive a flat ₹1,000 welcome voucher on qualifying full-body therapies.
           </p>
         </header>
 
-        {/* Consultation Callout Banner */}
-        <div className="pricing-consult-banner" style={{ background: 'linear-gradient(135deg, rgba(20, 28, 21, 0.85) 0%, rgba(30, 42, 32, 0.85) 100%)', border: '1px solid rgba(158, 184, 117, 0.25)', borderRadius: '16px', padding: '1.5rem 2rem', marginBottom: '2.5rem', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '1.2rem' }}>
-          <div>
-            <h2 style={{ fontSize: '1.25rem', color: 'var(--clr-white)', marginBottom: '0.35rem' }}>Looking for custom packages or special corporate offers?</h2>
-            <p style={{ color: 'rgba(255, 255, 255, 0.8)', fontSize: '0.92rem', margin: 0 }}>
-              Speak directly with our spa consultants to choose the right therapy, certified therapist, and package discounts.
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-            <Button 
-              href={links.whatsappUrl("Hello Tropical Spa! Please share the complete package tariff card and current offers.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-              style={{ minHeight: '44px', padding: '0 1.5rem', fontSize: '0.95rem' }}
-            >
-              💬 WhatsApp for Packages
-            </Button>
-            <Button 
-              href={links.telUrl}
-              className="btn cta-outline"
-              style={{ minHeight: '44px', padding: '0 1.5rem', fontSize: '0.95rem' }}
-            >
-              📞 Call Desk: {business.phone}
-            </Button>
-          </div>
-        </div>
-
         {/* Interactive Filter Tabs */}
         <div className="pricing-tabs" role="tablist" aria-label="Filter therapies by category">
-          <button 
+          <button
             role="tab"
             aria-selected={activeTab === 'all'}
             className={`tab-btn ${activeTab === 'all' ? 'active' : ''}`}
@@ -232,7 +204,7 @@ export const Pricing = () => {
           >
             All Services ({pricingData.length})
           </button>
-          <button 
+          <button
             role="tab"
             aria-selected={activeTab === 'full_body'}
             className={`tab-btn ${activeTab === 'full_body' ? 'active' : ''}`}
@@ -240,7 +212,7 @@ export const Pricing = () => {
           >
             Full Body Massages (60 / 90 Min)
           </button>
-          <button 
+          <button
             role="tab"
             aria-selected={activeTab === 'targeted'}
             className={`tab-btn ${activeTab === 'targeted' ? 'active' : ''}`}
@@ -248,7 +220,7 @@ export const Pricing = () => {
           >
             Targeted Therapies (30 Min)
           </button>
-          <button 
+          <button
             role="tab"
             aria-selected={activeTab === 'addons'}
             className={`tab-btn ${activeTab === 'addons' ? 'active' : ''}`}
@@ -259,13 +231,13 @@ export const Pricing = () => {
         </div>
 
         {/* Therapy Menu Table Wrap */}
-        <div className="pricing-table-wrap" aria-label="Official Spa Therapy Menu">
+        <div className="pricing-table-wrap" aria-label="Official Spa Therapy Menu" style={{ overflowX: 'auto' }}>
           <table className="pricing-table">
             <thead>
               <tr>
-                <th style={{ width: '50%' }}>Therapy Description</th>
+                <th style={{ width: '44%' }}>Therapy Description</th>
                 <th style={{ width: '22%' }}>Duration &amp; Focus</th>
-                <th style={{ width: '28%' }}>Package Inquiry</th>
+                <th style={{ width: '34%' }}>Price (₹)</th>
               </tr>
             </thead>
             <tbody>
@@ -277,8 +249,8 @@ export const Pricing = () => {
                         {optIndex === 0 ? (
                           <>
                             <div className="pricing-row-name">
-                              <Link 
-                                to={item.path} 
+                              <Link
+                                to={item.path}
                                 style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s' }}
                                 onMouseEnter={(e) => e.currentTarget.style.color = 'var(--clr-btn-bg)'}
                                 onMouseLeave={(e) => e.currentTarget.style.color = 'var(--clr-white)'}
@@ -304,15 +276,49 @@ export const Pricing = () => {
                         )}
                       </td>
                       <td className="pricing-row-price">
-                        <Button 
-                          href={links.whatsappUrl(`Hello Tropical Spa! I would like to inquire about the package options and tariffs for ${opt.duration} ${item.name}.`)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="btn"
-                          style={{ minHeight: '34px', fontSize: '0.8rem', padding: '0 1rem', width: '100%', whiteSpace: 'nowrap' }}
-                        >
-                          💬 Inquire Package
-                        </Button>
+                        {opt.price ? (
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                            <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem', flexWrap: 'wrap' }}>
+                              {opt.firstVisit ? (
+                                <>
+                                  <span style={{ fontSize: '1.15rem', fontWeight: '800', color: 'var(--clr-white)' }}>{opt.firstVisit}</span>
+                                  <span style={{ fontSize: '0.85rem', color: 'rgba(255, 255, 255, 0.5)', textDecoration: 'line-through' }}>{opt.price}</span>
+                                  <span style={{ fontSize: '0.72rem', color: 'var(--clr-btn-bg)', fontWeight: '700', background: 'rgba(158, 184, 117, 0.14)', padding: '0.15rem 0.5rem', borderRadius: '6px' }}>
+                                    1st Visit (₹1,000 Off)
+                                  </span>
+                                </>
+                              ) : (
+                                <>
+                                  <span style={{ fontSize: '1.15rem', fontWeight: '800', color: 'var(--clr-white)' }}>{opt.price}</span>
+                                  <span style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.6)' }}>Standard Rate</span>
+                                </>
+                              )}
+                            </div>
+                            <Button
+                              href={links.whatsappUrl(
+                                opt.firstVisit
+                                  ? `Hello Tropical Spa! I would like to book the ${opt.duration} ${item.name} (${opt.firstVisit} first-visit offer with ₹1,000 voucher).`
+                                  : `Hello Tropical Spa! I would like to book the ${opt.duration} ${item.name} (${opt.price}).`
+                              )}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="btn"
+                              style={{ minHeight: '34px', fontSize: '0.8rem', padding: '0 1rem', width: '100%', whiteSpace: 'nowrap' }}
+                            >
+                              Book on WhatsApp
+                            </Button>
+                          </div>
+                        ) : (
+                          <Button
+                            href={links.whatsappUrl(`Hello Tropical Spa! I would like to inquire about the package options and tariffs for ${opt.duration} ${item.name}.`)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn cta-outline"
+                            style={{ minHeight: '34px', fontSize: '0.8rem', padding: '0 1rem', width: '100%', whiteSpace: 'nowrap' }}
+                          >
+                            💬 Inquire Package
+                          </Button>
+                        )}
                       </td>
                     </tr>
                   ))}
@@ -328,6 +334,9 @@ export const Pricing = () => {
           <h2 id="voucher-heading" className="voucher-title">How to Claim Your ₹1,000 Gift Voucher</h2>
           <p className="voucher-desc">
             Claim an exclusive welcome benefit of ₹1,000 on qualifying wellness and spa packages. Follow these three simple steps to secure your session.
+          </p>
+          <p style={{ color: 'rgba(255, 255, 255, 0.72)', fontSize: '0.88rem', fontStyle: 'italic', marginBottom: '2rem' }}>
+            *₹1,000 welcome voucher applies to select therapies (Swedish, Aromatherapy, Thai, Balinese, Deep Tissue, and Four Hand Massage). Not applicable on Muscle Relaxing Massage.*
           </p>
 
           <div className="voucher-steps">
@@ -349,7 +358,7 @@ export const Pricing = () => {
           </div>
 
           <div className="cta-button-group">
-            <Button 
+            <Button
               href={links.whatsappUrl(business.voucherMessage)}
               target="_blank"
               rel="noopener noreferrer"
@@ -369,7 +378,7 @@ export const Pricing = () => {
 
         {/* Real Customer Reviews Section */}
         <div style={{ marginTop: '4rem' }}>
-          <Testimonials 
+          <Testimonials
             title="Guest Experiences on Our Ambiance & Packages"
             subtitle="Verified guests share their thoughts on our certified therapists, hygiene, and package value."
           />
